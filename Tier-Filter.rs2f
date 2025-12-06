@@ -398,12 +398,12 @@ exampleItem: Coins
 
 
 rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_SS_VALUE) {COINS_SS_STYLE}
-rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_S_VALUE && quantity:<COINS_SS_VALUE) {COINS_S_STYLE}
-rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_A_VALUE && quantity:<COINS_S_VALUE) {COINS_A_STYLE}
-rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_B_VALUE && quantity:<COINS_A_VALUE) {COINS_B_STYLE}
-rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_C_VALUE && quantity:<COINS_B_VALUE) {COINS_C_STYLE}
-rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_D_VALUE && quantity:<COINS_C_VALUE) {COINS_D_STYLE}
-rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_E_VALUE && quantity:<COINS_D_VALUE) {COINS_E_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_S_VALUE) {COINS_S_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_A_VALUE) {COINS_A_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_B_VALUE) {COINS_B_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_C_VALUE) {COINS_C_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_D_VALUE) {COINS_D_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_E_VALUE) {COINS_E_STYLE}
 
 /*@ define:input:currency
 label: Minimum Value
@@ -575,14 +575,13 @@ exampleItem: Tokkul
     textAccent = 2;\
     textAccentColor = "#66000000";
 
-
 rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_SS_QUANT) {TOKKUL_SS_STYLE}
-rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_S_QUANT && quantity:<TOKKUL_SS_QUANT) {TOKKUL_S_STYLE}
-rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_A_QUANT && quantity:<TOKKUL_S_QUANT) {TOKKUL_A_STYLE}
-rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_B_QUANT && quantity:<TOKKUL_A_QUANT) {TOKKUL_B_STYLE}
-rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_C_QUANT && quantity:<TOKKUL_B_QUANT) {TOKKUL_C_STYLE}
-rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_D_QUANT && quantity:<TOKKUL_C_QUANT) {TOKKUL_D_STYLE}
-rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_E_QUANT && quantity:<TOKKUL_D_QUANT) {TOKKUL_E_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_S_QUANT) {TOKKUL_S_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_A_QUANT) {TOKKUL_A_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_B_QUANT) {TOKKUL_B_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_C_QUANT) {TOKKUL_C_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_D_QUANT) {TOKKUL_D_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_E_QUANT) {TOKKUL_E_STYLE}
 
 /*@ define:input:currency
 label: Minimum Value
@@ -755,12 +754,12 @@ exampleItem: Numalite
 
 
 rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_SS_QUANT) {NUMALITE_SS_STYLE}
-rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_S_QUANT && quantity:<NUMALITE_SS_QUANT) {NUMALITE_S_STYLE}
-rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_A_QUANT && quantity:<NUMALITE_S_QUANT) {NUMALITE_A_STYLE}
-rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_B_QUANT && quantity:<NUMALITE_A_QUANT) {NUMALITE_B_STYLE}
-rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_C_QUANT && quantity:<NUMALITE_B_QUANT) {NUMALITE_C_STYLE}
-rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_D_QUANT && quantity:<NUMALITE_C_QUANT) {NUMALITE_D_STYLE}
-rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_E_QUANT && quantity:<NUMALITE_D_QUANT) {NUMALITE_E_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_S_QUANT) {NUMALITE_S_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_A_QUANT) {NUMALITE_A_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_B_QUANT) {NUMALITE_B_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_C_QUANT) {NUMALITE_C_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_D_QUANT) {NUMALITE_D_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_E_QUANT) {NUMALITE_E_STYLE}
 
 /*@ define:module:alchs
 name: Alchs
@@ -864,6 +863,7 @@ exampleItem: Dragon platelegs
 	showLootbeam = true;\
 	lootbeamColor = "#ffbbbb22";\
 	showValue = true;\
+	sound = "DropSS.wav";\
 	icon = Sprite(41,0);
 
 /*@ define:input:alchs
@@ -883,6 +883,7 @@ exampleItem: Dragon halberd
 	showLootbeam = true;\
 	lootbeamColor = "#ffffff70";\
 	showValue = true;\
+	sound = "DropS.wav";\
 	icon = Sprite(41,0);
 
 
@@ -901,6 +902,7 @@ exampleItem: Dragon battleaxe
 	textAccent = 3;\
 	borderColor = "#ffffff70";\
 	showValue = true;\
+	sound = "DropA.wav";\
 	icon = Sprite(41,0);
 
 /*@ define:input:alchs
@@ -963,12 +965,12 @@ exampleItem: Bronze platebody
 	
 	
 rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_SS_VALUE) {ALCHS_SS_STYLE}
-rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_S_VALUE && havalue:<ALCHS_SS_VALUE) {ALCHS_S_STYLE}
-rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_A_VALUE && havalue:<ALCHS_S_VALUE) {ALCHS_A_STYLE}
-rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_B_VALUE && havalue:<ALCHS_A_VALUE) {ALCHS_B_STYLE}
-rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_C_VALUE && havalue:<ALCHS_B_VALUE) {ALCHS_C_STYLE}
-rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_D_VALUE && havalue:<ALCHS_C_VALUE) {ALCHS_D_STYLE}
-rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_E_VALUE && havalue:<ALCHS_D_VALUE) {ALCHS_E_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_S_VALUE) {ALCHS_S_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_A_VALUE) {ALCHS_A_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_B_VALUE) {ALCHS_B_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_C_VALUE) {ALCHS_C_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_D_VALUE) {ALCHS_D_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_E_VALUE) {ALCHS_E_STYLE}
 
 /*@ define:module:keys
 name: Keys
@@ -1028,7 +1030,8 @@ exampleItem: Awakener's orb
 	textAccent = 3;\
 	borderColor = "#ff621075";\
 	showLootbeam = true;\
-	lootbeamColor = "#ff621075";
+	lootbeamColor = "#ff621075";\
+	sound = "DropSS.wav";
 
 /*@ define:input:keys
 label: S Tier Keys
@@ -1090,7 +1093,8 @@ exampleItem: Larran's key
 	textAccent = 3;\
 	borderColor = "#ffea02ff";\
 	showLootbeam = true;\
-	lootbeamColor = "#ffea02ff";
+	lootbeamColor = "#ffea02ff";\
+	sound = "DropS.wav";
 
 /*@ define:input:keys
 label: A Tier Keys
@@ -1159,7 +1163,8 @@ exampleItem: Brimstone key
 	menuTextColor = "#ff621075"; \
 	fontType = 2;\
 	textAccent = 3;\
-	borderColor = "#ffea02ff";
+	borderColor = "#ffea02ff";\
+	sound = "DropA.wav";
 
 /*@ define:input:keys
 label: B Tier Keys
@@ -1503,41 +1508,555 @@ exampleItem: Ecumenical key shards
 	textAccentColor = "#66000000"; \
 	menuTextColor = "#ff621075";
 
-rule (name:KEYS_SS_NAMES || (KEYS_MOON_KEY_SS && id:[30107,30105]) {KEYS_SS_STYLE}
-rule ((name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105]) && quantity:>=KEYS_S_SS_QUANT) {KEYS_SS_STYLE}
-rule ((name:KEYS_A_NAMES || (KEYS_MOON_KEY_A && id:[30107,30105]) && quantity:>=KEYS_A_SS_QUANT) {KEYS_SS_STYLE}
-rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105]) && quantity:>=KEYS_B_SS_QUANT) {KEYS_SS_STYLE}
-rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_SS_QUANT) {KEYS_SS_STYLE}
-rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_SS_QUANT) {KEYS_SS_STYLE}
-rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_SS_QUANT) {KEYS_SS_STYLE}
+rule (name:KEYS_SS_NAMES || (KEYS_MOON_KEY_SS && id:[30107,30105])) {KEYS_SS_STYLE}
+rule ((name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105])) && quantity:>=KEYS_S_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_A_NAMES || (KEYS_MOON_KEY_A && id:[30107,30105])) && quantity:>=KEYS_A_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105])) && quantity:>=KEYS_B_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105])) && quantity:>=KEYS_C_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105])) && quantity:>=KEYS_D_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) && quantity:>=KEYS_E_SS_QUANT) {KEYS_SS_STYLE}
 
-rule ((name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105]) {KEYS_S_STYLE}
-rule ((name:KEYS_A_NAMES || (KEYS_MOON_KEY_A && id:[30107,30105]) && quantity:>=KEYS_A_S_QUANT) {KEYS_S_STYLE}
-rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105]) && quantity:>=KEYS_B_S_QUANT) {KEYS_S_STYLE}
-rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_S_QUANT) {KEYS_S_STYLE}
-rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_S_QUANT) {KEYS_S_STYLE}
-rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_S_QUANT) {KEYS_S_STYLE}
+rule (name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105])) {KEYS_S_STYLE}
+rule ((name:KEYS_A_NAMES || (KEYS_MOON_KEY_A && id:[30107,30105])) && quantity:>=KEYS_A_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105])) && quantity:>=KEYS_B_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105])) && quantity:>=KEYS_C_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105])) && quantity:>=KEYS_D_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) && quantity:>=KEYS_E_S_QUANT) {KEYS_S_STYLE}
 
-rule (name:KEYS_A_NAMES  || (KEYS_MOON_KEY_A && id:[30107,30105]) {KEYS_A_STYLE}
-rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105]) && quantity:>=KEYS_B_A_QUANT) {KEYS_A_STYLE}
-rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_A_QUANT) {KEYS_A_STYLE}
-rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_A_QUANT) {KEYS_A_STYLE}
-rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_A_QUANT) {KEYS_A_STYLE}
+rule (name:KEYS_A_NAMES  || (KEYS_MOON_KEY_A && id:[30107,30105])) {KEYS_A_STYLE}
+rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105])) && quantity:>=KEYS_B_A_QUANT) {KEYS_A_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105])) && quantity:>=KEYS_C_A_QUANT) {KEYS_A_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105])) && quantity:>=KEYS_D_A_QUANT) {KEYS_A_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) && quantity:>=KEYS_E_A_QUANT) {KEYS_A_STYLE}
 
-rule (name:KEYS_B_NAMES  || (KEYS_MOON_KEY_B && id:[30107,30105]) {KEYS_B_STYLE}
-rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_B_QUANT) {KEYS_B_STYLE}
-rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_B_QUANT) {KEYS_B_STYLE}
-rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_B_QUANT) {KEYS_B_STYLE}
+rule (name:KEYS_B_NAMES  || (KEYS_MOON_KEY_B && id:[30107,30105])) {KEYS_B_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105])) && quantity:>=KEYS_C_B_QUANT) {KEYS_B_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105])) && quantity:>=KEYS_D_B_QUANT) {KEYS_B_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) && quantity:>=KEYS_E_B_QUANT) {KEYS_B_STYLE}
 
-rule (name:KEYS_C_NAMES  || (KEYS_MOON_KEY_C && id:[30107,30105]) {KEYS_C_STYLE}
-rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_C_QUANT) {KEYS_C_STYLE}
-rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_C_QUANT) {KEYS_C_STYLE}
+rule (name:KEYS_C_NAMES  || (KEYS_MOON_KEY_C && id:[30107,30105])) {KEYS_C_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105])) && quantity:>=KEYS_D_C_QUANT) {KEYS_C_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) && quantity:>=KEYS_E_C_QUANT) {KEYS_C_STYLE}
 
-rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) {KEYS_D_STYLE}
-rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_D_QUANT) {KEYS_D_STYLE}
+rule (name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105])) {KEYS_D_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) && quantity:>=KEYS_E_D_QUANT) {KEYS_D_STYLE}
 
-rule (name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) {KEYS_E_STYLE}
+rule (name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105])) {KEYS_E_STYLE}
 
+/*@ define:module:teleports
+name: Teleports
+subtitle: Teleport Items and Teleport Charges
+*/
+
+
+/*@ define:input:teleports
+label: SS Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: SS Tier
+*/
+
+#define TELEPORTS_SS_NAMES []
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define TELEPORTS_SS_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_SS_NAMES && !TELEPORTS_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define TELEPORTS_SS_MIN_QUANT 0
+
+rule (name:TELEPORTS_SS_NAMES && quantity:<TELEPORTS_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: SS Tierp
+type: style
+group: SS Tier
+exampleItem: Eternal teleport crystal
+*/
+
+#define TELEPORTS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff999999";\
+	color = "#ff999999";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff999999";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff999999";\
+	sound = "DropS.wav";
+
+/*@ define:input:teleports
+label: S Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: S Tier
+*/
+
+#define TELEPORTS_S_NAMES ["Eternal teleport crystal"]
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define TELEPORTS_S_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_S_NAMES && !TELEPORTS_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define TELEPORTS_S_MIN_QUANT 0
+
+rule (name:TELEPORTS_S_NAMES && quantity:<TELEPORTS_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define TELEPORTS_S_SS_QUANT 10
+
+
+/*@ define:input:teleports
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Teleport to house
+*/
+
+#define TELEPORTS_S_STYLE \
+	backgroundColor = "#ff999999";\
+	menuTextColor = "#ff999999";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffffff";\
+	sound = "DropS.wav";
+
+/*@ define:input:teleports
+label: A Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: A Tier
+*/
+
+#define TELEPORTS_A_NAMES ["Dorgesh-kaan sphere","Goblin village sphere", "Plain of mud sphere","Mokhaiotl waystone","Grand seed pod"]
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define TELEPORTS_A_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_A_NAMES && !TELEPORTS_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define TELEPORTS_A_MIN_QUANT 0
+
+rule (name:TELEPORTS_A_NAMES && quantity:<TELEPORTS_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define TELEPORTS_A_S_QUANT 10
+
+/*@ define:input:teleports
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define TELEPORTS_A_SS_QUANT 100
+
+
+/*@ define:input:teleports
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Dorgesh-kaan sphere
+*/
+
+#define TELEPORTS_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc999999";\
+	menuTextColor = "#ff999999"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	sound = "DropA.wav";
+
+/*@ define:input:teleports
+label: B Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: B Tier
+*/
+
+#define TELEPORTS_B_NAMES ["Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Nardah teleport","Mort'ton teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll"]
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define TELEPORTS_B_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_B_NAMES && !TELEPORTS_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define TELEPORTS_B_MIN_QUANT 0
+
+rule (name:TELEPORTS_B_NAMES && quantity:<TELEPORTS_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define TELEPORTS_B_A_QUANT 10
+
+/*@ define:input:teleports
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define TELEPORTS_B_S_QUANT 100
+
+/*@ define:input:teleports
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define TELEPORTS_B_SS_QUANT 1000
+
+/*@ define:input:teleports
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Xeric's talisman (inert)
+*/
+
+#define TELEPORTS_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#99999999";\
+	menuTextColor = "#ff999999";\
+	textAccent = 3;
+
+/*@ define:input:teleports
+label: C Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: C Tier
+*/
+
+#define TELEPORTS_C_NAMES ["Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Volcanic mine teleport","Wilderness crabs teleport","Zul-andra teleport","Key master teleport","Watson teleport","Guthixian temple teleport","Icy basalt","Stony basalt","Calcified moth"]
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define TELEPORTS_C_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_C_NAMES && !TELEPORTS_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define TELEPORTS_C_MIN_QUANT 0
+
+rule (name:TELEPORTS_C_NAMES && quantity:<TELEPORTS_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define TELEPORTS_C_B_QUANT 10
+
+/*@ define:input:teleports
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define TELEPORTS_C_A_QUANT 100
+
+/*@ define:input:teleports
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define TELEPORTS_C_S_QUANT 1000
+
+/*@ define:input:teleports
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define TELEPORTS_C_SS_QUANT 10000
+
+/*@ define:input:teleports
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Revenant cave teleport
+*/
+
+#define TELEPORTS_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#33999999";\
+	menuTextColor = "#ff999999";\
+	textAccent = 3;
+
+/*@ define:input:teleports
+label: D Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: D Tier
+*/
+
+#define TELEPORTS_D_NAMES ["Lizardman fang","Frozen tear","Bone fragments","Varrock teleport","Falador teleport","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport","Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrains Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Revenant cave teleport","Teleport crystal (*)"]
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define TELEPORTS_D_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_D_NAMES && !TELEPORTS_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define TELEPORTS_D_MIN_QUANT 0
+
+rule (name:TELEPORTS_D_NAMES && quantity:<TELEPORTS_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define TELEPORTS_D_C_QUANT 10
+
+/*@ define:input:teleports
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define TELEPORTS_D_B_QUANT 100
+
+/*@ define:input:teleports
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define TELEPORTS_D_A_QUANT 1000
+
+/*@ define:input:teleports
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define TELEPORTS_D_S_QUANT 10000
+
+/*@ define:input:teleports
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define TELEPORTS_D_SS_QUANT 100000
+
+/*@ define:input:teleports
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Lizardman fang
+*/
+
+#define TELEPORTS_D_STYLE \
+    color = "#ffffffff"; \
+	menuTextColor = "#ff999999";
+
+/*@ define:input:teleports
+label: E Tier Teleports
+type: enumlist
+enum: ["Lizardman fang","Frozen tear","Bone fragments","Left skull half","Right skull half","Top of sceptre","Bottom of sceptre","Xeric's talisman (inert)","Giantsoul amulet (uncharged)","Pendant of ates (inert)","Mokhaiotl waystone","Varrock teleport","Falador teleport","Lumbridge teleport","Camelot teleport","Ardougne teleport","Civitas illa Fortis teleport","Watchtower teleport","Teleport to house","Kourend Castle teleport","Rimmington teleport","Taverley teleport","Pollnivneach teleport","Rellekka teleport","Brimhaven teleport","Yanille teleport","Trollheim teleport","Hosidius teleport","Prifddinas teleport","Paddewwa teleport","Senntisten teleport","Kharyrll teleport","Lassar teleport","Dareeyak teleport","Carrallanger teleport","Annakarl teleport","Ghorrock teleport","Eternal teleport crystal","Moonclan teleport","Ourania teleport","Waterbirth teleport","Barbarian teleport","Khazard teleport","Fishing guild teleport",Catherby teleport","Ice plateau teleport","Arceuus Library teleport","Draynor Manor teleport","Battlefront teleport","Mind altar teleport","Salve Graveyard teleport","Fenkenstrain's Castle teleport","West Ardougne teleport","Harmony Island teleport","Cemetery teleport","Barrows teleport","Ape Atoll teleport","Target teleport","Wilderness crabs teleport","Nardah teleport","Digsite teleport","Feldip hills teleport","Lunar isle teleport","Mort'ton teleport","Pest control teleport","Piscatoris teleport","Tai bwo wannai teleport","Iorwerth camp teleport","Mos le'harmless teleport","Lumberyard teleport","Zul-andra teleport","Key master teleport","Revenant cave teleport","Watson teleport","Guthixian temple teleport","Spider cave teleport","Colossal wyrm teleport scroll","Chasm teleport scroll","Teleport crystal (*)","Icy basalt","Stony basalt","Calcified moth"]
+group: E Tier
+*/
+
+#define TELEPORTS_E_NAMES []
+
+/*@ define:input:teleports
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define TELEPORTS_E_SHOW_UNNOTED true
+
+rule (name:TELEPORTS_E_NAMES && !TELEPORTS_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:teleports
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_MIN_QUANT 0
+
+rule (name:TELEPORTS_E_NAMES && quantity:<TELEPORTS_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:teleports
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_D_QUANT 10
+
+/*@ define:input:teleports
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_C_QUANT 100
+
+/*@ define:input:teleports
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_B_QUANT 1000
+
+/*@ define:input:teleports
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_A_QUANT 10000
+
+/*@ define:input:teleports
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_S_QUANT 100000
+
+/*@ define:input:teleports
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define TELEPORTS_E_SS_QUANT 1000000
+
+/*@ define:input:teleports
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Bone fragments
+*/
+
+#define TELEPORTS_E_STYLE \
+    color = "#66ffffff"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff999999";
+
+rule (name:TELEPORTS_SS_NAMES) {TELEPORTS_SS_STYLE}
+rule (name:TELEPORTS_S_NAMES && quantity:>=TELEPORTS_S_SS_QUANT) {TELEPORTS_SS_STYLE}
+rule (name:TELEPORTS_A_NAMES && quantity:>=TELEPORTS_A_SS_QUANT) {TELEPORTS_SS_STYLE}
+rule (name:TELEPORTS_B_NAMES && quantity:>=TELEPORTS_B_SS_QUANT) {TELEPORTS_SS_STYLE}
+rule (name:TELEPORTS_C_NAMES && quantity:>=TELEPORTS_C_SS_QUANT) {TELEPORTS_SS_STYLE}
+rule (name:TELEPORTS_D_NAMES && quantity:>=TELEPORTS_D_SS_QUANT) {TELEPORTS_SS_STYLE}
+rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_SS_QUANT) {TELEPORTS_SS_STYLE}
+
+rule (name:TELEPORTS_S_NAMES) {TELEPORTS_S_STYLE}
+rule (name:TELEPORTS_A_NAMES && quantity:>=TELEPORTS_A_S_QUANT) {TELEPORTS_S_STYLE}
+rule (name:TELEPORTS_B_NAMES && quantity:>=TELEPORTS_B_S_QUANT) {TELEPORTS_S_STYLE}
+rule (name:TELEPORTS_C_NAMES && quantity:>=TELEPORTS_C_S_QUANT) {TELEPORTS_S_STYLE}
+rule (name:TELEPORTS_D_NAMES && quantity:>=TELEPORTS_D_S_QUANT) {TELEPORTS_S_STYLE}
+rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_S_QUANT) {TELEPORTS_S_STYLE}
+
+rule (name:TELEPORTS_A_NAMES) {TELEPORTS_A_STYLE}
+rule (name:TELEPORTS_B_NAMES && quantity:>=TELEPORTS_B_A_QUANT) {TELEPORTS_A_STYLE}
+rule (name:TELEPORTS_C_NAMES && quantity:>=TELEPORTS_C_A_QUANT) {TELEPORTS_A_STYLE}
+rule (name:TELEPORTS_D_NAMES && quantity:>=TELEPORTS_D_A_QUANT) {TELEPORTS_A_STYLE}
+rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_A_QUANT) {TELEPORTS_A_STYLE}
+
+rule (name:TELEPORTS_B_NAMES) {TELEPORTS_B_STYLE}
+rule (name:TELEPORTS_C_NAMES && quantity:>=TELEPORTS_C_B_QUANT) {TELEPORTS_B_STYLE}
+rule (name:TELEPORTS_D_NAMES && quantity:>=TELEPORTS_D_B_QUANT) {TELEPORTS_B_STYLE}
+rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_B_QUANT) {TELEPORTS_B_STYLE}
+
+rule (name:TELEPORTS_C_NAMES) {TELEPORTS_C_STYLE}
+rule (name:TELEPORTS_D_NAMES && quantity:>=TELEPORTS_D_C_QUANT) {TELEPORTS_C_STYLE}
+rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_C_QUANT) {TELEPORTS_C_STYLE}
+
+rule (name:TELEPORTS_D_NAMES) {TELEPORTS_D_STYLE}
+rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_D_QUANT) {TELEPORTS_D_STYLE}
+
+rule (name:TELEPORTS_E_NAMES) {TELEPORTS_E_STYLE}
 
 /*@ define:module:seeds
 name: Seeds
