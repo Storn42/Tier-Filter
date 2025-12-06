@@ -1,0 +1,1993 @@
+/*@ define:module:header
+hidden: true
+name: header
+*/
+
+meta {
+    name = "Storn's Tier Filter";
+    description = "A Proof of Concept for Tier Based Filtering";
+	}
+
+/*@ define:module:greetings
+name: This Is a Test
+description: 
+    This is a proof of concept for a filter that sorts by item tiers rather than ge value
+*/
+
+/*@ define:module:uniques
+name: Uniques 
+subtitle: Style your Collection Log drops 
+*/
+
+/*@ define:input:uniques
+label: SS Tier Uniques
+type: style
+*/
+#define UNIQUE_SS_STYLE \
+	color = "#ffff0000"; \
+	borderColor = "#ffff0000"; \
+	backgroundColor = "#ffffffff"; \
+    showLootbeam = true; \
+    textAccent = 3; \
+    fontType = 3; \
+    sound = "Unique_SS.wav";
+
+/*@ define:input:uniques
+label: S Tier Uniques
+type: style
+*/
+#define UNIQUE_S_STYLE \
+	color = "#ffffffff"; \
+	borderColor = "#ffffffff"; \
+	backgroundColor = "#ffd8b01a"; \
+    showLootbeam = true; \
+    textAccent = 3; \
+    fontType = 3; \
+    sound = "Unique_S.wav";
+
+/*@ define:input:uniques
+label: A Tier Uniques
+type: style
+*/
+#define UNIQUE_A_STYLE \
+	color = "#ffffffff"; \
+	borderColor = "#ffffffff"; \
+	backgroundColor = "#ffbc6025"; \
+	showLootbeam = true; \
+	textAccent = 3; \
+	fontType = 2; \
+    sound = "Unique_A.wav";
+
+/*@ define:input:uniques
+label: B Tier Uniques
+type: style
+*/
+#define UNIQUE_B_STYLE \
+	color = "#ffbc6025"; \
+	borderColor = "#ffbc6025"; \
+	backgroundColor = "#ff350d0d"; \
+	showLootbeam = true; \
+	textAccent = 3; \
+	fontType = 2; \
+    sound = "Unique_B.wav";
+
+/*@ define:input:uniques
+label: C Tier Uniques
+type: style
+*/
+#define UNIQUE_C_STYLE \
+	color = "#ffbc6025"; \
+	borderColor = "#ffbc6025"; \
+	backgroundColor = "#ff000000"; \
+	showLootbeam = true; \
+	textAccent = 3; \
+	fontType = 1; \
+    sound = "Unique_C.wav";
+
+/*@ define:input:uniques
+label: SS Tier Uniques
+type: enumlist
+enum: [
+  {
+    "value": "Abyssal dagger",
+    "label": "Abyssal dagger (Abyssal Demons)"
+  },
+  {
+    "value": "Gold ring",
+    "label": "Gold ring (DT2 Bosses)"
+  },
+  {
+    "value": "Dragon chainbody",
+    "label": "Dragon Chainbody (Dust/Smoke Devils)"
+  },
+  {
+    "value": "Smouldering stone",
+    "label": "Smouldering Stone (Hellhounds)"
+  }
+]
+group: Special Drops
+*/
+
+#define UNQIQUE_SPECIAL_SS_NAMES ["Abyssal dagger","Gold ring","Dragon chainbody","Smouldering stone"]
+
+/*@ define:input:uniques
+label: S Tier Uniques
+type: enumlist
+enum: [
+  {
+    "value": "Abyssal dagger",
+    "label": "Abyssal dagger (Abyssal Demons)"
+  },
+  {
+    "value": "Gold ring",
+    "label": "Gold ring (DT2 Bosses)"
+  },
+  {
+    "value": "Dragon chainbody",
+    "label": "Dragon Chainbody (Dust/Smoke Devils)"
+  },
+  {
+    "value": "Smouldering stone",
+    "label": "Smouldering Stone (Hellhounds)"
+  }
+]
+group: Special Drops
+*/
+
+#define UNQIQUE_SPECIAL_S_NAMES []
+
+
+/*@ define:input:uniques
+label: A Tier Uniques
+type: enumlist
+enum: [
+  {
+    "value": "Abyssal dagger",
+    "label": "Abyssal dagger (Abyssal Demons)"
+  },
+  {
+    "value": "Gold ring",
+    "label": "Gold ring (DT2 Bosses)"
+  },
+  {
+    "value": "Dragon chainbody",
+    "label": "Dragon Chainbody (Dust/Smoke Devils)"
+  },
+  {
+    "value": "Smouldering stone",
+    "label": "Smouldering Stone (Hellhounds)"
+  }
+]
+group: Special Drops
+*/
+
+#define UNQIQUE_SPECIAL_A_NAMES []
+
+
+/*@ define:input:uniques
+label: B Tier Uniques
+type: enumlist
+enum: [
+  {
+    "value": "Abyssal dagger",
+    "label": "Abyssal dagger (Abyssal Demons)"
+  },
+  {
+    "value": "Gold ring",
+    "label": "Gold ring (DT2 Bosses)"
+  },
+  {
+    "value": "Dragon chainbody",
+    "label": "Dragon Chainbody (Dust/Smoke Devils)"
+  },
+  {
+    "value": "Smouldering stone",
+    "label": "Smouldering Stone (Hellhounds)"
+  }
+]
+group: Special Drops
+*/
+
+#define UNQIQUE_SPECIAL_B_NAMES []
+
+
+/*@ define:input:uniques
+label: C Tier Uniques
+type: enumlist
+enum: [
+  {
+    "value": "Abyssal dagger",
+    "label": "Abyssal dagger (Abyssal Demons)"
+  },
+  {
+    "value": "Gold ring",
+    "label": "Gold ring (DT2 Bosses)"
+  },
+  {
+    "value": "Dragon chainbody",
+    "label": "Dragon Chainbody (Dust/Smoke Devils)"
+  },
+  {
+    "value": "Smouldering stone",
+    "label": "Smouldering Stone (Hellhounds)"
+  }
+]
+group: Special Drops
+*/
+
+#define UNQIQUE_SPECIAL_C_NAMES []
+
+#define SPECIAL_UNIQUE_CHECK(_enabled, _area) \
+	rule (_enabled && _area && name:UNQIQUE_SPECIAL_SS_NAMES) {UNIQUE_SS_STYLE} \
+	rule (_enabled && _area && name:UNQIQUE_SPECIAL_S_NAMES) {UNIQUE_S_STYLE} \
+	rule (_enabled && _area && name:UNQIQUE_SPECIAL_A_NAMES) {UNIQUE_A_STYLE} \
+	rule (_enabled && _area && name:UNQIQUE_SPECIAL_B_NAMES) {UNIQUE_B_STYLE} \
+	rule (_enabled && _area && name:UNQIQUE_SPECIAL_C_NAMES) {UNIQUE_C_STYLE} \
+
+/*@ define:module:currency
+name: Currency
+subtitle: Used to Trade with other Players and Vendors
+*/
+
+/*@ define:input:currency
+label: Minimum Value
+type: number
+group: Coins
+*/
+
+#define COINS_MIN_VALUE 100
+
+rule (name:"Coins" && quantity:<COINS_MIN_VALUE) {hidden = true;}
+
+/*@ define:input:currency
+label: SS Value
+type: number
+group: Coins
+*/
+
+#define COINS_SS_VALUE 10000000
+
+/*@ define:input:currency
+label: S Value
+type: number
+group: Coins
+*/
+
+#define COINS_S_VALUE 1000000
+
+/*@ define:input:currency
+label: A Value
+type: number
+group: Coins
+*/
+
+#define COINS_A_VALUE 10000
+
+/*@ define:input:currency
+label: B Value
+type: number
+group: Coins
+*/
+
+#define COINS_B_VALUE 5000
+
+/*@ define:input:currency
+label: C Value
+type: number
+group: Coins
+*/
+
+#define COINS_C_VALUE 100
+
+/*@ define:input:currency
+label: D Value
+type: number
+group: Coins
+*/
+
+#define COINS_D_VALUE 100
+
+/*@ define:input:currency
+label: E Value
+type: number
+group: Coins
+*/
+
+#define COINS_E_VALUE 1
+
+/*@ define:input:currency
+label: SS Tier
+type: style
+group: Coins
+exampleItem: Coins
+*/
+
+#define COINS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ffbbbb22";\
+	color = "#ffbbbb22";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffbbbb22";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffbbbb22";\
+	sound = "DropSS.wav";
+
+/*@ define:input:currency
+label: S Tier
+type: style
+group: Coins
+exampleItem: Coins 
+*/
+
+#define COINS_S_STYLE \
+	backgroundColor = "#ff9e9e29";\
+	menuTextColor = "#ffffff70";\
+	color = "#ffffff70";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffff70";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffff70";\
+	sound = "DropS.wav";
+
+/*@ define:input:currency
+label: A Tier
+type: style
+group: Coins
+exampleItem: Coins
+*/
+
+#define COINS_A_STYLE \
+	color = "#ffffff70";\
+	backgroundColor = "#cc9e9e29";\
+	menuTextColor = "#ffffff70"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffff70";\
+	sound = "DropA.wav";
+
+/*@ define:input:currency
+label: B Tier
+type: style
+group: Coins
+exampleItem: Coins
+*/
+
+#define COINS_B_STYLE \
+	color ="#ffffff70";\
+    backgroundColor = "#999e9e29";\
+	menuTextColor = "#ffffff70";\
+	textAccent = 3;
+
+/*@ define:input:currency
+label: C Tier
+type: style
+group: Coins
+exampleItem: Coins
+*/
+
+#define COINS_C_STYLE \
+    color = "#ffffff70";\
+    backgroundColor = "#449e9e29";\
+	menuTextColor = "#ffffff70";\
+	textAccent = 3;
+
+/*@ define:input:currency
+label: D Tier
+type: style
+group: Coins
+exampleItem: Coins
+*/
+
+#define COINS_D_STYLE \
+    color = "#ffffff70"; \
+	menuTextColor = "#ffffff70"; \
+
+/*@ define:input:currency
+label: E Tier
+type: style
+group: Coins
+exampleItem: Coins
+*/
+
+#define COINS_E_STYLE \
+    color = "#66ffff70"; \
+	menuTextColor = "#ffffff70"; \
+    textAccentColor = "#66000000";
+
+
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_SS_VALUE) {COINS_SS_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_S_VALUE && quantity:<COINS_SS_VALUE) {COINS_S_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_A_VALUE && quantity:<COINS_S_VALUE) {COINS_A_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_B_VALUE && quantity:<COINS_A_VALUE) {COINS_B_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_C_VALUE && quantity:<COINS_B_VALUE) {COINS_C_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_D_VALUE && quantity:<COINS_C_VALUE) {COINS_D_STYLE}
+rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_E_VALUE && quantity:<COINS_D_VALUE) {COINS_E_STYLE}
+
+/*@ define:input:currency
+label: Minimum Value
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_MIN_QUANT 0
+
+rule (name:"Tokkul" && quantity:<TOKKUL_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:currency
+label: SS Value
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_SS_QUANT 1000000
+
+/*@ define:input:currency
+label: S Value
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_S_QUANT 10000
+
+/*@ define:input:currency
+label: A Value
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_A_QUANT 10000
+
+/*@ define:input:currency
+label: B Value
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_B_QUANT 2000
+
+/*@ define:input:currency
+label: C Value
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_C_QUANT 500
+
+/*@ define:input:currency
+label: D Quantity
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_D_QUANT 10
+
+/*@ define:input:currency
+label: E Quantity
+type: number
+group: Tokkul
+*/
+
+#define TOKKUL_E_QUANT 1
+
+/*@ define:input:currency
+label: SS Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul
+*/
+
+#define TOKKUL_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ffB1B1BB";\
+	color = "#ffB1B1BB";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffB1B1BB";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffB1B1BB";\
+	sound = "DropSS.wav";
+
+/*@ define:input:currency
+label: S Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul 
+*/
+
+#define TOKKUL_S_STYLE \
+	backgroundColor = "#ff000000";\
+	menuTextColor = "#ffB1B1BB";\
+	color = "#ffB1B1BB";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffB1B1BB";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffB1B1BB";\
+	sound = "DropS.wav";
+
+/*@ define:input:currency
+label: A Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul
+*/
+
+#define TOKKUL_A_STYLE \
+	color = "#ffB1B1BB";\
+	backgroundColor = "#cc000000";\
+	menuTextColor = "#ffB1B1BB"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffB1B1BB";\
+	sound = "DropA.wav";
+
+/*@ define:input:currency
+label: B Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul
+*/
+
+#define TOKKUL_B_STYLE \
+	color ="#ffB1B1BB";\
+    backgroundColor = "#99000000";\
+	menuTextColor = "#ffB1B1BB";\
+	textAccent = 3;
+
+/*@ define:input:currency
+label: C Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul
+*/
+
+#define TOKKUL_C_STYLE \
+    color = "#ffB1B1BB";\
+    backgroundColor = "#44000000";\
+	menuTextColor = "#ffB1B1BB";\
+	textAccent = 3;
+
+/*@ define:input:currency
+label: D Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul
+*/
+
+#define TOKKUL_D_STYLE \
+    color = "#ffB1B1BB"; \
+	menuTextColor = "#ffB1B1BB"; \
+    textAccent = 2;\
+    textAccentColor = "#99000000";
+
+/*@ define:input:currency
+label: E Tier
+type: style
+group: Tokkul
+exampleItem: Tokkul
+*/
+
+#define TOKKUL_E_STYLE \
+    color = "#66B1B1BB"; \
+	menuTextColor = "#ffB1B1BB"; \
+    textAccent = 2;\
+    textAccentColor = "#66000000";
+
+
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_SS_QUANT) {TOKKUL_SS_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_S_QUANT && quantity:<TOKKUL_SS_QUANT) {TOKKUL_S_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_A_QUANT && quantity:<TOKKUL_S_QUANT) {TOKKUL_A_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_B_QUANT && quantity:<TOKKUL_A_QUANT) {TOKKUL_B_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_C_QUANT && quantity:<TOKKUL_B_QUANT) {TOKKUL_C_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_D_QUANT && quantity:<TOKKUL_C_QUANT) {TOKKUL_D_STYLE}
+rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_E_QUANT && quantity:<TOKKUL_D_QUANT) {TOKKUL_E_STYLE}
+
+/*@ define:input:currency
+label: Minimum Value
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_MIN_QUANT 0
+
+rule (name:"Numalite" && quantity:<NUMALITE_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:currency
+label: SS Value
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_SS_QUANT 18C7150
+
+/*@ define:input:currency
+label: S Value
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_S_QUANT 10000
+
+/*@ define:input:currency
+label: A Value
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_A_QUANT 10000
+
+/*@ define:input:currency
+label: B Value
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_B_QUANT 2000
+
+/*@ define:input:currency
+label: C Value
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_C_QUANT 500
+
+/*@ define:input:currency
+label: D Quantity
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_D_QUANT 10
+
+/*@ define:input:currency
+label: E Quantity
+type: number
+group: Numalite
+*/
+
+#define NUMALITE_E_QUANT 1
+
+/*@ define:input:currency
+label: SS Tier
+type: style
+group: Numalite
+exampleItem: Numalite
+*/
+
+#define NUMALITE_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ffAF9B76";\
+	color = "#ffAF9B76";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffAF9B76";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffAF9B76";\
+	sound = "DropSS.wav";
+
+/*@ define:input:currency
+label: S Tier
+type: style
+group: Numalite
+exampleItem: Numalite 
+*/
+
+#define NUMALITE_S_STYLE \
+	backgroundColor = "#ff8C7150";\
+	menuTextColor = "#ffAF9B76";\
+	color = "#ffAF9B76";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffAF9B76";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffAF9B76";\
+	sound = "DropS.wav";
+
+/*@ define:input:currency
+label: A Tier
+type: style
+group: Numalite
+exampleItem: Numalite
+*/
+
+#define NUMALITE_A_STYLE \
+	color = "#ffAF9B76";\
+	backgroundColor = "#cc8C7150";\
+	menuTextColor = "#ffAF9B76"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffAF9B76";\
+	sound = "DropA.wav";
+
+/*@ define:input:currency
+label: B Tier
+type: style
+group: Numalite
+exampleItem: Numalite
+*/
+
+#define NUMALITE_B_STYLE \
+	color ="#ffAF9B76";\
+    backgroundColor = "#998C7150";\
+	menuTextColor = "#ffAF9B76";\
+	textAccent = 3;
+
+/*@ define:input:currency
+label: C Tier
+type: style
+group: Numalite
+exampleItem: Numalite
+*/
+
+#define NUMALITE_C_STYLE \
+    color = "#ffAF9B76";\
+    backgroundColor = "#448C7150";\
+	menuTextColor = "#ffAF9B76";\
+	textAccent = 3;
+
+/*@ define:input:currency
+label: D Tier
+type: style
+group: Numalite
+exampleItem: Numalite
+*/
+
+#define NUMALITE_D_STYLE \
+    color = "#ffAF9B76"; \
+	menuTextColor = "#ffAF9B76"; \
+    textAccent = 2;\
+    textAccentColor = "#998C7150";
+
+/*@ define:input:currency
+label: E Tier
+type: style
+group: Numalite
+exampleItem: Numalite
+*/
+
+#define NUMALITE_E_STYLE \
+    color = "#66AF9B76"; \
+	menuTextColor = "#ffAF9B76"; \
+    textAccentColor = "#668C7150";
+
+
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_SS_QUANT) {NUMALITE_SS_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_S_QUANT && quantity:<NUMALITE_SS_QUANT) {NUMALITE_S_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_A_QUANT && quantity:<NUMALITE_S_QUANT) {NUMALITE_A_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_B_QUANT && quantity:<NUMALITE_A_QUANT) {NUMALITE_B_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_C_QUANT && quantity:<NUMALITE_B_QUANT) {NUMALITE_C_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_D_QUANT && quantity:<NUMALITE_C_QUANT) {NUMALITE_D_STYLE}
+rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_E_QUANT && quantity:<NUMALITE_D_QUANT) {NUMALITE_E_STYLE}
+
+/*@ define:module:alchs
+name: Alchs
+subtitle: Turn Everything to Gold
+*/
+
+/*@ define:input:alchs
+label: Alchable Items
+type: stringlist
+group: Alchs
+*/
+
+#define ALCHS_NAMES ["* dagger", "*axe", "* mace", "* claws", "* sword", "* Longsword", "* scimitar", "* spear", "* warhammer", "* Battleaxe", "* 2h sword", "* halberd", "* hasta", "* pickaxe", "* full helm", "* platebody", "* platelegs", "* plateskirt", "* kiteshield", "* med helm", "* chainbody", "* sq shield", "* boots", "* crossbow", "*battlestaff", "mystic *", "*d'hide*", "Onyx bolts*", "Tiny pearl", "Small pearl", "Shiny pearl", "Bright pearl", "Big pearl", "Huge pearl", "Enormous pearl", "Shimmering pearl", "Glistening peatl", "Brilliant pearl", "Radiant pearl"]
+
+/*@ define:input:alchs
+label: non-alchable Items
+type: stringlist
+group: Alchs
+*/
+
+#define ALCHS_BAD_NAMES ["3rd age pickaxe"]
+
+/*@ define:input:alchs
+label: Minimum Value
+type: number
+group: Alchs
+*/
+
+#define ALCHS_MIN_VALUE 1000
+
+/*@ define:input:alchs
+label: SS Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_SS_VALUE 10000000
+
+/*@ define:input:alchs
+label: S Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_S_VALUE 1000000
+
+/*@ define:input:alchs
+label: A Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_A_VALUE 100000
+
+/*@ define:input:alchs
+label: B Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_B_VALUE 20000
+
+/*@ define:input:alchs
+label: C Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_C_VALUE 5000
+
+/*@ define:input:alchs
+label: D Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_D_VALUE 100
+
+/*@ define:input:alchs
+label: E Value
+type: number
+group: Tiers
+*/
+
+#define ALCHS_E_VALUE 1
+
+/*@ define:input:alchs
+label: SS Tier
+type: style
+group: Styles
+exampleItem: Dragon platelegs
+*/
+
+#define ALCHS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ffbbbb22";\
+	color = "#ffbbbb22";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffbbbb22";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffbbbb22";\
+	icon = Sprite(41,0);
+
+/*@ define:input:alchs
+label: S Tier
+type: style
+group: Styles
+exampleItem: Dragon halberd
+*/
+
+#define ALCHS_S_STYLE \
+	backgroundColor = "#ff9e9e29";\
+	menuTextColor = "#ffffff70";\
+	color = "#ffffff70";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffff70";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffff70";\
+	icon = Sprite(41,0);
+
+
+/*@ define:input:alchs
+label: A Tier
+type: style
+group: Styles
+exampleItem: Dragon battleaxe
+*/
+
+#define ALCHS_A_STYLE \
+	color = "#ffffff70";\
+	backgroundColor = "#cc9e9e29";\
+	menuTextColor = "#ffffff70"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffff70";\
+	icon = Sprite(41,0);
+
+/*@ define:input:alchs
+label: B Tier
+type: style
+group: Styles
+exampleItem: Mystic air battlestaff
+*/
+
+#define ALCHS_B_STYLE \
+	color ="#ffffff70";\
+    backgroundColor = "#999e9e29";\
+	menuTextColor = "#ffffff70";\
+	textAccent = 3;\
+	icon = Sprite(41,0);
+
+/*@ define:input:alchs
+label: C Tier
+type: style
+group: Styles
+exampleItem: Adamant platebody
+*/
+
+#define ALCHS_C_STYLE \
+    color = "#ffffff70";\
+    backgroundColor = "#449e9e29";\
+	menuTextColor = "#ffffff70";\
+	textAccent = 3;\
+	icon = Sprite(41,0);
+
+
+/*@ define:input:alchs
+label: D Tier
+type: style
+group: Styles
+exampleItem: Steel platebody
+*/
+
+#define ALCHS_D_STYLE \
+    color = "#ffffff70"; \
+	menuTextColor = "#ffffff70"; \
+	icon = Sprite(41,0);
+
+/*@ define:input:alchs
+label: E Tier
+type: style
+group: Styles
+exampleItem: Bronze platebody
+*/
+
+#define ALCHS_E_STYLE \
+    color = "#66ffff70"; \
+	menuTextColor = "#ffffff70"; \
+	textAccentColor = "#66000000"; \
+	icon = Sprite(41,0);
+	
+	
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_SS_VALUE) {ALCHS_SS_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_S_VALUE && valueha:<ALCHS_SS_VALUE) {ALCHS_S_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_A_VALUE && valueha:<ALCHS_S_VALUE) {ALCHS_A_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_B_VALUE && valueha:<ALCHS_A_VALUE) {ALCHS_B_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_C_VALUE && valueha:<ALCHS_B_VALUE) {ALCHS_C_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_D_VALUE && valueha:<ALCHS_C_VALUE) {ALCHS_D_STYLE}
+rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && valueha:>=ALCHS_MIN_VALUE && valueha:>=ALCHS_E_VALUE && valueha:<ALCHS_D_VALUE) {ALCHS_E_STYLE}
+
+/*@ define:module:seeds
+name: Seeds
+subtitle: Grow some Herbs and Feed some Birds
+*/
+
+
+/*@ define:input:seeds
+label: SS Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: SS Tier
+*/
+
+#define SEEDS_SS_NAMES []
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define SEEDS_SS_SHOW_UNNOTED true
+
+rule (name:SEEDS_SS_NAMES && !SEEDS_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define SEEDS_SS_MIN_QUANT 0
+
+rule (name:SEEDS_SS_NAMES && quantity:<SEEDS_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: "Huasca seed"
+*/
+
+#define SEEDS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff017300";\
+	color = "#ff017300";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff017300";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff017300";\
+	sound = "DropSS.wav";
+
+/*@ define:input:seeds
+label: S Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: S Tier
+*/
+
+#define SEEDS_S_NAMES []
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define SEEDS_S_SHOW_UNNOTED true
+
+rule (name:SEEDS_S_NAMES && !SEEDS_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define SEEDS_S_MIN_QUANT 0
+
+rule (name:SEEDS_S_NAMES && quantity:<SEEDS_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define SEEDS_S_SS_QUANT 10
+
+
+/*@ define:input:seeds
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Snapdragon Seed
+*/
+
+#define SEEDS_S_STYLE \
+	backgroundColor = "#ff017300";\
+	menuTextColor = "#ff017300";\
+	color = "#ff00e024";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff00e024";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff00e024";\
+	sound = "DropS.wav";
+
+/*@ define:input:seeds
+label: A Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: A Tier
+*/
+
+#define SEEDS_A_NAMES ["Huasca seed","Rosewood seed"]
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define SEEDS_A_SHOW_UNNOTED true
+
+rule (name:SEEDS_A_NAMES && !SEEDS_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define SEEDS_A_MIN_QUANT 0
+
+rule (name:SEEDS_A_NAMES && quantity:<SEEDS_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define SEEDS_A_S_QUANT 10
+
+/*@ define:input:seeds
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define SEEDS_A_SS_QUANT 100
+
+
+/*@ define:input:seeds
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Torstol seed
+*/
+
+#define SEEDS_A_STYLE \
+	color = "#ff00e024";\
+	backgroundColor = "#cc017300";\
+	menuTextColor = "#ff017300"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ff00e024";\
+	sound = "DropA.wav";
+
+/*@ define:input:seeds
+label: B Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: B Tier
+*/
+
+#define SEEDS_B_NAMES ["Ranarr seed","Snapdragon seed","Torstol seed","Cotton seed","Yew seed","Magic seed","Dragonfruit tree seed","Camphor seed","Ironwood seed","Celastrus seed"]
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define SEEDS_B_SHOW_UNNOTED true
+
+rule (name:SEEDS_B_NAMES && !SEEDS_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define SEEDS_B_MIN_QUANT 0
+
+rule (name:SEEDS_B_NAMES && quantity:<SEEDS_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define SEEDS_B_A_QUANT 10
+
+/*@ define:input:seeds
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define SEEDS_B_S_QUANT 100
+
+/*@ define:input:seeds
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define SEEDS_B_SS_QUANT 1000
+
+/*@ define:input:seeds
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Ranaar Seed
+*/
+
+#define SEEDS_B_STYLE \
+	color = "#ff00e024";\
+    backgroundColor = "#99017300";\
+	menuTextColor = "#ff017300";\
+	textAccent = 3;
+
+/*@ define:input:seeds
+label: C Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: C Tier
+*/
+
+#define SEEDS_C_NAMES ["Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Snape grass seed","White lily","Hemp seed","Maple seed","Papaya tree seed","Palm tree seed","Seaweed spore","Grape seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Mahogany seed","Crystal acorn","Spirit seed","Redwood tree seed"] 
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define SEEDS_C_SHOW_UNNOTED true
+
+rule (name:SEEDS_C_NAMES && !SEEDS_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define SEEDS_C_MIN_QUANT 0
+
+rule (name:SEEDS_C_NAMES && quantity:<SEEDS_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define SEEDS_C_B_QUANT 10
+
+/*@ define:input:seeds
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define SEEDS_C_A_QUANT 100
+
+/*@ define:input:seeds
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define SEEDS_C_S_QUANT 1000
+
+/*@ define:input:seeds
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define SEEDS_C_SS_QUANT 10000
+
+/*@ define:input:seeds
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Irit seed
+*/
+
+#define SEEDS_C_STYLE \
+    color = "#ff00e024";\
+    backgroundColor = "#33017300";\
+	menuTextColor = "#ff017300";\
+	textAccent = 3;
+
+/*@ define:input:seeds
+label: D Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: D Tier
+*/
+
+#define SEEDS_D_NAMES ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Watermelon seed","Limpwurt seed","Whiteberry seed","Poison ivy seed","Willow seed","Curry tree seed","Pineapple seed","Teak seed","Calquat tree seed"]
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define SEEDS_D_SHOW_UNNOTED true
+
+rule (name:SEEDS_D_NAMES && !SEEDS_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define SEEDS_D_MIN_QUANT 0
+
+rule (name:SEEDS_D_NAMES && quantity:<SEEDS_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define SEEDS_D_C_QUANT 10
+
+/*@ define:input:seeds
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define SEEDS_D_B_QUANT 100
+
+/*@ define:input:seeds
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define SEEDS_D_A_QUANT 1000
+
+/*@ define:input:seeds
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define SEEDS_D_S_QUANT 10000
+
+/*@ define:input:seeds
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define SEEDS_D_SS_QUANT 100000
+
+/*@ define:input:seeds
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Guam seed
+*/
+
+#define SEEDS_D_STYLE \
+    color = "#ff00e024"; \
+	menuTextColor = "#ff017300";
+
+/*@ define:input:seeds
+label: E Tier Seeds
+type: enumlist
+enum: ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Huasca seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Snape grass seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed","White lily","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Hemp seed","Cotton seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Maple seed","Yew seed","Magic seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Mushroom spore","Belladonna seed","Hespori seed","Elkhorn frag","Pillar frag","Umbral frag","Kronos seed","Iasor seed","Attas seed","Teak seed","Mahogany seed","Camphor seed","Ironwood seed","Rosewood seed","Calquat tree seed","Crystal acorn","Spirit seed","Celastrus seed","Redwood tree seed"]
+group: E Tier
+*/
+
+#define SEEDS_E_NAMES ["Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Flax seed","Krandorian seed","Wildblood seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Acorn","Apple tree seed","Banana tree seed","Orange tree seed","Mushroom spore","Belladonna seed"]
+
+/*@ define:input:seeds
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define SEEDS_E_SHOW_UNNOTED true
+
+rule (name:SEEDS_E_NAMES && !SEEDS_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_MIN_QUANT 0
+
+rule (name:SEEDS_E_NAMES && quantity:<SEEDS_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:seeds
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_D_QUANT 10
+
+/*@ define:input:seeds
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_C_QUANT 100
+
+/*@ define:input:seeds
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_B_QUANT 1000
+
+/*@ define:input:seeds
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_A_QUANT 10000
+
+/*@ define:input:seeds
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_S_QUANT 100000
+
+/*@ define:input:seeds
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define SEEDS_E_SS_QUANT 1000000
+
+/*@ define:input:seeds
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Potato seed
+*/
+
+#define SEEDS_E_STYLE \
+    color = "#6600e024"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff017300";
+
+rule (name:SEEDS_SS_NAMES) {SEEDS_SS_STYLE}
+rule (name:SEEDS_S_NAMES && quantity:>=SEEDS_S_SS_QUANT) {SEEDS_SS_STYLE}
+rule (name:SEEDS_A_NAMES && quantity:>=SEEDS_A_SS_QUANT) {SEEDS_SS_STYLE}
+rule (name:SEEDS_B_NAMES && quantity:>=SEEDS_B_SS_QUANT) {SEEDS_SS_STYLE}
+rule (name:SEEDS_C_NAMES && quantity:>=SEEDS_C_SS_QUANT) {SEEDS_SS_STYLE}
+rule (name:SEEDS_D_NAMES && quantity:>=SEEDS_D_SS_QUANT) {SEEDS_SS_STYLE}
+rule (name:SEEDS_E_NAMES && quantity:>=SEEDS_E_SS_QUANT) {SEEDS_SS_STYLE}
+
+rule (name:SEEDS_S_NAMES) {SEEDS_S_STYLE}
+rule (name:SEEDS_A_NAMES && quantity:>=SEEDS_A_S_QUANT) {SEEDS_S_STYLE}
+rule (name:SEEDS_B_NAMES && quantity:>=SEEDS_B_S_QUANT) {SEEDS_S_STYLE}
+rule (name:SEEDS_C_NAMES && quantity:>=SEEDS_C_S_QUANT) {SEEDS_S_STYLE}
+rule (name:SEEDS_D_NAMES && quantity:>=SEEDS_D_S_QUANT) {SEEDS_S_STYLE}
+rule (name:SEEDS_E_NAMES && quantity:>=SEEDS_E_S_QUANT) {SEEDS_S_STYLE}
+
+rule (name:SEEDS_A_NAMES) {SEEDS_A_STYLE}
+rule (name:SEEDS_B_NAMES && quantity:>=SEEDS_B_A_QUANT) {SEEDS_A_STYLE}
+rule (name:SEEDS_C_NAMES && quantity:>=SEEDS_C_A_QUANT) {SEEDS_A_STYLE}
+rule (name:SEEDS_D_NAMES && quantity:>=SEEDS_D_A_QUANT) {SEEDS_A_STYLE}
+rule (name:SEEDS_E_NAMES && quantity:>=SEEDS_E_A_QUANT) {SEEDS_A_STYLE}
+
+rule (name:SEEDS_B_NAMES) {SEEDS_B_STYLE}
+rule (name:SEEDS_C_NAMES && quantity:>=SEEDS_C_B_QUANT) {SEEDS_B_STYLE}
+rule (name:SEEDS_D_NAMES && quantity:>=SEEDS_D_B_QUANT) {SEEDS_B_STYLE}
+rule (name:SEEDS_E_NAMES && quantity:>=SEEDS_E_B_QUANT) {SEEDS_B_STYLE}
+
+rule (name:SEEDS_C_NAMES) {SEEDS_C_STYLE}
+rule (name:SEEDS_D_NAMES && quantity:>=SEEDS_D_C_QUANT) {SEEDS_C_STYLE}
+rule (name:SEEDS_E_NAMES && quantity:>=SEEDS_E_C_QUANT) {SEEDS_C_STYLE}
+
+rule (name:SEEDS_D_NAMES) {SEEDS_D_STYLE}
+rule (name:SEEDS_E_NAMES && quantity:>=SEEDS_E_D_QUANT) {SEEDS_D_STYLE}
+
+rule (name:SEEDS_E_NAMES) {SEEDS_E_STYLE}
+
+/*@ define:module:herbs
+name: Herbs
+subtitle: Dont forget your sack! 
+*/
+
+/*@ define:input:herbs
+label: SS Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: SS Tier
+*/
+
+#define HERBS_SS_NAMES []
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define HERBS_SS_SHOW_UNNOTED true
+
+rule (name:HERBS_SS_NAMES && !HERBS_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define HERBS_SS_MIN_QUANT 0
+
+rule (name:HERBS_SS_NAMES && quantity:<HERBS_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Grimy huasca
+*/
+
+#define HERBS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff017300";\
+	color = "#ff017300";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff017300";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff017300";\
+	sound = "DropSS.wav";
+
+/*@ define:input:herbs
+label: S Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: S Tier
+*/
+
+#define HERBS_S_NAMES []
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define HERBS_S_SHOW_UNNOTED true
+
+rule (name:HERBS_S_NAMES && !HERBS_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define HERBS_S_MIN_QUANT 0
+
+rule (name:HERBS_S_NAMES && quantity:<HERBS_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define HERBS_S_SS_QUANT 10
+
+
+/*@ define:input:herbs
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Grimy snapdragon
+*/
+
+#define HERBS_S_STYLE \
+	backgroundColor = "#ff017300";\
+	menuTextColor = "#ff017300";\
+	color = "#ff00e024";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff00e024";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff00e024";\
+	sound = "DropS.wav";
+
+/*@ define:input:herbs
+label: A Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: A Tier
+*/
+
+#define HERBS_A_NAMES []
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define HERBS_A_SHOW_UNNOTED true
+
+rule (name:HERBS_A_NAMES && !HERBS_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define HERBS_A_MIN_QUANT 0
+
+rule (name:HERBS_A_NAMES && quantity:<HERBS_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define HERBS_A_S_QUANT 10
+
+/*@ define:input:herbs
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define HERBS_A_SS_QUANT 100
+
+
+/*@ define:input:herbs
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Grimy ranarr weed
+*/
+
+#define HERBS_A_STYLE \
+	color = "#ff00e024";\
+	backgroundColor = "#cc017300";\
+	menuTextColor = "#ff017300"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ff00e024"; \
+	sound = "DropA.wav";
+
+/*@ define:input:herbs
+label: B Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: B Tier
+*/
+
+#define HERBS_B_NAMES ["*Huasca"]
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define HERBS_B_SHOW_UNNOTED true
+
+rule (name:HERBS_B_NAMES && !HERBS_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBS_B_MIN_QUANT 0
+
+rule (name:HERBS_B_NAMES && quantity:<HERBS_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBS_B_A_QUANT 10
+
+/*@ define:input:herbs
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBS_B_S_QUANT 100
+
+/*@ define:input:herbs
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBS_B_SS_QUANT 1000
+
+/*@ define:input:herbs
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Grimy torstol
+*/
+
+#define HERBS_B_STYLE \
+	color = "#ff00e024";\
+    backgroundColor = "#99017300";\
+	menuTextColor = "#ff017300";\
+	textAccent = 3;
+
+/*@ define:input:herbs
+label: C Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: C Tier
+*/
+
+#define HERBS_C_NAMES ["*Ranarr weed","*Snapdragon","*Torstol"]
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define HERBS_C_SHOW_UNNOTED true
+
+rule (name:HERBS_C_NAMES && !HERBS_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBS_C_MIN_QUANT 0
+
+rule (name:HERBS_C_NAMES && quantity:<HERBS_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBS_C_B_QUANT 10
+
+/*@ define:input:herbs
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBS_C_A_QUANT 100
+
+/*@ define:input:herbs
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBS_C_S_QUANT 1000
+
+/*@ define:input:herbs
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBS_C_SS_QUANT 10000
+
+/*@ define:input:herbs
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Grimy Irit leaf
+*/
+
+#define HERBS_C_STYLE \
+    color = "#ff00e024";\
+    backgroundColor = "#33017300";\
+	menuTextColor = "#ff017300";\
+	textAccent = 3;
+
+/*@ define:input:herbs
+label: D Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: D Tier
+*/
+
+#define HERBS_D_NAMES ["*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Cadantine","*Lantadyme","*Dwarf weed"]
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define HERBS_D_SHOW_UNNOTED true
+
+rule (name:HERBS_D_NAMES && !HERBS_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBS_D_MIN_QUANT 0
+
+rule (name:HERBS_D_NAMES && quantity:<HERBS_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBS_D_C_QUANT 10
+
+/*@ define:input:herbs
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBS_D_B_QUANT 100
+
+/*@ define:input:herbs
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBS_D_A_QUANT 1000
+
+/*@ define:input:herbs
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBS_D_S_QUANT 10000
+
+/*@ define:input:herbs
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBS_D_SS_QUANT 100000
+
+/*@ define:input:herbs
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Grimy harrlander
+*/
+
+#define HERBS_D_STYLE \
+    color = "#ff00e024"; \
+	menuTextColor = "#ff017300";
+
+/*@ define:input:herbs
+label: E Tier Herbs
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: E Tier
+*/
+
+#define HERBS_E_NAMES ["*Guam leaf","*Marrentill","*Tarromin","*Harralander"]
+
+/*@ define:input:herbs
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define HERBS_E_SHOW_UNNOTED true
+
+rule (name:HERBS_E_NAMES && !HERBS_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herbs
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_MIN_QUANT 0
+
+rule (name:HERBS_E_NAMES && quantity:<HERBS_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herbs
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_D_QUANT 10
+
+/*@ define:input:herbs
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_C_QUANT 100
+
+/*@ define:input:herbs
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_B_QUANT 1000
+
+/*@ define:input:herbs
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_A_QUANT 10000
+
+/*@ define:input:herbs
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_S_QUANT 100000
+
+/*@ define:input:herbs
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBS_E_SS_QUANT 1000000
+
+/*@ define:input:herbs
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Grimy guam leaf
+*/
+
+#define HERBS_E_STYLE \
+    color = "#6600e024"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff017300";
+
+rule (name:HERBS_SS_NAMES) {HERBS_SS_STYLE}
+rule (name:HERBS_S_NAMES && quantity:>=HERBS_S_SS_QUANT) {HERBS_SS_STYLE}
+rule (name:HERBS_A_NAMES && quantity:>=HERBS_A_SS_QUANT) {HERBS_SS_STYLE}
+rule (name:HERBS_B_NAMES && quantity:>=HERBS_B_SS_QUANT) {HERBS_SS_STYLE}
+rule (name:HERBS_C_NAMES && quantity:>=HERBS_C_SS_QUANT) {HERBS_SS_STYLE}
+rule (name:HERBS_D_NAMES && quantity:>=HERBS_D_SS_QUANT) {HERBS_SS_STYLE}
+rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_SS_QUANT) {HERBS_SS_STYLE}
+
+rule (name:HERBS_S_NAMES) {HERBS_S_STYLE}
+rule (name:HERBS_A_NAMES && quantity:>=HERBS_A_S_QUANT) {HERBS_S_STYLE}
+rule (name:HERBS_B_NAMES && quantity:>=HERBS_B_S_QUANT) {HERBS_S_STYLE}
+rule (name:HERBS_C_NAMES && quantity:>=HERBS_C_S_QUANT) {HERBS_S_STYLE}
+rule (name:HERBS_D_NAMES && quantity:>=HERBS_D_S_QUANT) {HERBS_S_STYLE}
+rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_S_QUANT) {HERBS_S_STYLE}
+
+rule (name:HERBS_A_NAMES) {HERBS_A_STYLE}
+rule (name:HERBS_B_NAMES && quantity:>=HERBS_B_A_QUANT) {HERBS_A_STYLE}
+rule (name:HERBS_C_NAMES && quantity:>=HERBS_C_A_QUANT) {HERBS_A_STYLE}
+rule (name:HERBS_D_NAMES && quantity:>=HERBS_D_A_QUANT) {HERBS_A_STYLE}
+rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_A_QUANT) {HERBS_A_STYLE}
+
+rule (name:HERBS_B_NAMES) {HERBS_B_STYLE}
+rule (name:HERBS_C_NAMES && quantity:>=HERBS_C_B_QUANT) {HERBS_B_STYLE}
+rule (name:HERBS_D_NAMES && quantity:>=HERBS_D_B_QUANT) {HERBS_B_STYLE}
+rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_B_QUANT) {HERBS_B_STYLE}
+
+rule (name:HERBS_C_NAMES) {HERBS_C_STYLE}
+rule (name:HERBS_D_NAMES && quantity:>=HERBS_D_C_QUANT) {HERBS_C_STYLE}
+rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_C_QUANT) {HERBS_C_STYLE}
+
+rule (name:HERBS_D_NAMES) {HERBS_D_STYLE}
+rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_D_QUANT) {HERBS_D_STYLE}
+
+rule (name:HERBS_E_NAMES) {HERBS_E_STYLE}
