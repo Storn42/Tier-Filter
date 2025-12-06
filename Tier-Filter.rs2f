@@ -970,6 +970,575 @@ rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && 
 rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_D_VALUE && havalue:<ALCHS_C_VALUE) {ALCHS_D_STYLE}
 rule (name:ALCHS_NAMES && !name:ALCHS_BAD_NAMES && havalue:>=ALCHS_MIN_VALUE && havalue:>=ALCHS_E_VALUE && havalue:<ALCHS_D_VALUE) {ALCHS_E_STYLE}
 
+/*@ define:module:keys
+name: Keys
+subtitle: Keys for Chests and Bosses
+*/
+
+
+/*@ define:input:keys
+label: SS Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: SS Tier
+*/
+
+#define KEYS_SS_NAMES []
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define KEYS_SS_SHOW_UNNOTED true
+
+rule (name:KEYS_SS_NAMES && !KEYS_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define KEYS_SS_MIN_QUANT 0
+
+rule (name:KEYS_SS_NAMES && quantity:<KEYS_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: Moon Key Half SS Tier
+type: boolean
+group: SS Tier
+*/
+
+#define KEYS_MOON_KEY_SS false
+
+/*@ define:input:keys
+label: SS Tierp
+type: style
+group: SS Tier
+exampleItem: Awakener's orb
+*/
+
+#define KEYS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff621075";\
+	color = "#ff621075";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff621075";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff621075";
+
+/*@ define:input:keys
+label: S Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: S Tier
+*/
+
+#define KEYS_S_NAMES ["Awakener's orb","Moon key"]
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define KEYS_S_SHOW_UNNOTED true
+
+rule (name:KEYS_S_NAMES && !KEYS_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define KEYS_S_MIN_QUANT 0
+
+rule (name:KEYS_S_NAMES && quantity:<KEYS_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define KEYS_S_SS_QUANT 10
+
+/*@ define:input:keys
+label: Moon Key Half S Tier
+type: boolean
+group: S Tier
+*/
+
+#define KEYS_MOON_KEY_S false
+
+/*@ define:input:keys
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Larran's key
+*/
+
+#define KEYS_S_STYLE \
+	backgroundColor = "#ff621075";\
+	menuTextColor = "#ff621075";\
+	color = "#ffea02ff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffea02ff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffea02ff";
+
+/*@ define:input:keys
+label: A Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: A Tier
+*/
+
+#define KEYS_A_NAMES ["Dark Totem","Brimstone key","Ecumenical key","Enhanced crystal key","Larran's key"]
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define KEYS_A_SHOW_UNNOTED true
+
+rule (name:KEYS_A_NAMES && !KEYS_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define KEYS_A_MIN_QUANT 0
+
+rule (name:KEYS_A_NAMES && quantity:<KEYS_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define KEYS_A_S_QUANT 10
+
+/*@ define:input:keys
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define KEYS_A_SS_QUANT 100
+
+/*@ define:input:keys
+label: Moon Key Half A Tier
+type: boolean
+group: A Tier
+*/
+
+#define KEYS_MOON_KEY_A true
+
+
+/*@ define:input:keys
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Brimstone key
+*/
+
+#define KEYS_A_STYLE \
+	color = "#ffea02ff";\
+	backgroundColor = "#cc621075";\
+	menuTextColor = "#ff621075"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffea02ff";
+
+/*@ define:input:keys
+label: B Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: B Tier
+*/
+
+#define KEYS_B_NAMES ["Dark totem base","Dark totem middle","Dark totem top","Crystal key","Frozen key","Frozen key piece (bandos)","Frozen key piece (saradomin)","Frozen key piece (zamorak)","Frozen key piece (armadyl)","Grubby key","Sinister key"]
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define KEYS_B_SHOW_UNNOTED true
+
+rule (name:KEYS_B_NAMES && !KEYS_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define KEYS_B_MIN_QUANT 0
+
+rule (name:KEYS_B_NAMES && quantity:<KEYS_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define KEYS_B_A_QUANT 10
+
+/*@ define:input:keys
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define KEYS_B_S_QUANT 100
+
+/*@ define:input:keys
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define KEYS_B_SS_QUANT 1000
+
+/*@ define:input:keys
+label: Moon Key Half B Tier
+type: boolean
+group: B Tier
+*/
+
+#define KEYS_MOON_KEY_B false
+
+/*@ define:input:keys
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Crystal key
+*/
+
+#define KEYS_B_STYLE \
+	color = "#ffea02ff";\
+    backgroundColor = "#99621075";\
+	menuTextColor = "#ff621075";\
+	textAccent = 3;
+
+/*@ define:input:keys
+label: C Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: C Tier
+*/
+
+#define KEYS_C_NAMES ["Giant key","Mossy key","Zombie pirate key","Tooth half of key","Loop half of key","Ecumenical key shard"]
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define KEYS_C_SHOW_UNNOTED true
+
+rule (name:KEYS_C_NAMES && !KEYS_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define KEYS_C_MIN_QUANT 0
+
+rule (name:KEYS_C_NAMES && quantity:<KEYS_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define KEYS_C_B_QUANT 10
+
+/*@ define:input:keys
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define KEYS_C_A_QUANT 100
+
+/*@ define:input:keys
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define KEYS_C_S_QUANT 1000
+
+/*@ define:input:keys
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define KEYS_C_SS_QUANT 10000
+
+
+/*@ define:input:keys
+label: Moon Key Half C Tier
+type: boolean
+group: C Tier
+*/
+
+#define KEYS_MOON_KEY_C false
+
+/*@ define:input:keys
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Loop half of key
+*/
+
+#define KEYS_C_STYLE \
+    color = "#ffea02ff";\
+    backgroundColor = "#33621075";\
+	menuTextColor = "#ff621075";\
+	textAccent = 3;
+
+/*@ define:input:keys
+label: D Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: D Tier
+*/
+
+#define KEYS_D_NAMES ["Ogre coffin key","Muddy key"]
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define KEYS_D_SHOW_UNNOTED true
+
+rule (name:KEYS_D_NAMES && !KEYS_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define KEYS_D_MIN_QUANT 0
+
+rule (name:KEYS_D_NAMES && quantity:<KEYS_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define KEYS_D_C_QUANT 10
+
+/*@ define:input:keys
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define KEYS_D_B_QUANT 100
+
+/*@ define:input:keys
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define KEYS_D_A_QUANT 1000
+
+/*@ define:input:keys
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define KEYS_D_S_QUANT 10000
+
+/*@ define:input:keys
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define KEYS_D_SS_QUANT 100000
+
+/*@ define:input:keys
+label: Moon Key Half D Tier
+type: boolean
+group: D Tier
+*/
+
+#define KEYS_MOON_KEY_D false
+
+/*@ define:input:keys
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Muddy key
+*/
+
+#define KEYS_D_STYLE \
+    color = "#ffea02ff"; \
+	menuTextColor = "#ff621075";
+
+/*@ define:input:keys
+label: E Tier Keys
+type: enumlist
+enum: ["Dark totem base","Dark totem middle","Dark totem top","Dark Totem","Awakener's orb","Giant key","Mossy key","Zombie pirate key","Ogre coffin key","Moon key","Tooth half of key","Loop half of key","Brimstone key","Ecumenical key","Crystal key","Enhanced crystal key","Frozen key*","Grubby key","Larran's key","Muddy key","Sinister key","Ecumenical key shard"]
+group: E Tier
+*/
+
+#define KEYS_E_NAMES []
+
+/*@ define:input:keys
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define KEYS_E_SHOW_UNNOTED true
+
+rule (name:KEYS_E_NAMES && !KEYS_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:keys
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_MIN_QUANT 0
+
+rule (name:KEYS_E_NAMES && quantity:<KEYS_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:keys
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_D_QUANT 10
+
+/*@ define:input:keys
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_C_QUANT 100
+
+/*@ define:input:keys
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_B_QUANT 1000
+
+/*@ define:input:keys
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_A_QUANT 10000
+
+/*@ define:input:keys
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_S_QUANT 100000
+
+/*@ define:input:keys
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define KEYS_E_SS_QUANT 1000000
+
+/*@ define:input:keys
+label: Moon Key Half E Tier
+type: boolean
+group: E Tier
+*/
+
+#define KEYS_MOON_KEY_E false
+
+/*@ define:input:keys
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Ecumenical key shards
+*/
+
+#define KEYS_E_STYLE \
+    color = "#66ea02ff"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff621075";
+
+rule (name:KEYS_SS_NAMES || (KEYS_MOON_KEY_SS && id:[30107,30105]) {KEYS_SS_STYLE}
+rule ((name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105]) && quantity:>=KEYS_S_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_A_NAMES || (KEYS_MOON_KEY_A && id:[30107,30105]) && quantity:>=KEYS_A_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105]) && quantity:>=KEYS_B_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_SS_QUANT) {KEYS_SS_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_SS_QUANT) {KEYS_SS_STYLE}
+
+rule ((name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105]) {KEYS_S_STYLE}
+rule ((name:KEYS_A_NAMES || (KEYS_MOON_KEY_A && id:[30107,30105]) && quantity:>=KEYS_A_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105]) && quantity:>=KEYS_B_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_S_QUANT) {KEYS_S_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_S_QUANT) {KEYS_S_STYLE}
+
+rule (name:KEYS_A_NAMES  || (KEYS_MOON_KEY_A && id:[30107,30105]) {KEYS_A_STYLE}
+rule ((name:KEYS_B_NAMES || (KEYS_MOON_KEY_B && id:[30107,30105]) && quantity:>=KEYS_B_A_QUANT) {KEYS_A_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_A_QUANT) {KEYS_A_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_A_QUANT) {KEYS_A_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_A_QUANT) {KEYS_A_STYLE}
+
+rule (name:KEYS_B_NAMES  || (KEYS_MOON_KEY_B && id:[30107,30105]) {KEYS_B_STYLE}
+rule ((name:KEYS_C_NAMES || (KEYS_MOON_KEY_C && id:[30107,30105]) && quantity:>=KEYS_C_B_QUANT) {KEYS_B_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_B_QUANT) {KEYS_B_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_B_QUANT) {KEYS_B_STYLE}
+
+rule (name:KEYS_C_NAMES  || (KEYS_MOON_KEY_C && id:[30107,30105]) {KEYS_C_STYLE}
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) && quantity:>=KEYS_D_C_QUANT) {KEYS_C_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_C_QUANT) {KEYS_C_STYLE}
+
+rule ((name:KEYS_D_NAMES || (KEYS_MOON_KEY_D && id:[30107,30105]) {KEYS_D_STYLE}
+rule ((name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) && quantity:>=KEYS_E_D_QUANT) {KEYS_D_STYLE}
+
+rule (name:KEYS_E_NAMES || (KEYS_MOON_KEY_E && id:[30107,30105]) {KEYS_E_STYLE}
+
+
 /*@ define:module:seeds
 name: Seeds
 subtitle: Grow some Herbs and Feed some Birds
