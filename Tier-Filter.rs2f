@@ -1493,7 +1493,68 @@ subtitle: Dont forget your sack!
 /*@ define:input:herbs
 label: SS Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: SS Tier
 */
 
@@ -1540,7 +1601,68 @@ exampleItem: Grimy huasca
 /*@ define:input:herbs
 label: S Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: S Tier
 */
 
@@ -1596,7 +1718,68 @@ exampleItem: Grimy snapdragon
 /*@ define:input:herbs
 label: A Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: A Tier
 */
 
@@ -1658,7 +1841,68 @@ exampleItem: Grimy ranarr weed
 /*@ define:input:herbs
 label: B Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: B Tier
 */
 
@@ -1724,7 +1968,68 @@ exampleItem: Grimy torstol
 /*@ define:input:herbs
 label: C Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: C Tier
 */
 
@@ -1798,7 +2103,68 @@ exampleItem: Grimy Irit leaf
 /*@ define:input:herbs
 label: D Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: D Tier
 */
 
@@ -1878,7 +2244,68 @@ exampleItem: Grimy harrlander
 /*@ define:input:herbs
 label: E Tier Herbs
 type: enumlist
-enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },  
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },  
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },  
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  }, 
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  }, 
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  }, 
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  }, 
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  }, 
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  }, 
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  }, 
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  }, 
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
 group: E Tier
 */
 
