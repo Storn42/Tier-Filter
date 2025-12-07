@@ -12,6 +12,26 @@ meta {
 name: This Is a Test
 description: 
     This is a proof of concept for a filter that sorts by item tiers rather than ge value
+	
+	To Do:
+	- User Settings
+	- Hide Items
+	- Uniquess
+	- Bosses
+	- Monsters
+	- Minigames
+	- Clues
+	- Herblote Secondaries
+	- Cooking
+	- Food/Potion Drops
+	- Runes
+	- Ores/Bars
+	- Gems/Jewelry
+	- Dragon Hide (Crafting Resources?)
+	- Logs/Planks
+	- Ammo (Metal Gear?)
+	- Prayer
+	- Fallback
 */
 
 /*@ define:module:uniques
@@ -2057,6 +2077,521 @@ rule (name:TELEPORTS_D_NAMES) {TELEPORTS_D_STYLE}
 rule (name:TELEPORTS_E_NAMES && quantity:>=TELEPORTS_E_D_QUANT) {TELEPORTS_D_STYLE}
 
 rule (name:TELEPORTS_E_NAMES) {TELEPORTS_E_STYLE}
+
+/*@ define:module:charges
+name: Item Charges
+subtitle: Charges for Various Items
+*/
+
+
+/*@ define:input:charges
+label: SS Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: SS Tier
+*/
+
+#define CHARGES_SS_NAMES []
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define CHARGES_SS_SHOW_UNNOTED true
+
+rule (name:CHARGES_SS_NAMES && !CHARGES_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define CHARGES_SS_MIN_QUANT 0
+
+rule (name:CHARGES_SS_NAMES && quantity:<CHARGES_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: SS Tierp
+type: style
+group: SS Tier
+exampleItem: Nihil shard
+*/
+
+#define CHARGES_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff2fa79f";\
+	color = "#ff2fa79f";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff2fa79f";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff2fa79f";\
+	sound = "DropS.wav";
+
+/*@ define:input:charges
+label: S Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: S Tier
+*/
+
+#define CHARGES_S_NAMES []
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define CHARGES_S_SHOW_UNNOTED true
+
+rule (name:CHARGES_S_NAMES && !CHARGES_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define CHARGES_S_MIN_QUANT 0
+
+rule (name:CHARGES_S_NAMES && quantity:<CHARGES_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define CHARGES_S_SS_QUANT 10
+
+
+/*@ define:input:charges
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Sunfire splinters
+*/
+
+#define CHARGES_S_STYLE \
+	backgroundColor = "#ff2fa79f";\
+	menuTextColor = "#ff2fa79f";\
+	color = "#ff00ffee";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff00ffee";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff00ffee";\
+	sound = "DropS.wav";
+
+/*@ define:input:charges
+label: A Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: A Tier
+*/
+
+#define CHARGES_A_NAMES []
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define CHARGES_A_SHOW_UNNOTED true
+
+rule (name:CHARGES_A_NAMES && !CHARGES_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define CHARGES_A_MIN_QUANT 0
+
+rule (name:CHARGES_A_NAMES && quantity:<CHARGES_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define CHARGES_A_S_QUANT 10
+
+/*@ define:input:charges
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define CHARGES_A_SS_QUANT 100
+
+
+/*@ define:input:charges
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Ring of recoil
+*/
+
+#define CHARGES_A_STYLE \
+	color = "#ff00ffee";\
+	backgroundColor = "#cc2fa79f";\
+	menuTextColor = "#ff2fa79f"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ff00ffee";\
+	sound = "DropA.wav";
+
+/*@ define:input:charges
+label: B Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: B Tier
+*/
+
+#define CHARGES_B_NAMES []
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define CHARGES_B_SHOW_UNNOTED true
+
+rule (name:CHARGES_B_NAMES && !CHARGES_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define CHARGES_B_MIN_QUANT 0
+
+rule (name:CHARGES_B_NAMES && quantity:<CHARGES_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define CHARGES_B_A_QUANT 10
+
+/*@ define:input:charges
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define CHARGES_B_S_QUANT 100
+
+/*@ define:input:charges
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define CHARGES_B_SS_QUANT 1000
+
+/*@ define:input:charges
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Zulrah's scales
+*/
+
+#define CHARGES_B_STYLE \
+	color = "#ff00ffee";\
+    backgroundColor = "#992fa79f";\
+	menuTextColor = "#ff2fa79f";\
+	textAccent = 3;
+
+/*@ define:input:charges
+label: C Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: C Tier
+*/
+
+#define CHARGES_C_NAMES ["Ancient shard", "Nihil shard"]
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define CHARGES_C_SHOW_UNNOTED true
+
+rule (name:CHARGES_C_NAMES && !CHARGES_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define CHARGES_C_MIN_QUANT 0
+
+rule (name:CHARGES_C_NAMES && quantity:<CHARGES_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define CHARGES_C_B_QUANT 10
+
+/*@ define:input:charges
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define CHARGES_C_A_QUANT 100
+
+/*@ define:input:charges
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define CHARGES_C_S_QUANT 1000
+
+/*@ define:input:charges
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define CHARGES_C_SS_QUANT 10000
+
+/*@ define:input:charges
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Granite dust
+*/
+
+#define CHARGES_C_STYLE \
+    color = "#ff00ffee";\
+    backgroundColor = "#332fa79f";\
+	menuTextColor = "#ff2fa79f";\
+	textAccent = 3;
+
+/*@ define:input:charges
+label: D Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: D Tier
+*/
+
+#define CHARGES_D_NAMES ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define CHARGES_D_SHOW_UNNOTED true
+
+rule (name:CHARGES_D_NAMES && !CHARGES_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define CHARGES_D_MIN_QUANT 0
+
+rule (name:CHARGES_D_NAMES && quantity:<CHARGES_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define CHARGES_D_C_QUANT 10
+
+/*@ define:input:charges
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define CHARGES_D_B_QUANT 100
+
+/*@ define:input:charges
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define CHARGES_D_A_QUANT 1000
+
+/*@ define:input:charges
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define CHARGES_D_S_QUANT 10000
+
+/*@ define:input:charges
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define CHARGES_D_SS_QUANT 100000
+
+/*@ define:input:charges
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Spirit flakes
+*/
+
+#define CHARGES_D_STYLE \
+    color = "#ff00ffee"; \
+	menuTextColor = "#ff2fa79f";
+
+/*@ define:input:charges
+label: E Tier Charges
+type: enumlist
+enum: ["Zulrah's scales","Granite dust","Ancient essence","Sunfire splinters","Crystal shard","Ancient shard","sapphire ring","ring of recoil","Revenant ether", "Soiled page", "Burnt page", "Soaked page", "Desiccated page", "Nihil shard", "Spirit flakes", "Aether catalyst", "Demon tear","Gryphon feather"]
+group: E Tier
+*/
+
+#define CHARGES_E_NAMES []
+
+/*@ define:input:charges
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define CHARGES_E_SHOW_UNNOTED true
+
+rule (name:CHARGES_E_NAMES && !CHARGES_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:charges
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_MIN_QUANT 0
+
+rule (name:CHARGES_E_NAMES && quantity:<CHARGES_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:charges
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_D_QUANT 10
+
+/*@ define:input:charges
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_C_QUANT 100
+
+/*@ define:input:charges
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_B_QUANT 1000
+
+/*@ define:input:charges
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_A_QUANT 10000
+
+/*@ define:input:charges
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_S_QUANT 100000
+
+/*@ define:input:charges
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define CHARGES_E_SS_QUANT 1000000
+
+/*@ define:input:charges
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Ancient essence
+*/
+
+#define CHARGES_E_STYLE \
+    color = "#6600ffee"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff2fa79f";
+
+rule (name:CHARGES_SS_NAMES) {CHARGES_SS_STYLE}
+rule (name:CHARGES_S_NAMES && quantity:>=CHARGES_S_SS_QUANT) {CHARGES_SS_STYLE}
+rule (name:CHARGES_A_NAMES && quantity:>=CHARGES_A_SS_QUANT) {CHARGES_SS_STYLE}
+rule (name:CHARGES_B_NAMES && quantity:>=CHARGES_B_SS_QUANT) {CHARGES_SS_STYLE}
+rule (name:CHARGES_C_NAMES && quantity:>=CHARGES_C_SS_QUANT) {CHARGES_SS_STYLE}
+rule (name:CHARGES_D_NAMES && quantity:>=CHARGES_D_SS_QUANT) {CHARGES_SS_STYLE}
+rule (name:CHARGES_E_NAMES && quantity:>=CHARGES_E_SS_QUANT) {CHARGES_SS_STYLE}
+
+rule (name:CHARGES_S_NAMES) {CHARGES_S_STYLE}
+rule (name:CHARGES_A_NAMES && quantity:>=CHARGES_A_S_QUANT) {CHARGES_S_STYLE}
+rule (name:CHARGES_B_NAMES && quantity:>=CHARGES_B_S_QUANT) {CHARGES_S_STYLE}
+rule (name:CHARGES_C_NAMES && quantity:>=CHARGES_C_S_QUANT) {CHARGES_S_STYLE}
+rule (name:CHARGES_D_NAMES && quantity:>=CHARGES_D_S_QUANT) {CHARGES_S_STYLE}
+rule (name:CHARGES_E_NAMES && quantity:>=CHARGES_E_S_QUANT) {CHARGES_S_STYLE}
+
+rule (name:CHARGES_A_NAMES) {CHARGES_A_STYLE}
+rule (name:CHARGES_B_NAMES && quantity:>=CHARGES_B_A_QUANT) {CHARGES_A_STYLE}
+rule (name:CHARGES_C_NAMES && quantity:>=CHARGES_C_A_QUANT) {CHARGES_A_STYLE}
+rule (name:CHARGES_D_NAMES && quantity:>=CHARGES_D_A_QUANT) {CHARGES_A_STYLE}
+rule (name:CHARGES_E_NAMES && quantity:>=CHARGES_E_A_QUANT) {CHARGES_A_STYLE}
+
+rule (name:CHARGES_B_NAMES) {CHARGES_B_STYLE}
+rule (name:CHARGES_C_NAMES && quantity:>=CHARGES_C_B_QUANT) {CHARGES_B_STYLE}
+rule (name:CHARGES_D_NAMES && quantity:>=CHARGES_D_B_QUANT) {CHARGES_B_STYLE}
+rule (name:CHARGES_E_NAMES && quantity:>=CHARGES_E_B_QUANT) {CHARGES_B_STYLE}
+
+rule (name:CHARGES_C_NAMES) {CHARGES_C_STYLE}
+rule (name:CHARGES_D_NAMES && quantity:>=CHARGES_D_C_QUANT) {CHARGES_C_STYLE}
+rule (name:CHARGES_E_NAMES && quantity:>=CHARGES_E_C_QUANT) {CHARGES_C_STYLE}
+
+rule (name:CHARGES_D_NAMES) {CHARGES_D_STYLE}
+rule (name:CHARGES_E_NAMES && quantity:>=CHARGES_E_D_QUANT) {CHARGES_D_STYLE}
+
+rule (name:CHARGES_E_NAMES) {CHARGES_E_STYLE}
 
 /*@ define:module:seeds
 name: Seeds
