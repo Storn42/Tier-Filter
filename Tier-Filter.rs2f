@@ -32,8 +32,6 @@ description:
 
   - Herblote Secondaries
 
-  - Cooking
-
   - Food/Potion Drops
 
   - Runes
@@ -1055,7 +1053,7 @@ group: SS Tier
 #define KEYS_MOON_KEY_SS false
 
 /*@ define:input:keys
-label: SS Tierp
+label: SS Tier
 type: style
 group: SS Tier
 exampleItem: Awakener's orb
@@ -1618,7 +1616,7 @@ group: SS Tier
 rule (name:TELEPORTS_SS_NAMES && quantity:<TELEPORTS_SS_MIN_QUANT) {hidden = true;}
 
 /*@ define:input:teleports
-label: SS Tierp
+label: SS Tier
 type: style
 group: SS Tier
 exampleItem: Eternal teleport crystal
@@ -2133,7 +2131,7 @@ group: SS Tier
 rule (name:CHARGES_SS_NAMES && quantity:<CHARGES_SS_MIN_QUANT) {hidden = true;}
 
 /*@ define:input:charges
-label: SS Tierp
+label: SS Tier
 type: style
 group: SS Tier
 exampleItem: Nihil shard
@@ -4068,6 +4066,520 @@ rule (name:HERBS_E_NAMES && quantity:>=HERBS_E_D_QUANT) {HERBS_D_STYLE}
 
 rule (name:HERBS_E_NAMES) {HERBS_E_STYLE}
 
+/*@ define:module:herblore_secondaries
+name: Herblore Secondaries
+subtitle: Mix with Herbs for Wonderful Potions
+*/
+
+/*@ define:input:herblore_secondaries
+label: SS Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: SS Tier
+*/
+
+#define HERBLORE_SECONDARIES_SS_NAMES []
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define HERBLORE_SECONDARIES_SS_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_SS_NAMES && !HERBLORE_SECONDARIES_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define HERBLORE_SECONDARIES_SS_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_SS_NAMES && quantity:<HERBLORE_SECONDARIES_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Crushed superior dragon bones
+*/
+
+#define HERBLORE_SECONDARIES_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff62a1ff";\
+	color = "#ff62a1ff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff62a1ff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff62a1ff";\
+	sound = "DropS.wav";
+
+/*@ define:input:herblore_secondaries
+label: S Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: S Tier
+*/
+
+#define HERBLORE_SECONDARIES_S_NAMES []
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define HERBLORE_SECONDARIES_S_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_S_NAMES && !HERBLORE_SECONDARIES_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define HERBLORE_SECONDARIES_S_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_S_NAMES && quantity:<HERBLORE_SECONDARIES_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define HERBLORE_SECONDARIES_S_SS_QUANT 10
+
+
+/*@ define:input:herblore_secondaries
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Lava scale shard
+*/
+
+#define HERBLORE_SECONDARIES_S_STYLE \
+	backgroundColor = "#ff62a1ff";\
+	menuTextColor = "#ff62a1ff";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffffff";\
+	sound = "DropS.wav";
+
+/*@ define:input:herblore_secondaries
+label: A Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: A Tier
+*/
+
+#define HERBLORE_SECONDARIES_A_NAMES []
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define HERBLORE_SECONDARIES_A_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_A_NAMES && !HERBLORE_SECONDARIES_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define HERBLORE_SECONDARIES_A_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_A_NAMES && quantity:<HERBLORE_SECONDARIES_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define HERBLORE_SECONDARIES_A_S_QUANT 10
+
+/*@ define:input:herblore_secondaries
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define HERBLORE_SECONDARIES_A_SS_QUANT 100
+
+
+/*@ define:input:herblore_secondaries
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Wine of zamorak
+*/
+
+#define HERBLORE_SECONDARIES_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc62a1ff";\
+	menuTextColor = "#ff62a1ff"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	sound = "DropA.wav";
+
+/*@ define:input:herblore_secondaries
+label: B Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: B Tier
+*/
+
+#define HERBLORE_SECONDARIES_B_NAMES ["Giant egg sac","Scaly blue dragonhide","Aldarium","Crushed superior dragon bones"]
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define HERBLORE_SECONDARIES_B_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_B_NAMES && !HERBLORE_SECONDARIES_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBLORE_SECONDARIES_B_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_B_NAMES && quantity:<HERBLORE_SECONDARIES_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBLORE_SECONDARIES_B_A_QUANT 10
+
+/*@ define:input:herblore_secondaries
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBLORE_SECONDARIES_B_S_QUANT 100
+
+/*@ define:input:herblore_secondaries
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define HERBLORE_SECONDARIES_B_SS_QUANT 1000
+
+/*@ define:input:herblore_secondaries
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Red spiders' eggs
+*/
+
+#define HERBLORE_SECONDARIES_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#9962a1ff";\
+	menuTextColor = "#ff62a1ff";\
+	textAccent = 3;
+
+/*@ define:input:herblore_secondaries
+label: C Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_NAMES ["Wine of zamorak","Nail beast nails","Magic roots"]
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_C_NAMES && !HERBLORE_SECONDARIES_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_C_NAMES && quantity:<HERBLORE_SECONDARIES_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_B_QUANT 10
+
+/*@ define:input:herblore_secondaries
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_A_QUANT 100
+
+/*@ define:input:herblore_secondaries
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_S_QUANT 1000
+
+/*@ define:input:herblore_secondaries
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define HERBLORE_SECONDARIES_C_SS_QUANT 10000
+
+/*@ define:input:herblore_secondaries
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Limpwurt root
+*/
+
+#define HERBLORE_SECONDARIES_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#3362a1ff";\
+	menuTextColor = "#ff62a1ff";\
+	textAccent = 3;
+
+/*@ define:input:herblore_secondaries
+label: D Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_NAMES ["Unicorn horn","Unicorn horn dust","Limpwurt root","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Jangerberries","Volcanic ash","Nihil dust","Lily of the sands","Crystal dust","Araxyte venom sack","Lava scale*"]
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_D_NAMES && !HERBLORE_SECONDARIES_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_D_NAMES && quantity:<HERBLORE_SECONDARIES_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_C_QUANT 10
+
+/*@ define:input:herblore_secondaries
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_B_QUANT 100
+
+/*@ define:input:herblore_secondaries
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_A_QUANT 1000
+
+/*@ define:input:herblore_secondaries
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_S_QUANT 10000
+
+/*@ define:input:herblore_secondaries
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define HERBLORE_SECONDARIES_D_SS_QUANT 100000
+
+/*@ define:input:herblore_secondaries
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Eye of newt
+*/
+
+#define HERBLORE_SECONDARIES_D_STYLE \
+    color = "#ffffffff"; \
+	menuTextColor = "#ff62a1ff";
+
+/*@ define:input:herblore_secondaries
+label: E Tier Herblore Secondaries
+type: enumlist
+enum: ["Eye of newt","Unicorn horn","Unicorn horn dust","Limpwurt root","Ashes","Red spiders' eggs","White berries","Toad's legs","Goat horn dust","Desert goat horn","Snape grass","Mort myre fungus","Kebbit teeth dust","Kebbit teeth","Dragon scale dust","Blue dragon scale","Potato cactus","Wine of zamorak","Jangerberries","Volcanic ash","Giant egg sac","Aldarium","Scaly blue dragonhide","Nail beast nails","Magic roots","Nihil dust","Lily of the sands","Crushed superior dragon bones","Crystal dust", "Swamp tar","Lava scale*","Araxyte venom sack"]
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_NAMES ["Eye of newt","Ashes", "Swamp tar"]
+
+/*@ define:input:herblore_secondaries
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_SHOW_UNNOTED true
+
+rule (name:HERBLORE_SECONDARIES_E_NAMES && !HERBLORE_SECONDARIES_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_MIN_QUANT 0
+
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:<HERBLORE_SECONDARIES_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:herblore_secondaries
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_D_QUANT 10
+
+/*@ define:input:herblore_secondaries
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_C_QUANT 100
+
+/*@ define:input:herblore_secondaries
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_B_QUANT 1000
+
+/*@ define:input:herblore_secondaries
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_A_QUANT 10000
+
+/*@ define:input:herblore_secondaries
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_S_QUANT 100000
+
+/*@ define:input:herblore_secondaries
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define HERBLORE_SECONDARIES_E_SS_QUANT 1000000
+
+/*@ define:input:herblore_secondaries
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Swamp tar
+*/
+
+#define HERBLORE_SECONDARIES_E_STYLE \
+    color = "#66ffffff"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff62a1ff";
+
+rule (name:HERBLORE_SECONDARIES_SS_NAMES) {HERBLORE_SECONDARIES_SS_STYLE}
+rule (name:HERBLORE_SECONDARIES_S_NAMES && quantity:>=HERBLORE_SECONDARIES_S_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
+rule (name:HERBLORE_SECONDARIES_A_NAMES && quantity:>=HERBLORE_SECONDARIES_A_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
+rule (name:HERBLORE_SECONDARIES_B_NAMES && quantity:>=HERBLORE_SECONDARIES_B_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
+rule (name:HERBLORE_SECONDARIES_C_NAMES && quantity:>=HERBLORE_SECONDARIES_C_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
+rule (name:HERBLORE_SECONDARIES_D_NAMES && quantity:>=HERBLORE_SECONDARIES_D_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:>=HERBLORE_SECONDARIES_E_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
+
+rule (name:HERBLORE_SECONDARIES_S_NAMES) {HERBLORE_SECONDARIES_S_STYLE}
+rule (name:HERBLORE_SECONDARIES_A_NAMES && quantity:>=HERBLORE_SECONDARIES_A_S_QUANT) {HERBLORE_SECONDARIES_S_STYLE}
+rule (name:HERBLORE_SECONDARIES_B_NAMES && quantity:>=HERBLORE_SECONDARIES_B_S_QUANT) {HERBLORE_SECONDARIES_S_STYLE}
+rule (name:HERBLORE_SECONDARIES_C_NAMES && quantity:>=HERBLORE_SECONDARIES_C_S_QUANT) {HERBLORE_SECONDARIES_S_STYLE}
+rule (name:HERBLORE_SECONDARIES_D_NAMES && quantity:>=HERBLORE_SECONDARIES_D_S_QUANT) {HERBLORE_SECONDARIES_S_STYLE}
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:>=HERBLORE_SECONDARIES_E_S_QUANT) {HERBLORE_SECONDARIES_S_STYLE}
+
+rule (name:HERBLORE_SECONDARIES_A_NAMES) {HERBLORE_SECONDARIES_A_STYLE}
+rule (name:HERBLORE_SECONDARIES_B_NAMES && quantity:>=HERBLORE_SECONDARIES_B_A_QUANT) {HERBLORE_SECONDARIES_A_STYLE}
+rule (name:HERBLORE_SECONDARIES_C_NAMES && quantity:>=HERBLORE_SECONDARIES_C_A_QUANT) {HERBLORE_SECONDARIES_A_STYLE}
+rule (name:HERBLORE_SECONDARIES_D_NAMES && quantity:>=HERBLORE_SECONDARIES_D_A_QUANT) {HERBLORE_SECONDARIES_A_STYLE}
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:>=HERBLORE_SECONDARIES_E_A_QUANT) {HERBLORE_SECONDARIES_A_STYLE}
+
+rule (name:HERBLORE_SECONDARIES_B_NAMES) {HERBLORE_SECONDARIES_B_STYLE}
+rule (name:HERBLORE_SECONDARIES_C_NAMES && quantity:>=HERBLORE_SECONDARIES_C_B_QUANT) {HERBLORE_SECONDARIES_B_STYLE}
+rule (name:HERBLORE_SECONDARIES_D_NAMES && quantity:>=HERBLORE_SECONDARIES_D_B_QUANT) {HERBLORE_SECONDARIES_B_STYLE}
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:>=HERBLORE_SECONDARIES_E_B_QUANT) {HERBLORE_SECONDARIES_B_STYLE}
+
+rule (name:HERBLORE_SECONDARIES_C_NAMES) {HERBLORE_SECONDARIES_C_STYLE}
+rule (name:HERBLORE_SECONDARIES_D_NAMES && quantity:>=HERBLORE_SECONDARIES_D_C_QUANT) {HERBLORE_SECONDARIES_C_STYLE}
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:>=HERBLORE_SECONDARIES_E_C_QUANT) {HERBLORE_SECONDARIES_C_STYLE}
+
+rule (name:HERBLORE_SECONDARIES_D_NAMES) {HERBLORE_SECONDARIES_D_STYLE}
+rule (name:HERBLORE_SECONDARIES_E_NAMES && quantity:>=HERBLORE_SECONDARIES_E_D_QUANT) {HERBLORE_SECONDARIES_D_STYLE}
+
+rule (name:HERBLORE_SECONDARIES_E_NAMES) {HERBLORE_SECONDARIES_E_STYLE}
+
 /*@ define:module:cooking
 name: Cooking 
 subtitle: Raw Food and other Ingrediants
@@ -4103,10 +4615,10 @@ group: SS Tier
 rule (name:COOKING_SS_NAMES && quantity:<COOKING_SS_MIN_QUANT) {hidden = true;}
 
 /*@ define:input:cooking
-label: SS Tierp
+label: SS Tier
 type: style
 group: SS Tier
-exampleItem: Grimy huasca
+exampleItem: Raw anglerfish
 */
 
 #define COOKING_SS_STYLE \
@@ -4162,7 +4674,7 @@ group: S Tier
 label: S Tier
 type: style
 group: S Tier
-exampleItem: Grimy snapdragon
+exampleItem: Raw manta ray
 */
 
 #define COOKING_S_STYLE \
@@ -4226,7 +4738,7 @@ group: A Tier
 label: A Tier
 type: style
 group: A Tier
-exampleItem: Grimy ranarr weed
+exampleItem: Raw sea turtle
 */
 
 #define COOKING_A_STYLE \
@@ -4295,7 +4807,7 @@ group: B Tier
 label: B Tier
 type: style
 group: B Tier
-exampleItem: Grimy torstol
+exampleItem: Raw shark
 */
 
 #define COOKING_B_STYLE \
@@ -4369,7 +4881,7 @@ group: C Tier
 label: C Tier
 type: style
 group: C Tier
-exampleItem: Grimy Irit leaf
+exampleItem: Raw monkfish
 */
 
 #define COOKING_C_STYLE \
@@ -4451,7 +4963,7 @@ group: D Tier
 label: D Tier
 type: style
 group: D Tier
-exampleItem: Grimy harrlander
+exampleItem: Grapes
 */
 
 #define COOKING_D_STYLE \
@@ -4539,7 +5051,7 @@ group: E Tier
 label: E Tier
 type: style
 group: E Tier
-exampleItem: Grimy guam leaf
+exampleItem: Raw shrimps
 */
 
 #define COOKING_E_STYLE \
