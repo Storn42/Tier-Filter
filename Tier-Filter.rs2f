@@ -10,27 +10,46 @@ meta {
 
 /*@ define:module:greetings
 name: This Is a Test
-description: 
+description:
     This is a proof of concept for a filter that sorts by item tiers rather than ge value
 
-  To Do:
+
+  Things to Finisha
+
   - User Settings
+
   - Hide Items
+
   - Uniquess
+
   - Bosses
-  - Monsters
+
+   - Monsters
+
   - Minigames
+
   - Clues
+
   - Herblote Secondaries
+
   - Cooking
+
   - Food/Potion Drops
+
   - Runes
+
   - Ores/Bars
+
   - Gems/Jewelry
+
   - Dragon Hide (Crafting Resources?)
+
   - Logs/Planks
+
   - Ammo (Metal Gear?)
+
   - Prayer
+
   - Fallback
 */
 
