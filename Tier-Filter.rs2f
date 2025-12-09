@@ -14,7 +14,7 @@ description:
     This is a proof of concept for a filter that sorts by item tiers rather than ge value
 
 
-  Things to Finisha
+  Things to Finish
 
   - User Settings
 
@@ -24,13 +24,11 @@ description:
 
   - Bosses
 
-   - Monsters
+  - Monsters
 
   - Minigames
 
   - Clues
-
-  - Herblote Secondaries
 
   - Food/Potion Drops
 
@@ -67,6 +65,7 @@ type: style
     showLootbeam = true; \
     textAccent = 3; \
     fontType = 3; \
+	menuSort = 60000;\
     sound = "Unique_SS.wav";
 
 /*@ define:input:uniques
@@ -80,6 +79,7 @@ type: style
     showLootbeam = true; \
     textAccent = 3; \
     fontType = 3; \
+	menuSort = 50000;\
     sound = "Unique_S.wav";
 
 /*@ define:input:uniques
@@ -93,6 +93,7 @@ type: style
 	showLootbeam = true; \
 	textAccent = 3; \
 	fontType = 2; \
+	menuSort = 40000;\
     sound = "Unique_A.wav";
 
 /*@ define:input:uniques
@@ -106,6 +107,7 @@ type: style
 	showLootbeam = true; \
 	textAccent = 3; \
 	fontType = 2; \
+	menuSort = 30000;\
     sound = "Unique_B.wav";
 
 /*@ define:input:uniques
@@ -119,6 +121,7 @@ type: style
 	showLootbeam = true; \
 	textAccent = 3; \
 	fontType = 1; \
+	menuSort = 20000;\
     sound = "Unique_C.wav";
 
 /*@ define:input:uniques
@@ -348,6 +351,7 @@ exampleItem: Coins
 	borderColor = "#ffbbbb22";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffbbbb22";\
+	menuSort = 50000;\
 	sound = "DropSS.wav";
 
 /*@ define:input:currency
@@ -366,6 +370,7 @@ exampleItem: Coins
 	borderColor = "#ffffff70";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffffff70";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:currency
@@ -382,6 +387,7 @@ exampleItem: Coins
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffffff70";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:currency
@@ -395,6 +401,7 @@ exampleItem: Coins
 	color ="#ffffff70";\
     backgroundColor = "#999e9e29";\
 	menuTextColor = "#ffffff70";\
+	menuSort = 20000;\
 	textAccent = 3;
 
 /*@ define:input:currency
@@ -408,6 +415,7 @@ exampleItem: Coins
     color = "#ffffff70";\
     backgroundColor = "#449e9e29";\
 	menuTextColor = "#ffffff70";\
+	menuSort = 10000;\
 	textAccent = 3;
 
 /*@ define:input:currency
@@ -431,7 +439,8 @@ exampleItem: Coins
 #define COINS_E_STYLE \
     color = "#66ffff70"; \
 	menuTextColor = "#ffffff70"; \
-    textAccentColor = "#66000000";
+    textAccentColor = "#66000000"; \
+	menuSort = -10000;
 
 
 rule (name:"Coins" && quantity:>=COINS_MIN_VALUE && quantity:>=COINS_SS_VALUE) {COINS_SS_STYLE}
@@ -524,6 +533,7 @@ exampleItem: Tokkul
 	borderColor = "#ffB1B1BB";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffB1B1BB";\
+	menuSort = 50000;\
 	sound = "DropSS.wav";
 
 /*@ define:input:currency
@@ -542,6 +552,7 @@ exampleItem: Tokkul
 	borderColor = "#ffB1B1BB";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffB1B1BB";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:currency
@@ -558,6 +569,7 @@ exampleItem: Tokkul
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffB1B1BB";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:currency
@@ -571,7 +583,8 @@ exampleItem: Tokkul
 	color ="#ffB1B1BB";\
     backgroundColor = "#99000000";\
 	menuTextColor = "#ffB1B1BB";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;
 
 /*@ define:input:currency
 label: C Tier
@@ -584,7 +597,8 @@ exampleItem: Tokkul
     color = "#ffB1B1BB";\
     backgroundColor = "#44000000";\
 	menuTextColor = "#ffB1B1BB";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:currency
 label: D Tier
@@ -597,7 +611,7 @@ exampleItem: Tokkul
     color = "#ffB1B1BB"; \
 	menuTextColor = "#ffB1B1BB"; \
     textAccent = 2;\
-    textAccentColor = "#99000000";
+    textAccentColor = "#99000000";\
 
 /*@ define:input:currency
 label: E Tier
@@ -610,7 +624,8 @@ exampleItem: Tokkul
     color = "#66B1B1BB"; \
 	menuTextColor = "#ffB1B1BB"; \
     textAccent = 2;\
-    textAccentColor = "#66000000";
+    textAccentColor = "#66000000";\
+	menuSort = -10000;\
 
 rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_SS_QUANT) {TOKKUL_SS_STYLE}
 rule (name:"Tokkul" && quantity:>=TOKKUL_MIN_QUANT && quantity:>=TOKKUL_S_QUANT) {TOKKUL_S_STYLE}
@@ -702,6 +717,7 @@ exampleItem: Numalite
 	borderColor = "#ffAF9B76";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffAF9B76";\
+	menuSort = 50000;\
 	sound = "DropSS.wav";
 
 /*@ define:input:currency
@@ -720,6 +736,7 @@ exampleItem: Numalite
 	borderColor = "#ffAF9B76";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffAF9B76";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:currency
@@ -736,6 +753,7 @@ exampleItem: Numalite
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffAF9B76";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:currency
@@ -749,7 +767,8 @@ exampleItem: Numalite
 	color ="#ffAF9B76";\
     backgroundColor = "#998C7150";\
 	menuTextColor = "#ffAF9B76";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;
 
 /*@ define:input:currency
 label: C Tier
@@ -762,7 +781,8 @@ exampleItem: Numalite
     color = "#ffAF9B76";\
     backgroundColor = "#448C7150";\
 	menuTextColor = "#ffAF9B76";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:currency
 label: D Tier
@@ -787,7 +807,8 @@ exampleItem: Numalite
 #define NUMALITE_E_STYLE \
     color = "#66AF9B76"; \
 	menuTextColor = "#ffAF9B76"; \
-    textAccentColor = "#668C7150";
+    textAccentColor = "#668C7150";\
+	menuSort = -10000;\
 
 
 rule (name:"Numalite" && quantity:>=NUMALITE_MIN_QUANT && quantity:>=NUMALITE_SS_QUANT) {NUMALITE_SS_STYLE}
@@ -900,6 +921,7 @@ exampleItem: Dragon platelegs
 	showLootbeam = true;\
 	lootbeamColor = "#ffbbbb22";\
 	showValue = true;\
+	menuSort = 50000;\
 	sound = "DropSS.wav";\
 	icon = Sprite(41,0);
 
@@ -920,6 +942,7 @@ exampleItem: Dragon halberd
 	showLootbeam = true;\
 	lootbeamColor = "#ffffff70";\
 	showValue = true;\
+	menuSort = 40000;\
 	sound = "DropS.wav";\
 	icon = Sprite(41,0);
 
@@ -939,6 +962,7 @@ exampleItem: Dragon battleaxe
 	textAccent = 3;\
 	borderColor = "#ffffff70";\
 	showValue = true;\
+	menuSort = 30000;\
 	sound = "DropA.wav";\
 	icon = Sprite(41,0);
 
@@ -954,6 +978,7 @@ exampleItem: Mystic air battlestaff
     backgroundColor = "#999e9e29";\
 	menuTextColor = "#ffffff70";\
 	textAccent = 3;\
+	menuSort = 20000;\
 	showValue = true;\
 	icon = Sprite(41,0);
 
@@ -970,6 +995,7 @@ exampleItem: Adamant platebody
 	menuTextColor = "#ffffff70";\
 	textAccent = 3;\
 	showValue = true;\
+	menuSort = 10000;\
 	icon = Sprite(41,0);
 
 
@@ -998,6 +1024,7 @@ exampleItem: Bronze platebody
 	menuTextColor = "#ffffff70"; \
 	textAccentColor = "#66000000"; \
 	showValue = true;\
+	menuSort = -10000;\
 	icon = Sprite(41,0);
 	
 	
@@ -1068,6 +1095,7 @@ exampleItem: Awakener's orb
 	borderColor = "#ff621075";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff621075";\
+	menuSort = 50000;\
 	sound = "DropSS.wav";
 
 /*@ define:input:keys
@@ -1131,6 +1159,7 @@ exampleItem: Larran's key
 	borderColor = "#ffea02ff";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffea02ff";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:keys
@@ -1201,6 +1230,7 @@ exampleItem: Brimstone key
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffea02ff";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:keys
@@ -1275,7 +1305,8 @@ exampleItem: Crystal key
 	color = "#ffea02ff";\
     backgroundColor = "#99621075";\
 	menuTextColor = "#ff621075";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;\
 
 /*@ define:input:keys
 label: C Tier Keys
@@ -1358,7 +1389,8 @@ exampleItem: Loop half of key
     color = "#ffea02ff";\
     backgroundColor = "#33621075";\
 	menuTextColor = "#ff621075";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:keys
 label: D Tier Keys
@@ -1543,7 +1575,8 @@ exampleItem: Ecumenical key shards
 #define KEYS_E_STYLE \
     color = "#66ea02ff"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff621075";
+	menuTextColor = "#ff621075";\
+	menuSort = -10000;
 
 rule (name:KEYS_SS_NAMES || (KEYS_MOON_KEY_SS && id:[30107,30105])) {KEYS_SS_STYLE}
 rule ((name:KEYS_S_NAMES || (KEYS_MOON_KEY_S && id:[30107,30105])) && quantity:>=KEYS_S_SS_QUANT) {KEYS_SS_STYLE}
@@ -1631,7 +1664,8 @@ exampleItem: Eternal teleport crystal
 	borderColor = "#ff999999";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff999999";\
-	sound = "DropS.wav";
+	menuSort = 50000;\
+	sound = "DropSS.wav";
 
 /*@ define:input:teleports
 label: S Tier Teleports
@@ -1687,6 +1721,7 @@ exampleItem: Teleport to house
 	borderColor = "#ffffffff";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffffffff";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:teleports
@@ -1749,6 +1784,7 @@ exampleItem: Dorgesh-kaan sphere
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffffffff";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:teleports
@@ -1815,7 +1851,8 @@ exampleItem: Xeric's talisman (inert)
 	color = "#ffffffff";\
     backgroundColor = "#99999999";\
 	menuTextColor = "#ff999999";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;
 
 /*@ define:input:teleports
 label: C Tier Teleports
@@ -1889,7 +1926,8 @@ exampleItem: Revenant cave teleport
     color = "#ffffffff";\
     backgroundColor = "#33999999";\
 	menuTextColor = "#ff999999";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:teleports
 label: D Tier Teleports
@@ -2058,7 +2096,8 @@ exampleItem: Bone fragments
 #define TELEPORTS_E_STYLE \
     color = "#66ffffff"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff999999";
+	menuTextColor = "#ff999999"; \
+	menuSort = -10000;
 
 rule (name:TELEPORTS_SS_NAMES) {TELEPORTS_SS_STYLE}
 rule (name:TELEPORTS_S_NAMES && quantity:>=TELEPORTS_S_SS_QUANT) {TELEPORTS_SS_STYLE}
@@ -2146,7 +2185,8 @@ exampleItem: Nihil shard
 	borderColor = "#ff2fa79f";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff2fa79f";\
-	sound = "DropS.wav";
+	menuSort = 50000;\
+	sound = "DropSS.wav";
 
 /*@ define:input:charges
 label: S Tier Charges
@@ -2202,6 +2242,7 @@ exampleItem: Sunfire splinters
 	borderColor = "#ff00ffee";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff00ffee";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:charges
@@ -2264,6 +2305,7 @@ exampleItem: Ring of recoil
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ff00ffee";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:charges
@@ -2330,7 +2372,8 @@ exampleItem: Zulrah's scales
 	color = "#ff00ffee";\
     backgroundColor = "#992fa79f";\
 	menuTextColor = "#ff2fa79f";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;\
 
 /*@ define:input:charges
 label: C Tier Charges
@@ -2404,7 +2447,8 @@ exampleItem: Granite dust
     color = "#ff00ffee";\
     backgroundColor = "#332fa79f";\
 	menuTextColor = "#ff2fa79f";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;\
 
 /*@ define:input:charges
 label: D Tier Charges
@@ -2573,7 +2617,8 @@ exampleItem: Ancient essence
 #define CHARGES_E_STYLE \
     color = "#6600ffee"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff2fa79f";
+	menuTextColor = "#ff2fa79f";\
+	menuSort = -10000;\
 
 rule (name:CHARGES_SS_NAMES) {CHARGES_SS_STYLE}
 rule (name:CHARGES_S_NAMES && quantity:>=CHARGES_S_SS_QUANT) {CHARGES_SS_STYLE}
@@ -2661,6 +2706,7 @@ exampleItem: "Huasca seed"
 	borderColor = "#ff017300";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff017300";\
+	menuSort = 50000;\
 	sound = "DropSS.wav";
 
 /*@ define:input:seeds
@@ -2717,6 +2763,7 @@ exampleItem: Snapdragon Seed
 	borderColor = "#ff00e024";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff00e024";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:seeds
@@ -2779,6 +2826,7 @@ exampleItem: Torstol seed
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ff00e024";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:seeds
@@ -2845,7 +2893,8 @@ exampleItem: Ranaar Seed
 	color = "#ff00e024";\
     backgroundColor = "#99017300";\
 	menuTextColor = "#ff017300";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;
 
 /*@ define:input:seeds
 label: C Tier Seeds
@@ -2919,7 +2968,8 @@ exampleItem: Irit seed
     color = "#ff00e024";\
     backgroundColor = "#33017300";\
 	menuTextColor = "#ff017300";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:seeds
 label: D Tier Seeds
@@ -3088,7 +3138,8 @@ exampleItem: Potato seed
 #define SEEDS_E_STYLE \
     color = "#6600e024"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff017300";
+	menuTextColor = "#ff017300";\
+	menuSort = -10000;\
 
 rule (name:SEEDS_SS_NAMES) {SEEDS_SS_STYLE}
 rule (name:SEEDS_S_NAMES && quantity:>=SEEDS_S_SS_QUANT) {SEEDS_SS_STYLE}
@@ -3236,6 +3287,7 @@ exampleItem: Grimy huasca
 	borderColor = "#ff017300";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff017300";\
+	menuSort = 50000;\
 	sound = "DropSS.wav";
 
 /*@ define:input:herbs
@@ -3353,6 +3405,7 @@ exampleItem: Grimy snapdragon
 	borderColor = "#ff00e024";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff00e024";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:herbs
@@ -3476,6 +3529,7 @@ exampleItem: Grimy ranarr weed
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ff00e024"; \
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:herbs
@@ -3603,7 +3657,8 @@ exampleItem: Grimy torstol
 	color = "#ff00e024";\
     backgroundColor = "#99017300";\
 	menuTextColor = "#ff017300";\
-	textAccent = 3;
+	textAccent = 3; \
+	menuSort = 20000;\
 
 /*@ define:input:herbs
 label: C Tier Herbs
@@ -3738,7 +3793,8 @@ exampleItem: Grimy Irit leaf
     color = "#ff00e024";\
     backgroundColor = "#33017300";\
 	menuTextColor = "#ff017300";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:herbs
 label: D Tier Herbs
@@ -4029,7 +4085,8 @@ exampleItem: Grimy guam leaf
 #define HERBS_E_STYLE \
     color = "#6600e024"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff017300";
+	menuTextColor = "#ff017300";\
+	menuSort = -10000;
 
 rule (name:HERBS_SS_NAMES) {HERBS_SS_STYLE}
 rule (name:HERBS_S_NAMES && quantity:>=HERBS_S_SS_QUANT) {HERBS_SS_STYLE}
@@ -4116,7 +4173,8 @@ exampleItem: Crushed superior dragon bones
 	borderColor = "#ff62a1ff";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff62a1ff";\
-	sound = "DropS.wav";
+	menuSort = 50000;\
+	sound = "DropSS.wav";
 
 /*@ define:input:herblore_secondaries
 label: S Tier Herblore Secondaries
@@ -4172,6 +4230,7 @@ exampleItem: Lava scale shard
 	borderColor = "#ffffffff";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffffffff";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:herblore_secondaries
@@ -4234,6 +4293,7 @@ exampleItem: Wine of zamorak
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffffffff";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:herblore_secondaries
@@ -4300,7 +4360,8 @@ exampleItem: Red spiders' eggs
 	color = "#ffffffff";\
     backgroundColor = "#9962a1ff";\
 	menuTextColor = "#ff62a1ff";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;\
 
 /*@ define:input:herblore_secondaries
 label: C Tier Herblore Secondaries
@@ -4374,7 +4435,8 @@ exampleItem: Limpwurt root
     color = "#ffffffff";\
     backgroundColor = "#3362a1ff";\
 	menuTextColor = "#ff62a1ff";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;
 
 /*@ define:input:herblore_secondaries
 label: D Tier Herblore Secondaries
@@ -4543,7 +4605,8 @@ exampleItem: Swamp tar
 #define HERBLORE_SECONDARIES_E_STYLE \
     color = "#66ffffff"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff62a1ff";
+	menuTextColor = "#ff62a1ff";\
+	menuSort = -10000;
 
 rule (name:HERBLORE_SECONDARIES_SS_NAMES) {HERBLORE_SECONDARIES_SS_STYLE}
 rule (name:HERBLORE_SECONDARIES_S_NAMES && quantity:>=HERBLORE_SECONDARIES_S_SS_QUANT) {HERBLORE_SECONDARIES_SS_STYLE}
@@ -4630,7 +4693,8 @@ exampleItem: Raw anglerfish
 	borderColor = "#ff4c0369";\
 	showLootbeam = true;\
 	lootbeamColor = "#ff4c0369";\
-	sound = "DropS.wav";
+	menuSort = 50000;\
+	sound = "DropSS.wav";
 
 /*@ define:input:cooking
 label: S Tier Cooking
@@ -4686,6 +4750,7 @@ exampleItem: Raw manta ray
 	borderColor = "#ffc42533";\
 	showLootbeam = true;\
 	lootbeamColor = "#ffc42533";\
+	menuSort = 40000;\
 	sound = "DropS.wav";
 
 /*@ define:input:cooking
@@ -4748,6 +4813,7 @@ exampleItem: Raw sea turtle
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffc42533";\
+	menuSort = 30000;\
 	sound = "DropA.wav";
 
 /*@ define:input:cooking
@@ -4814,7 +4880,8 @@ exampleItem: Raw shark
 	color = "#ffc42533";\
     backgroundColor = "#994c0369";\
 	menuTextColor = "#ff4c0369";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 20000;
 
 /*@ define:input:cooking
 label: C Tier Cooking
@@ -4888,7 +4955,8 @@ exampleItem: Raw monkfish
     color = "#ffc42533";\
     backgroundColor = "#334c0369";\
 	menuTextColor = "#ff4c0369";\
-	textAccent = 3;
+	textAccent = 3;\
+	menuSort = 10000;\
 
 /*@ define:input:cooking
 label: D Tier Cooking
@@ -5057,7 +5125,8 @@ exampleItem: Raw shrimps
 #define COOKING_E_STYLE \
     color = "#66c42533"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff4c0369";
+	menuTextColor = "#ff4c0369";\
+	menuSort = -10000;
 
 rule (name:COOKING_SS_NAMES) {COOKING_SS_STYLE}
 rule (name:COOKING_S_NAMES && quantity:>=COOKING_S_SS_QUANT) {COOKING_SS_STYLE}
