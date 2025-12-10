@@ -6198,6 +6198,527 @@ rule (name:BLIGHTED_FOOD_AND_POTS_STOCKPILE_E_NAMES && quantity:>=BLIGHTED_FOOD_
 
 rule (name:BLIGHTED_FOOD_AND_POTS_STOCKPILE_E_NAMES) {BLIGHTED_FOOD_AND_POTS_STOCKPILE_E_STYLE}
 
+/*@ define:module:food_and_pots_stockpile
+name: Food and Potion Drops
+subtitle: Food and Drinks for Later Consumption
+*/
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: SS Tier
+*/
+
+#define RUNES_SS_NAMES []
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define RUNES_SS_SHOW_UNNOTED true
+
+rule (name:RUNES_SS_NAMES && !RUNES_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define RUNES_SS_MIN_QUANT 0
+
+rule (name:RUNES_SS_NAMES && quantity:<RUNES_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: "Sanfew serum(4)"
+*/
+
+#define RUNES_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff6a9190";\
+	color = "#ff6a9190";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff6a9190";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff6a9190";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:food_and_pots_stockpile
+label: S Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: S Tier
+*/
+
+#define RUNES_S_NAMES []
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define RUNES_S_SHOW_UNNOTED true
+
+rule (name:RUNES_S_NAMES && !RUNES_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define RUNES_S_MIN_QUANT 0
+
+rule (name:RUNES_S_NAMES && quantity:<RUNES_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define RUNES_S_SS_QUANT 10
+
+
+/*@ define:input:food_and_pots_stockpile
+label: S Tier
+type: style
+group: S Tier
+exampleItem: "Super restore(4)"
+*/
+
+#define RUNES_S_STYLE \
+	backgroundColor = "#ff6a9190";\
+	menuTextColor = "#ff6a9190";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffffff";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:food_and_pots_stockpile
+label: A Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: A Tier
+*/
+
+#define RUNES_A_NAMES []
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define RUNES_A_SHOW_UNNOTED true
+
+rule (name:RUNES_A_NAMES && !RUNES_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define RUNES_A_MIN_QUANT 0
+
+rule (name:RUNES_A_NAMES && quantity:<RUNES_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define RUNES_A_S_QUANT 10
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define RUNES_A_SS_QUANT 100
+
+
+/*@ define:input:food_and_pots_stockpile
+label: A Tier
+type: style
+group: A Tier
+exampleItem: "Saradomin brew(4)"
+*/
+
+#define RUNES_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc6a9190";\
+	menuTextColor = "#ff6a9190"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:food_and_pots_stockpile
+label: B Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: B Tier
+*/
+
+#define RUNES_B_NAMES []
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define RUNES_B_SHOW_UNNOTED true
+
+rule (name:RUNES_B_NAMES && !RUNES_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNES_B_MIN_QUANT 0
+
+rule (name:RUNES_B_NAMES && quantity:<RUNES_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNES_B_A_QUANT 10
+
+/*@ define:input:food_and_pots_stockpile
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNES_B_S_QUANT 100
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNES_B_SS_QUANT 1000
+
+/*@ define:input:food_and_pots_stockpile
+label: B Tier
+type: style
+group: B Tier
+exampleItem: "Prayer potion(4)"
+*/
+
+#define RUNES_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#996a9190";\
+	menuTextColor = "#ff6a9190";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:food_and_pots_stockpile
+label: C Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: C Tier
+*/
+
+#define RUNES_C_NAMES ["Aether rune"]
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define RUNES_C_SHOW_UNNOTED true
+
+rule (name:RUNES_C_NAMES && !RUNES_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNES_C_MIN_QUANT 0
+
+rule (name:RUNES_C_NAMES && quantity:<RUNES_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNES_C_B_QUANT 10
+
+/*@ define:input:food_and_pots_stockpile
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNES_C_A_QUANT 100
+
+/*@ define:input:food_and_pots_stockpile
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNES_C_S_QUANT 1000
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNES_C_SS_QUANT 10000
+
+/*@ define:input:food_and_pots_stockpile
+label: C Tier
+type: style
+group: C Tier
+exampleItem: "Super combat potion(4)"
+*/
+
+#define RUNES_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#336a9190";\
+	menuTextColor = "#ff6a9190";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:food_and_pots_stockpile
+label: D Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: D Tier
+*/
+
+#define RUNES_D_NAMES ["Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack"]
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define RUNES_D_SHOW_UNNOTED true
+
+rule (name:RUNES_D_NAMES && !RUNES_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNES_D_MIN_QUANT 0
+
+rule (name:RUNES_D_NAMES && quantity:<RUNES_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNES_D_C_QUANT 10
+
+/*@ define:input:food_and_pots_stockpile
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNES_D_B_QUANT 100
+
+/*@ define:input:food_and_pots_stockpile
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNES_D_A_QUANT 1000
+
+/*@ define:input:food_and_pots_stockpile
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNES_D_S_QUANT 10000
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNES_D_SS_QUANT 100000
+
+/*@ define:input:food_and_pots_stockpile
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Energy potion
+*/
+
+#define RUNES_D_STYLE \
+    color = "#ff6a9190"; \
+	menuTextColor = "#ff6a9190";
+
+/*@ define:input:food_and_pots_stockpile
+label: E Tier Runes
+type: enumlist
+enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+group: E Tier
+*/
+
+#define RUNES_E_NAMES ["Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+
+/*@ define:input:food_and_pots_stockpile
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define RUNES_E_SHOW_UNNOTED true
+
+rule (name:RUNES_E_NAMES && !RUNES_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_MIN_QUANT 0
+
+rule (name:RUNES_E_NAMES && quantity:<RUNES_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:food_and_pots_stockpile
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_D_QUANT 10
+
+/*@ define:input:food_and_pots_stockpile
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_C_QUANT 100
+
+/*@ define:input:food_and_pots_stockpile
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_B_QUANT 1000
+
+/*@ define:input:food_and_pots_stockpile
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_A_QUANT 10000
+
+/*@ define:input:food_and_pots_stockpile
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_S_QUANT 100000
+
+/*@ define:input:food_and_pots_stockpile
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNES_E_SS_QUANT 1000000
+
+/*@ define:input:food_and_pots_stockpile
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Attack potion(4)
+*/
+
+#define RUNES_E_STYLE \
+    color = "#666a9190"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff6a9190";\
+	menuSort = -10000;\
+
+rule (name:RUNES_SS_NAMES) {RUNES_SS_STYLE}
+rule (name:RUNES_S_NAMES && quantity:>=RUNES_S_SS_QUANT) {RUNES_SS_STYLE}
+rule (name:RUNES_A_NAMES && quantity:>=RUNES_A_SS_QUANT) {RUNES_SS_STYLE}
+rule (name:RUNES_B_NAMES && quantity:>=RUNES_B_SS_QUANT) {RUNES_SS_STYLE}
+rule (name:RUNES_C_NAMES && quantity:>=RUNES_C_SS_QUANT) {RUNES_SS_STYLE}
+rule (name:RUNES_D_NAMES && quantity:>=RUNES_D_SS_QUANT) {RUNES_SS_STYLE}
+rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_SS_QUANT) {RUNES_SS_STYLE}
+
+rule (name:RUNES_S_NAMES) {RUNES_S_STYLE}
+rule (name:RUNES_A_NAMES && quantity:>=RUNES_A_S_QUANT) {RUNES_S_STYLE}
+rule (name:RUNES_B_NAMES && quantity:>=RUNES_B_S_QUANT) {RUNES_S_STYLE}
+rule (name:RUNES_C_NAMES && quantity:>=RUNES_C_S_QUANT) {RUNES_S_STYLE}
+rule (name:RUNES_D_NAMES && quantity:>=RUNES_D_S_QUANT) {RUNES_S_STYLE}
+rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_S_QUANT) {RUNES_S_STYLE}
+
+rule (name:RUNES_A_NAMES) {RUNES_A_STYLE}
+rule (name:RUNES_B_NAMES && quantity:>=RUNES_B_A_QUANT) {RUNES_A_STYLE}
+rule (name:RUNES_C_NAMES && quantity:>=RUNES_C_A_QUANT) {RUNES_A_STYLE}
+rule (name:RUNES_D_NAMES && quantity:>=RUNES_D_A_QUANT) {RUNES_A_STYLE}
+rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_A_QUANT) {RUNES_A_STYLE}
+
+rule (name:RUNES_B_NAMES) {RUNES_B_STYLE}
+rule (name:RUNES_C_NAMES && quantity:>=RUNES_C_B_QUANT) {RUNES_B_STYLE}
+rule (name:RUNES_D_NAMES && quantity:>=RUNES_D_B_QUANT) {RUNES_B_STYLE}
+rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_B_QUANT) {RUNES_B_STYLE}
+
+rule (name:RUNES_C_NAMES) {RUNES_C_STYLE}
+rule (name:RUNES_D_NAMES && quantity:>=RUNES_D_C_QUANT) {RUNES_C_STYLE}
+rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_C_QUANT) {RUNES_C_STYLE}
+
+rule (name:RUNES_D_NAMES) {RUNES_D_STYLE}
+rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_D_QUANT) {RUNES_D_STYLE}
+
+rule (name:RUNES_E_NAMES) {RUNES_E_STYLE}
+
+
 
 
 
