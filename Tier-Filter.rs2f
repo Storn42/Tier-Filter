@@ -2006,7 +2006,7 @@ exampleItem: Lizardman fang
 */
 
 #define TELEPORTS_D_STYLE \
-    color = "#ffffffff"; \
+    color = "#ff999999"; \
 	menuTextColor = "#ff999999";
 
 /*@ define:input:teleports
@@ -2094,7 +2094,7 @@ exampleItem: Bone fragments
 */
 
 #define TELEPORTS_E_STYLE \
-    color = "#66ffffff"; \
+    color = "#66999999"; \
 	textAccentColor = "#66000000"; \
 	menuTextColor = "#ff999999"; \
 	menuSort = -10000;
@@ -4515,7 +4515,7 @@ exampleItem: Eye of newt
 */
 
 #define HERBLORE_SECONDARIES_D_STYLE \
-    color = "#ffffffff"; \
+    color = "#ff62a1ff"; \
 	menuTextColor = "#ff62a1ff";
 
 /*@ define:input:herblore_secondaries
@@ -4603,7 +4603,7 @@ exampleItem: Swamp tar
 */
 
 #define HERBLORE_SECONDARIES_E_STYLE \
-    color = "#66ffffff"; \
+    color = "#6662a1ff"; \
 	textAccentColor = "#66000000"; \
 	menuTextColor = "#ff62a1ff";\
 	menuSort = -10000;
@@ -5643,7 +5643,7 @@ exampleItem: Attack potion(4)
 */
 
 #define FOOD_AND_POTS_STOCKPILE_E_STYLE \
-    color = "#66ffffff"; \
+    color = "#66813f09"; \
 	textAccentColor = "#66000000"; \
 	menuTextColor = "#ff813f09";\
 	menuSort = -10000;\
@@ -6199,8 +6199,8 @@ rule (name:BLIGHTED_FOOD_AND_POTS_STOCKPILE_E_NAMES && quantity:>=BLIGHTED_FOOD_
 rule (name:BLIGHTED_FOOD_AND_POTS_STOCKPILE_E_NAMES) {BLIGHTED_FOOD_AND_POTS_STOCKPILE_E_STYLE}
 
 /*@ define:module:runes
-name: Food and Potion Drops
-subtitle: Food and Drinks for Later Consumption
+name: Runes
+subtitle: Cast some Magic Spells
 */
 
 /*@ define:input:runes
@@ -6236,7 +6236,7 @@ rule (name:RUNES_SS_NAMES && quantity:<RUNES_SS_MIN_QUANT) {hidden = true;}
 label: SS Tier
 type: style
 group: SS Tier
-exampleItem: "Sanfew serum(4)"
+exampleItem: Wrath rune
 */
 
 #define RUNES_SS_STYLE \
@@ -6293,7 +6293,7 @@ group: S Tier
 label: S Tier
 type: style
 group: S Tier
-exampleItem: "Super restore(4)"
+exampleItem: Blood rune
 */
 
 #define RUNES_S_STYLE \
@@ -6358,7 +6358,7 @@ group: A Tier
 label: A Tier
 type: style
 group: A Tier
-exampleItem: "Saradomin brew(4)"
+exampleItem: Death rune
 */
 
 #define RUNES_A_STYLE \
@@ -6428,7 +6428,7 @@ group: B Tier
 label: B Tier
 type: style
 group: B Tier
-exampleItem: "Prayer potion(4)"
+exampleItem: Chaos rune
 */
 
 #define RUNES_B_STYLE \
@@ -6503,7 +6503,7 @@ group: C Tier
 label: C Tier
 type: style
 group: C Tier
-exampleItem: "Super combat potion(4)"
+exampleItem: Cosmic rune
 */
 
 #define RUNES_C_STYLE \
@@ -6586,7 +6586,7 @@ group: D Tier
 label: D Tier
 type: style
 group: D Tier
-exampleItem: Energy potion
+exampleItem: Mind rune
 */
 
 #define RUNES_D_STYLE \
@@ -6674,7 +6674,7 @@ group: E Tier
 label: E Tier
 type: style
 group: E Tier
-exampleItem: Attack potion(4)
+exampleItem: Air rune
 */
 
 #define RUNES_E_STYLE \
