@@ -5206,13 +5206,13 @@ exampleItem: "Sanfew serum(4)"
 
 #define FOOD_AND_POTS_STOCKPILE_SS_STYLE \
 	backgroundColor = "#ffffffff";\
-	menuTextColor = "#ff62a1ff";\
-	color = "#ff62a1ff";\
+	menuTextColor = "#ff813f09";\
+	color = "#ff813f09";\
 	fontType = 3;\
 	textAccent = 3;\
-	borderColor = "#ff62a1ff";\
+	borderColor = "#ff813f09";\
 	showLootbeam = true;\
-	lootbeamColor = "#ff62a1ff";\
+	lootbeamColor = "#ff813f09";\
 	menuSort = 50000;\
 	sound = "DropSS.wav";
 
@@ -5262,8 +5262,8 @@ exampleItem: "Super restore(4)"
 */
 
 #define FOOD_AND_POTS_STOCKPILE_S_STYLE \
-	backgroundColor = "#ff62a1ff";\
-	menuTextColor = "#ff62a1ff";\
+	backgroundColor = "#ff813f09";\
+	menuTextColor = "#ff813f09";\
 	color = "#ffffffff";\
 	fontType = 3;\
 	textAccent = 3;\
@@ -5328,8 +5328,8 @@ exampleItem: "Saradomin brew(4)"
 
 #define FOOD_AND_POTS_STOCKPILE_A_STYLE \
 	color = "#ffffffff";\
-	backgroundColor = "#cc62a1ff";\
-	menuTextColor = "#ff62a1ff"; \
+	backgroundColor = "#cc813f09";\
+	menuTextColor = "#ff813f09"; \
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffffffff";\
@@ -5398,8 +5398,8 @@ exampleItem: "Prayer potion(4)"
 
 #define FOOD_AND_POTS_STOCKPILE_B_STYLE \
 	color = "#ffffffff";\
-    backgroundColor = "#9962a1ff";\
-	menuTextColor = "#ff62a1ff";\
+    backgroundColor = "#99813f09";\
+	menuTextColor = "#ff813f09";\
 	textAccent = 3;\
 	menuSort = 20000;
 
@@ -5473,8 +5473,8 @@ exampleItem: "Super combat potion(4)"
 
 #define FOOD_AND_POTS_STOCKPILE_C_STYLE \
     color = "#ffffffff";\
-    backgroundColor = "#3362a1ff";\
-	menuTextColor = "#ff62a1ff";\
+    backgroundColor = "#33813f09";\
+	menuTextColor = "#ff813f09";\
 	textAccent = 3;\
 	menuSort = 10000;\
 
@@ -5555,8 +5555,8 @@ exampleItem: Energy potion
 */
 
 #define FOOD_AND_POTS_STOCKPILE_D_STYLE \
-    color = "#ff62a1ff"; \
-	menuTextColor = "#ff62a1ff";
+    color = "#ff813f09"; \
+	menuTextColor = "#ff813f09";
 
 /*@ define:input:food_and_pots_stockpile
 label: E Tier Food and Pots
@@ -5645,7 +5645,7 @@ exampleItem: Attack potion(4)
 #define FOOD_AND_POTS_STOCKPILE_E_STYLE \
     color = "#66ffffff"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff62a1ff";\
+	menuTextColor = "#ff813f09";\
 	menuSort = -10000;\
 
 rule (name:FOOD_AND_POTS_STOCKPILE_SS_NAMES) {FOOD_AND_POTS_STOCKPILE_SS_STYLE}
@@ -5681,7 +5681,7 @@ rule (name:FOOD_AND_POTS_STOCKPILE_E_NAMES && quantity:>=FOOD_AND_POTS_STOCKPILE
 rule (name:FOOD_AND_POTS_STOCKPILE_D_NAMES) {FOOD_AND_POTS_STOCKPILE_D_STYLE}
 rule (name:FOOD_AND_POTS_STOCKPILE_E_NAMES && quantity:>=FOOD_AND_POTS_STOCKPILE_E_D_QUANT) {FOOD_AND_POTS_STOCKPILE_D_STYLE}
 
-rule (name:FOOD_AND_POTS_STOCKPILE_E_NAMES) {FOOD_AND_POTS_STOCKPILE_E_STYLE}
+rule (name:FOOD_AND_POTS_STOCKPILE_E_NAMES) {FOOD_AND_POTS_STOCKPILE_E_STYLE}s
 
 /*@ define:input:food_and_pots_stockpile
 label: SS Tier Blighted Food and Pots
