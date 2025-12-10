@@ -30,10 +30,6 @@ description:
 
   - Clues
 
-  - Food/Potion Drops
-
-  - Runes
-
   - Ores/Bars
 
   - Gems/Jewelry
@@ -6206,7 +6202,7 @@ subtitle: Cast some Magic Spells
 /*@ define:input:runes
 label: SS Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: SS Tier
 */
 
@@ -6254,7 +6250,7 @@ exampleItem: Wrath rune
 /*@ define:input:runes
 label: S Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: S Tier
 */
 
@@ -6311,7 +6307,7 @@ exampleItem: Blood rune
 /*@ define:input:runes
 label: A Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: A Tier
 */
 
@@ -6374,7 +6370,7 @@ exampleItem: Death rune
 /*@ define:input:runes
 label: B Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: B Tier
 */
 
@@ -6441,7 +6437,7 @@ exampleItem: Chaos rune
 /*@ define:input:runes
 label: C Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: C Tier
 */
 
@@ -6516,7 +6512,7 @@ exampleItem: Cosmic rune
 /*@ define:input:runes
 label: D Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: D Tier
 */
 
@@ -6596,11 +6592,11 @@ exampleItem: Mind rune
 /*@ define:input:runes
 label: E Tier Runes
 type: enumlist
-enum: ["Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+enum: ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Aether rune","Cosmic rune","Chaos rune","Nature rune","Law rune","Death rune","Sunfire rune","Astral rune","Blood rune","Soul rune","Wrath rune","Blighted ancient ice sack","Blighted entangle sack","Blighted surge sack","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 group: E Tier
 */
 
-#define RUNES_E_NAMES ["Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
+#define RUNES_E_NAMES ["Air rune","Water rune","Earth rune","Fire rune","Mind rune","Body Rune","Mist rune","Dust rune","Mud rune","Smoke rune","Steam rune","Lava rune","Mist rune","Blighted vengeance sack","Blighted teleport spell sack"]
 
 /*@ define:input:runes
 label: Show Unnoted
@@ -6717,6 +6713,527 @@ rule (name:RUNES_D_NAMES) {RUNES_D_STYLE}
 rule (name:RUNES_E_NAMES && quantity:>=RUNES_E_D_QUANT) {RUNES_D_STYLE}
 
 rule (name:RUNES_E_NAMES) {RUNES_E_STYLE}
+
+/*@ define:module:ores_and_bars
+name: Ores & Bars
+subtitle: Everything from Bronze to Rune
+*/
+
+/*@ define:input:ores_and_bars
+label: SS Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Iron ore","Silver ore"]
+group: SS Tier
+*/
+
+#define ORES_AND_BARS_SS_NAMES []
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define ORES_AND_BARS_SS_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_SS_NAMES && !ORES_AND_BARS_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define ORES_AND_BARS_SS_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_SS_NAMES && quantity:<ORES_AND_BARS_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: "Sanfew serum(4)"
+*/
+
+#define ORES_AND_BARS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff17224b";\
+	color = "#ff17224b";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff17224b";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff17224b";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:ores_and_bars
+label: S Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Iron ore","Silver ore"]
+group: S Tier
+*/
+
+#define ORES_AND_BARS_S_NAMES []
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define ORES_AND_BARS_S_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_S_NAMES && !ORES_AND_BARS_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define ORES_AND_BARS_S_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_S_NAMES && quantity:<ORES_AND_BARS_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define ORES_AND_BARS_S_SS_QUANT 10
+
+
+/*@ define:input:ores_and_bars
+label: S Tier
+type: style
+group: S Tier
+exampleItem: "Super restore(4)"
+*/
+
+#define ORES_AND_BARS_S_STYLE \
+	backgroundColor = "#ff17224b";\
+	menuTextColor = "#ff17224b";\
+	color = "#ffc6c6c6";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffc6c6c6";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff17224b";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:ores_and_bars
+label: A Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Iron ore","Silver ore"]
+group: A Tier
+*/
+
+#define ORES_AND_BARS_A_NAMES []
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define ORES_AND_BARS_A_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_A_NAMES && !ORES_AND_BARS_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define ORES_AND_BARS_A_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_A_NAMES && quantity:<ORES_AND_BARS_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define ORES_AND_BARS_A_S_QUANT 10
+
+/*@ define:input:ores_and_bars
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define ORES_AND_BARS_A_SS_QUANT 100
+
+
+/*@ define:input:ores_and_bars
+label: A Tier
+type: style
+group: A Tier
+exampleItem: "Saradomin brew(4)"
+*/
+
+#define ORES_AND_BARS_A_STYLE \
+	color = "#ffc6c6c6";\
+	backgroundColor = "#cc17224b";\
+	menuTextColor = "#ff17224b"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffc6c6c6";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:ores_and_bars
+label: B Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Bronze bar","Iron bar","Silver bar","Gold bar","Copper ore","Tin ore","Iron ore","Silver ore"]
+group: B Tier
+*/
+
+#define ORES_AND_BARS_B_NAMES []
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define ORES_AND_BARS_B_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_B_NAMES && !ORES_AND_BARS_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define ORES_AND_BARS_B_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_B_NAMES && quantity:<ORES_AND_BARS_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define ORES_AND_BARS_B_A_QUANT 10
+
+/*@ define:input:ores_and_bars
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define ORES_AND_BARS_B_S_QUANT 100
+
+/*@ define:input:ores_and_bars
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define ORES_AND_BARS_B_SS_QUANT 1000
+
+/*@ define:input:ores_and_bars
+label: B Tier
+type: style
+group: B Tier
+exampleItem: "Prayer potion(4)"
+*/
+
+#define ORES_AND_BARS_B_STYLE \
+	color = "#ffc6c6c6";\
+    backgroundColor = "#9917224b";\
+	menuTextColor = "#ff17224b";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:ores_and_bars
+label: C Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Bronze bar","Iron bar","Silver bar","Gold bar","Copper ore","Tin ore","Iron ore","Silver ore"]
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_NAMES ["Runite bar","Cupronickel bar","Runite ore","Nickel ore"]
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_C_NAMES && !ORES_AND_BARS_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_C_NAMES && quantity:<ORES_AND_BARS_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_B_QUANT 10
+
+/*@ define:input:ores_and_bars
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_A_QUANT 100
+
+/*@ define:input:ores_and_bars
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_S_QUANT 1000
+
+/*@ define:input:ores_and_bars
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define ORES_AND_BARS_C_SS_QUANT 10000
+
+/*@ define:input:ores_and_bars
+label: C Tier
+type: style
+group: C Tier
+exampleItem: "Super combat potion(4)"
+*/
+
+#define ORES_AND_BARS_C_STYLE \
+    color = "#ffc6c6c6";\
+    backgroundColor = "#3317224b";\
+	menuTextColor = "#ff17224b";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:ores_and_bars
+label: D Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Bronze bar","Iron bar","Silver bar","Gold bar","Copper ore","Tin ore","Iron ore","Silver ore"]
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_NAMES ["Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore"]
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_D_NAMES && !ORES_AND_BARS_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_D_NAMES && quantity:<ORES_AND_BARS_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_C_QUANT 10
+
+/*@ define:input:ores_and_bars
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_B_QUANT 100
+
+/*@ define:input:ores_and_bars
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_A_QUANT 1000
+
+/*@ define:input:ores_and_bars
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_S_QUANT 10000
+
+/*@ define:input:ores_and_bars
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define ORES_AND_BARS_D_SS_QUANT 100000
+
+/*@ define:input:ores_and_bars
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Energy potion
+*/
+
+#define ORES_AND_BARS_D_STYLE \
+    color = "#ff17224b"; \
+	menuTextColor = "#ff17224b";
+
+/*@ define:input:ores_and_bars
+label: E Tier Ores & Bars
+type: enumlist
+enum: ["Runite bar","Cupronickel bar","Runite ore","Nickel ore","Lead bar","Steel bar","Lovakite bar","Mithril bar","Coal","Adamant bar","Lead ore","Gold ore","Mithril ore","Lovakite ore","Adamantite ore","Bronze bar","Iron bar","Silver bar","Gold bar","Copper ore","Tin ore","Iron ore","Silver ore"]
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_NAMES ["Bronze bar","Iron bar","Silver bar","Gold bar","Copper ore","Tin ore","Iron ore","Silver ore"]
+
+/*@ define:input:ores_and_bars
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_SHOW_UNNOTED true
+
+rule (name:ORES_AND_BARS_E_NAMES && !ORES_AND_BARS_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_MIN_QUANT 0
+
+rule (name:ORES_AND_BARS_E_NAMES && quantity:<ORES_AND_BARS_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:ores_and_bars
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_D_QUANT 10
+
+/*@ define:input:ores_and_bars
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_C_QUANT 100
+
+/*@ define:input:ores_and_bars
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_B_QUANT 1000
+
+/*@ define:input:ores_and_bars
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_A_QUANT 10000
+
+/*@ define:input:ores_and_bars
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_S_QUANT 100000
+
+/*@ define:input:ores_and_bars
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define ORES_AND_BARS_E_SS_QUANT 1000000
+
+/*@ define:input:ores_and_bars
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Attack potion(4)
+*/
+
+#define ORES_AND_BARS_E_STYLE \
+    color = "#6617224b"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff17224b";\
+	menuSort = -10000;\
+
+rule (name:ORES_AND_BARS_SS_NAMES) {ORES_AND_BARS_SS_STYLE}
+rule (name:ORES_AND_BARS_S_NAMES && quantity:>=ORES_AND_BARS_S_SS_QUANT) {ORES_AND_BARS_SS_STYLE}
+rule (name:ORES_AND_BARS_A_NAMES && quantity:>=ORES_AND_BARS_A_SS_QUANT) {ORES_AND_BARS_SS_STYLE}
+rule (name:ORES_AND_BARS_B_NAMES && quantity:>=ORES_AND_BARS_B_SS_QUANT) {ORES_AND_BARS_SS_STYLE}
+rule (name:ORES_AND_BARS_C_NAMES && quantity:>=ORES_AND_BARS_C_SS_QUANT) {ORES_AND_BARS_SS_STYLE}
+rule (name:ORES_AND_BARS_D_NAMES && quantity:>=ORES_AND_BARS_D_SS_QUANT) {ORES_AND_BARS_SS_STYLE}
+rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_SS_QUANT) {ORES_AND_BARS_SS_STYLE}
+
+rule (name:ORES_AND_BARS_S_NAMES) {ORES_AND_BARS_S_STYLE}
+rule (name:ORES_AND_BARS_A_NAMES && quantity:>=ORES_AND_BARS_A_S_QUANT) {ORES_AND_BARS_S_STYLE}
+rule (name:ORES_AND_BARS_B_NAMES && quantity:>=ORES_AND_BARS_B_S_QUANT) {ORES_AND_BARS_S_STYLE}
+rule (name:ORES_AND_BARS_C_NAMES && quantity:>=ORES_AND_BARS_C_S_QUANT) {ORES_AND_BARS_S_STYLE}
+rule (name:ORES_AND_BARS_D_NAMES && quantity:>=ORES_AND_BARS_D_S_QUANT) {ORES_AND_BARS_S_STYLE}
+rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_S_QUANT) {ORES_AND_BARS_S_STYLE}
+
+rule (name:ORES_AND_BARS_A_NAMES) {ORES_AND_BARS_A_STYLE}
+rule (name:ORES_AND_BARS_B_NAMES && quantity:>=ORES_AND_BARS_B_A_QUANT) {ORES_AND_BARS_A_STYLE}
+rule (name:ORES_AND_BARS_C_NAMES && quantity:>=ORES_AND_BARS_C_A_QUANT) {ORES_AND_BARS_A_STYLE}
+rule (name:ORES_AND_BARS_D_NAMES && quantity:>=ORES_AND_BARS_D_A_QUANT) {ORES_AND_BARS_A_STYLE}
+rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_A_QUANT) {ORES_AND_BARS_A_STYLE}
+
+rule (name:ORES_AND_BARS_B_NAMES) {ORES_AND_BARS_B_STYLE}
+rule (name:ORES_AND_BARS_C_NAMES && quantity:>=ORES_AND_BARS_C_B_QUANT) {ORES_AND_BARS_B_STYLE}
+rule (name:ORES_AND_BARS_D_NAMES && quantity:>=ORES_AND_BARS_D_B_QUANT) {ORES_AND_BARS_B_STYLE}
+rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_B_QUANT) {ORES_AND_BARS_B_STYLE}
+
+rule (name:ORES_AND_BARS_C_NAMES) {ORES_AND_BARS_C_STYLE}
+rule (name:ORES_AND_BARS_D_NAMES && quantity:>=ORES_AND_BARS_D_C_QUANT) {ORES_AND_BARS_C_STYLE}
+rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_C_QUANT) {ORES_AND_BARS_C_STYLE}
+
+rule (name:ORES_AND_BARS_D_NAMES) {ORES_AND_BARS_D_STYLE}
+rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_D_QUANT) {ORES_AND_BARS_D_STYLE}
+
+rule (name:ORES_AND_BARS_E_NAMES) {ORES_AND_BARS_E_STYLE}
+
 
 
 
