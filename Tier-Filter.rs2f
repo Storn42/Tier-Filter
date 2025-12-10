@@ -6752,7 +6752,7 @@ rule (name:ORES_AND_BARS_SS_NAMES && quantity:<ORES_AND_BARS_SS_MIN_QUANT) {hidd
 label: SS Tier
 type: style
 group: SS Tier
-exampleItem: "Sanfew serum(4)"
+exampleItem: Runite bar
 */
 
 #define ORES_AND_BARS_SS_STYLE \
@@ -6809,7 +6809,7 @@ group: S Tier
 label: S Tier
 type: style
 group: S Tier
-exampleItem: "Super restore(4)"
+exampleItem: Cupronickel bar
 */
 
 #define ORES_AND_BARS_S_STYLE \
@@ -6874,7 +6874,7 @@ group: A Tier
 label: A Tier
 type: style
 group: A Tier
-exampleItem: "Saradomin brew(4)"
+exampleItem: Adamant bar
 */
 
 #define ORES_AND_BARS_A_STYLE \
@@ -6944,7 +6944,7 @@ group: B Tier
 label: B Tier
 type: style
 group: B Tier
-exampleItem: "Prayer potion(4)"
+exampleItem: Gold ore
 */
 
 #define ORES_AND_BARS_B_STYLE \
@@ -7019,7 +7019,7 @@ group: C Tier
 label: C Tier
 type: style
 group: C Tier
-exampleItem: "Super combat potion(4)"
+exampleItem: Mithril bar
 */
 
 #define ORES_AND_BARS_C_STYLE \
@@ -7102,7 +7102,7 @@ group: D Tier
 label: D Tier
 type: style
 group: D Tier
-exampleItem: Energy potion
+exampleItem: Steel bar
 */
 
 #define ORES_AND_BARS_D_STYLE \
@@ -7190,7 +7190,7 @@ group: E Tier
 label: E Tier
 type: style
 group: E Tier
-exampleItem: Attack potion(4)
+exampleItem: Copper ore
 */
 
 #define ORES_AND_BARS_E_STYLE \
