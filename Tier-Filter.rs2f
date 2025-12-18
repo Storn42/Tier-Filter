@@ -7232,8 +7232,522 @@ rule (name:ORES_AND_BARS_E_NAMES && quantity:>=ORES_AND_BARS_E_D_QUANT) {ORES_AN
 
 rule (name:ORES_AND_BARS_E_NAMES) {ORES_AND_BARS_E_STYLE}
 
+/*@ define:module:logs
+name: Logs
+subtitle: Collect all sorts of Wood
+*/
+
+/*@ define:input:logs
+label: SS Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: SS Tier
+*/
+
+#define LOGS_SS_NAMES []
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define LOGS_SS_SHOW_UNNOTED true
+
+rule (name:LOGS_SS_NAMES && !LOGS_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define LOGS_SS_MIN_QUANT 0
+
+rule (name:LOGS_SS_NAMES && quantity:<LOGS_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Rosewood logs
+*/
+
+#define LOGS_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff512A02";\
+	color = "#ff512A02";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff512A02";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff512A02";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:logs
+label: S Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: S Tier
+*/
+
+#define LOGS_S_NAMES []
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define LOGS_S_SHOW_UNNOTED true
+
+rule (name:LOGS_S_NAMES && !LOGS_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define LOGS_S_MIN_QUANT 0
+
+rule (name:LOGS_S_NAMES && quantity:<LOGS_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define LOGS_S_SS_QUANT 10
 
 
+/*@ define:input:logs
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Redwood logs
+*/
+
+#define LOGS_S_STYLE \
+	backgroundColor = "#ff512A02";\
+	menuTextColor = "#ffAC8C53";\
+	color = "#ffAC8C53";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffAC8C53";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff512A02";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:logs
+label: A Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: A Tier
+*/
+
+#define LOGS_A_NAMES []
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define LOGS_A_SHOW_UNNOTED true
+
+rule (name:LOGS_A_NAMES && !LOGS_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define LOGS_A_MIN_QUANT 0
+
+rule (name:LOGS_A_NAMES && quantity:<LOGS_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define LOGS_A_S_QUANT 10
+
+/*@ define:input:logs
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define LOGS_A_SS_QUANT 100
 
 
+/*@ define:input:logs
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Magic logs
+*/
 
+#define LOGS_A_STYLE \
+	color = "#ffAC8C53";\
+	backgroundColor = "#cc512A02";\
+	menuTextColor = "#ffAC8C53"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffAC8C53";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:logs
+label: B Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: B Tier
+*/
+
+#define LOGS_B_NAMES ["Goading potion(*)","Prayer regeneration potion(*)","Sanfew serum(*)","Surge potion(*)"]
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define LOGS_B_SHOW_UNNOTED true
+
+rule (name:LOGS_B_NAMES && !LOGS_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define LOGS_B_MIN_QUANT 0
+
+rule (name:LOGS_B_NAMES && quantity:<LOGS_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define LOGS_B_A_QUANT 10
+
+/*@ define:input:logs
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define LOGS_B_S_QUANT 100
+
+/*@ define:input:logs
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define LOGS_B_SS_QUANT 1000
+
+/*@ define:input:logs
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Yew logs
+*/
+
+#define LOGS_B_STYLE \
+	color = "#ffAC8C53";\
+    backgroundColor = "#99512A02";\
+	menuTextColor = "#ffAC8C53";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:logs
+label: C Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: C Tier
+*/
+
+#define LOGS_C_NAMES ["Redwood logs","Rosewood logs"]
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define LOGS_C_SHOW_UNNOTED true
+
+rule (name:LOGS_C_NAMES && !LOGS_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define LOGS_C_MIN_QUANT 0
+
+rule (name:LOGS_C_NAMES && quantity:<LOGS_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define LOGS_C_B_QUANT 10
+
+/*@ define:input:logs
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define LOGS_C_A_QUANT 100
+
+/*@ define:input:logs
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define LOGS_C_S_QUANT 1000
+
+/*@ define:input:logs
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define LOGS_C_SS_QUANT 10000
+
+/*@ define:input:logs
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Maple logs
+*/
+
+#define LOGS_C_STYLE \
+    color = "#ffAC8C53";\
+    backgroundColor = "#33512A02";\
+	menuTextColor = "#ffAC8C53";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:logs
+label: D Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: D Tier
+*/
+
+#define LOGS_D_NAMES ["Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs"]
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define LOGS_D_SHOW_UNNOTED true
+
+rule (name:LOGS_D_NAMES && !LOGS_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define LOGS_D_MIN_QUANT 0
+
+rule (name:LOGS_D_NAMES && quantity:<LOGS_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define LOGS_D_C_QUANT 10
+
+/*@ define:input:logs
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define LOGS_D_B_QUANT 100
+
+/*@ define:input:logs
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define LOGS_D_A_QUANT 1000
+
+/*@ define:input:logs
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define LOGS_D_S_QUANT 10000
+
+/*@ define:input:logs
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define LOGS_D_SS_QUANT 100000
+
+/*@ define:input:logs
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Oak logs
+*/
+
+#define LOGS_D_STYLE \
+    color = "#ffAC8C53"; \
+	menuTextColor = "#ffAC8C53";
+
+/*@ define:input:logs
+label: E Tier Logs
+type: enumlist
+enum: ["Redwood logs","Rosewood logs","Yew logs","Magic logs","Mahogany logs","Camphor logs","Ironwood logs","Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+group: E Tier
+*/
+
+#define LOGS_E_NAMES ["Logs","Oak logs","Willow logs","Maple logs","Teak logs","Achey tree logs","Jatoba logs","Arctic pine logs","Bark","Juniper logs","Blisterwood logs"]
+
+/*@ define:input:logs
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define LOGS_E_SHOW_UNNOTED true
+
+rule (name:LOGS_E_NAMES && !LOGS_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:logs
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_MIN_QUANT 0
+
+rule (name:LOGS_E_NAMES && quantity:<LOGS_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:logs
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_D_QUANT 10
+
+/*@ define:input:logs
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_C_QUANT 100
+
+/*@ define:input:logs
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_B_QUANT 1000
+
+/*@ define:input:logs
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_A_QUANT 10000
+
+/*@ define:input:logs
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_S_QUANT 100000
+
+/*@ define:input:logs
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define LOGS_E_SS_QUANT 1000000
+
+/*@ define:input:logs
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Logs
+*/
+
+#define LOGS_E_STYLE \
+    color = "#66AC8C53"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ffAC8C53";\
+	menuSort = -10000;\
+
+rule (name:LOGS_SS_NAMES) {LOGS_SS_STYLE}
+rule (name:LOGS_S_NAMES && quantity:>=LOGS_S_SS_QUANT) {LOGS_SS_STYLE}
+rule (name:LOGS_A_NAMES && quantity:>=LOGS_A_SS_QUANT) {LOGS_SS_STYLE}
+rule (name:LOGS_B_NAMES && quantity:>=LOGS_B_SS_QUANT) {LOGS_SS_STYLE}
+rule (name:LOGS_C_NAMES && quantity:>=LOGS_C_SS_QUANT) {LOGS_SS_STYLE}
+rule (name:LOGS_D_NAMES && quantity:>=LOGS_D_SS_QUANT) {LOGS_SS_STYLE}
+rule (name:LOGS_E_NAMES && quantity:>=LOGS_E_SS_QUANT) {LOGS_SS_STYLE}
+
+rule (name:LOGS_S_NAMES) {LOGS_S_STYLE}
+rule (name:LOGS_A_NAMES && quantity:>=LOGS_A_S_QUANT) {LOGS_S_STYLE}
+rule (name:LOGS_B_NAMES && quantity:>=LOGS_B_S_QUANT) {LOGS_S_STYLE}
+rule (name:LOGS_C_NAMES && quantity:>=LOGS_C_S_QUANT) {LOGS_S_STYLE}
+rule (name:LOGS_D_NAMES && quantity:>=LOGS_D_S_QUANT) {LOGS_S_STYLE}
+rule (name:LOGS_E_NAMES && quantity:>=LOGS_E_S_QUANT) {LOGS_S_STYLE}
+
+rule (name:LOGS_A_NAMES) {LOGS_A_STYLE}
+rule (name:LOGS_B_NAMES && quantity:>=LOGS_B_A_QUANT) {LOGS_A_STYLE}
+rule (name:LOGS_C_NAMES && quantity:>=LOGS_C_A_QUANT) {LOGS_A_STYLE}
+rule (name:LOGS_D_NAMES && quantity:>=LOGS_D_A_QUANT) {LOGS_A_STYLE}
+rule (name:LOGS_E_NAMES && quantity:>=LOGS_E_A_QUANT) {LOGS_A_STYLE}
+
+rule (name:LOGS_B_NAMES) {LOGS_B_STYLE}
+rule (name:LOGS_C_NAMES && quantity:>=LOGS_C_B_QUANT) {LOGS_B_STYLE}
+rule (name:LOGS_D_NAMES && quantity:>=LOGS_D_B_QUANT) {LOGS_B_STYLE}
+rule (name:LOGS_E_NAMES && quantity:>=LOGS_E_B_QUANT) {LOGS_B_STYLE}
+
+rule (name:LOGS_C_NAMES) {LOGS_C_STYLE}
+rule (name:LOGS_D_NAMES && quantity:>=LOGS_D_C_QUANT) {LOGS_C_STYLE}
+rule (name:LOGS_E_NAMES && quantity:>=LOGS_E_C_QUANT) {LOGS_C_STYLE}
+
+rule (name:LOGS_D_NAMES) {LOGS_D_STYLE}
+rule (name:LOGS_E_NAMES && quantity:>=LOGS_E_D_QUANT) {LOGS_D_STYLE}
+
+rule (name:LOGS_E_NAMES) {LOGS_E_STYLE}
