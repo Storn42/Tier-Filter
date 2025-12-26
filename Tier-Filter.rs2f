@@ -6753,13 +6753,13 @@ exampleItem: Runite bar
 
 #define ORES_AND_BARS_SS_STYLE \
 	backgroundColor = "#ffffffff";\
-	menuTextColor = "#ff17224b";\
-	color = "#ff17224b";\
+	menuTextColor = "#ff5E5E4C";\
+	color = "#ff5E5E4C";\
 	fontType = 3;\
 	textAccent = 3;\
-	borderColor = "#ff17224b";\
+	borderColor = "#ff5E5E4C";\
 	showLootbeam = true;\
-	lootbeamColor = "#ff17224b";\
+	lootbeamColor = "#ff5E5E4C";\
 	menuSort = 50000;\
 	sound = "DropSS.wav";
 
@@ -6809,14 +6809,14 @@ exampleItem: Cupronickel bar
 */
 
 #define ORES_AND_BARS_S_STYLE \
-	backgroundColor = "#ff17224b";\
-	menuTextColor = "#ff17224b";\
-	color = "#ffc6c6c6";\
+	backgroundColor = "#ff5E5E4C";\
+	menuTextColor = "#ff5E5E4C";\
+	color = "#ff75B5CF";\
 	fontType = 3;\
 	textAccent = 3;\
-	borderColor = "#ffc6c6c6";\
+	borderColor = "#ff75B5CF";\
 	showLootbeam = true;\
-	lootbeamColor = "#ff17224b";\
+	lootbeamColor = "#ff5E5E4C";\
 	menuSort = 40000;\
 	sound = "DropS.wav";
 
@@ -6874,12 +6874,12 @@ exampleItem: Adamant bar
 */
 
 #define ORES_AND_BARS_A_STYLE \
-	color = "#ffc6c6c6";\
-	backgroundColor = "#cc17224b";\
-	menuTextColor = "#ff17224b"; \
+	color = "#ff75B5CF";\
+	backgroundColor = "#cc5E5E4C";\
+	menuTextColor = "#ff5E5E4C"; \
 	fontType = 2;\
 	textAccent = 3;\
-	borderColor = "#ffc6c6c6";\
+	borderColor = "#ff75B5CF";\
 	menuSort = 30000;\
 	sound = "DropA.wav";
 
@@ -6944,9 +6944,9 @@ exampleItem: Gold ore
 */
 
 #define ORES_AND_BARS_B_STYLE \
-	color = "#ffc6c6c6";\
-    backgroundColor = "#9917224b";\
-	menuTextColor = "#ff17224b";\
+	color = "#ff75B5CF";\
+    backgroundColor = "#995E5E4C";\
+	menuTextColor = "#ff5E5E4C";\
 	textAccent = 3;\
 	menuSort = 20000;
 
@@ -7019,9 +7019,9 @@ exampleItem: Mithril bar
 */
 
 #define ORES_AND_BARS_C_STYLE \
-    color = "#ffc6c6c6";\
-    backgroundColor = "#3317224b";\
-	menuTextColor = "#ff17224b";\
+    color = "#ff75B5CF";\
+    backgroundColor = "#335E5E4C";\
+	menuTextColor = "#ff5E5E4C";\
 	textAccent = 3;\
 	menuSort = 10000;\
 
@@ -7102,8 +7102,8 @@ exampleItem: Steel bar
 */
 
 #define ORES_AND_BARS_D_STYLE \
-    color = "#ff17224b"; \
-	menuTextColor = "#ff17224b";
+    color = "#ff5E5E4C"; \
+	menuTextColor = "#ff5E5E4C";
 
 /*@ define:input:ores_and_bars
 label: E Tier Ores & Bars
@@ -7190,9 +7190,9 @@ exampleItem: Copper ore
 */
 
 #define ORES_AND_BARS_E_STYLE \
-    color = "#6617224b"; \
+    color = "#665E5E4C"; \
 	textAccentColor = "#66000000"; \
-	menuTextColor = "#ff17224b";\
+	menuTextColor = "#ff5E5E4C";\
 	menuSort = -10000;\
 
 rule (name:ORES_AND_BARS_SS_NAMES) {ORES_AND_BARS_SS_STYLE}
@@ -8269,3 +8269,523 @@ rule (name:PLANKS_D_NAMES) {PLANKS_D_STYLE}
 rule (name:PLANKS_E_NAMES && quantity:>=PLANKS_E_D_QUANT) {PLANKS_D_STYLE}
 
 rule (name:PLANKS_E_NAMES) {PLANKS_E_STYLE}
+
+/*@ define:module:crafting
+name: Crafting Materials
+subtitle: Gems & Leathers
+*/
+
+/*@ define:input:crafting
+label: SS Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: SS Tier
+*/
+
+#define CRAFTING_SS_NAMES ["Zenyte","Uncut zenyte"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define CRAFTING_SS_SHOW_UNNOTED true
+
+rule (name:CRAFTING_SS_NAMES && !CRAFTING_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define CRAFTING_SS_MIN_QUANT 0
+
+rule (name:CRAFTING_SS_NAMES && quantity:<CRAFTING_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Uncut zenyte
+*/
+
+#define CRAFTING_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff85654A";\
+	color = "#ff85654A";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff85654A";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff85654A";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:crafting
+label: S Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: S Tier
+*/
+
+#define CRAFTING_S_NAMES ["Onyx","Uncut onyx"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define CRAFTING_S_SHOW_UNNOTED true
+
+rule (name:CRAFTING_S_NAMES && !CRAFTING_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define CRAFTING_S_MIN_QUANT 0
+
+rule (name:CRAFTING_S_NAMES && quantity:<CRAFTING_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define CRAFTING_S_SS_QUANT 10
+
+
+/*@ define:input:crafting
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Uncut onyx
+*/
+
+#define CRAFTING_S_STYLE \
+	backgroundColor = "#ff85654A";\
+	menuTextColor = "#ffD8BD1A";\
+	color = "#ffD8BD1A";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffD8BD1A";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff85654A";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:crafting
+label: A Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: A Tier
+*/
+
+#define CRAFTING_A_NAMES ["Hueycoatl hide"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define CRAFTING_A_SHOW_UNNOTED true
+
+rule (name:CRAFTING_A_NAMES && !CRAFTING_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define CRAFTING_A_MIN_QUANT 0
+
+rule (name:CRAFTING_A_NAMES && quantity:<CRAFTING_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define CRAFTING_A_S_QUANT 10
+
+/*@ define:input:crafting
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define CRAFTING_A_SS_QUANT 100
+
+
+/*@ define:input:crafting
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Hueycoatl hide
+*/
+
+#define CRAFTING_A_STYLE \
+	color = "#ffD8BD1A";\
+	backgroundColor = "#cc85654A";\
+	menuTextColor = "#ffD8BD1A"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffD8BD1A";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:crafting
+label: B Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: B Tier
+*/
+
+#define CRAFTING_B_NAMES ["Uncut dragonstone","Dragonstone"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define CRAFTING_B_SHOW_UNNOTED true
+
+rule (name:CRAFTING_B_NAMES && !CRAFTING_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define CRAFTING_B_MIN_QUANT 0
+
+rule (name:CRAFTING_B_NAMES && quantity:<CRAFTING_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define CRAFTING_B_A_QUANT 10
+
+/*@ define:input:crafting
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define CRAFTING_B_S_QUANT 100
+
+/*@ define:input:crafting
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define CRAFTING_B_SS_QUANT 1000
+
+/*@ define:input:crafting
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Uncut dragonstone
+*/
+
+#define CRAFTING_B_STYLE \
+	color = "#ffD8BD1A";\
+    backgroundColor = "#9985654A";\
+	menuTextColor = "#ffD8BD1A";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:crafting
+label: C Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: C Tier
+*/
+
+#define CRAFTING_C_NAMES ["Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define CRAFTING_C_SHOW_UNNOTED true
+
+rule (name:CRAFTING_C_NAMES && !CRAFTING_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define CRAFTING_C_MIN_QUANT 0
+
+rule (name:CRAFTING_C_NAMES && quantity:<CRAFTING_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define CRAFTING_C_B_QUANT 10
+
+/*@ define:input:crafting
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define CRAFTING_C_A_QUANT 100
+
+/*@ define:input:crafting
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define CRAFTING_C_S_QUANT 1000
+
+/*@ define:input:crafting
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define CRAFTING_C_SS_QUANT 10000
+
+/*@ define:input:crafting
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Black dragon leather
+*/
+
+#define CRAFTING_C_STYLE \
+    color = "#ffD8BD1A";\
+    backgroundColor = "#3385654A";\
+	menuTextColor = "#ffD8BD1A";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:crafting
+label: D Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: D Tier
+*/
+
+#define CRAFTING_D_NAMES ["Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define CRAFTING_D_SHOW_UNNOTED true
+
+rule (name:CRAFTING_D_NAMES && !CRAFTING_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define CRAFTING_D_MIN_QUANT 0
+
+rule (name:CRAFTING_D_NAMES && quantity:<CRAFTING_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define CRAFTING_D_C_QUANT 10
+
+/*@ define:input:crafting
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define CRAFTING_D_B_QUANT 100
+
+/*@ define:input:crafting
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define CRAFTING_D_A_QUANT 1000
+
+/*@ define:input:crafting
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define CRAFTING_D_S_QUANT 10000
+
+/*@ define:input:crafting
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define CRAFTING_D_SS_QUANT 100000
+
+/*@ define:input:crafting
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Uncut ruby
+*/
+
+#define CRAFTING_D_STYLE \
+    color = "#ffD8BD1A"; \
+	menuTextColor = "#ffD8BD1A";
+
+/*@ define:input:crafting
+label: E Tier Crafting Supplies
+type: enumlist
+enum: ["Zenyte","Uncut zenyte","Onyx","Uncut onyx","Hueycoatl hide","Uncut diamond","Dragonstone","Green dragon leather","Blue dragon leather","Red dragon leather","Black dragon leather","Fine cloth","Red topaz","Uncut red topaz","Diamond","Uncut diamond","Green dragonhide","Blue dragonhide","Red dragonhide","Black dragonhide","Battlestaff","Hemp","Linen yarn","Hemp yarn","Cotton yarn","Cotton boll","Soft clay","Cured yak-hide","Xerician fabric","Molten glass","Opal","Uncut opal","Jade","Uncut jade","Sapphire","Uncut sapphire","Emerald","Uncut emerald","Ruby","Uncut ruby","Water orb","Earth orb","Fire orb","Air orb","Amethyst","Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+group: E Tier
+*/
+
+#define CRAFTING_E_NAMES ["Wool","Flax","Ball of wool","Cow hide","Leather","Hard leather","Snakeskin","Snake hide","Gold bar","Silver bar"]
+
+/*@ define:input:crafting
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define CRAFTING_E_SHOW_UNNOTED true
+
+rule (name:CRAFTING_E_NAMES && !CRAFTING_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:crafting
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_MIN_QUANT 0
+
+rule (name:CRAFTING_E_NAMES && quantity:<CRAFTING_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:crafting
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_D_QUANT 10
+
+/*@ define:input:crafting
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_C_QUANT 100
+
+/*@ define:input:crafting
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_B_QUANT 1000
+
+/*@ define:input:crafting
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_A_QUANT 10000
+
+/*@ define:input:crafting
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_S_QUANT 100000
+
+/*@ define:input:crafting
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define CRAFTING_E_SS_QUANT 1000000
+
+/*@ define:input:crafting
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Leather
+*/
+
+#define CRAFTING_E_STYLE \
+    color = "#66D8BD1A"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ffD8BD1A";\
+	menuSort = -10000;\
+
+rule (name:CRAFTING_SS_NAMES) {CRAFTING_SS_STYLE}
+rule (name:CRAFTING_S_NAMES && quantity:>=CRAFTING_S_SS_QUANT) {CRAFTING_SS_STYLE}
+rule (name:CRAFTING_A_NAMES && quantity:>=CRAFTING_A_SS_QUANT) {CRAFTING_SS_STYLE}
+rule (name:CRAFTING_B_NAMES && quantity:>=CRAFTING_B_SS_QUANT) {CRAFTING_SS_STYLE}
+rule (name:CRAFTING_C_NAMES && quantity:>=CRAFTING_C_SS_QUANT) {CRAFTING_SS_STYLE}
+rule (name:CRAFTING_D_NAMES && quantity:>=CRAFTING_D_SS_QUANT) {CRAFTING_SS_STYLE}
+rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_SS_QUANT) {CRAFTING_SS_STYLE}
+
+rule (name:CRAFTING_S_NAMES) {CRAFTING_S_STYLE}
+rule (name:CRAFTING_A_NAMES && quantity:>=CRAFTING_A_S_QUANT) {CRAFTING_S_STYLE}
+rule (name:CRAFTING_B_NAMES && quantity:>=CRAFTING_B_S_QUANT) {CRAFTING_S_STYLE}
+rule (name:CRAFTING_C_NAMES && quantity:>=CRAFTING_C_S_QUANT) {CRAFTING_S_STYLE}
+rule (name:CRAFTING_D_NAMES && quantity:>=CRAFTING_D_S_QUANT) {CRAFTING_S_STYLE}
+rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_S_QUANT) {CRAFTING_S_STYLE}
+
+rule (name:CRAFTING_A_NAMES) {CRAFTING_A_STYLE}
+rule (name:CRAFTING_B_NAMES && quantity:>=CRAFTING_B_A_QUANT) {CRAFTING_A_STYLE}
+rule (name:CRAFTING_C_NAMES && quantity:>=CRAFTING_C_A_QUANT) {CRAFTING_A_STYLE}
+rule (name:CRAFTING_D_NAMES && quantity:>=CRAFTING_D_A_QUANT) {CRAFTING_A_STYLE}
+rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_A_QUANT) {CRAFTING_A_STYLE}
+
+rule (name:CRAFTING_B_NAMES) {CRAFTING_B_STYLE}
+rule (name:CRAFTING_C_NAMES && quantity:>=CRAFTING_C_B_QUANT) {CRAFTING_B_STYLE}
+rule (name:CRAFTING_D_NAMES && quantity:>=CRAFTING_D_B_QUANT) {CRAFTING_B_STYLE}
+rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_B_QUANT) {CRAFTING_B_STYLE}
+
+rule (name:CRAFTING_C_NAMES) {CRAFTING_C_STYLE}
+rule (name:CRAFTING_D_NAMES && quantity:>=CRAFTING_D_C_QUANT) {CRAFTING_C_STYLE}
+rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_C_QUANT) {CRAFTING_C_STYLE}
+
+rule (name:CRAFTING_D_NAMES) {CRAFTING_D_STYLE}
+rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_D_QUANT) {CRAFTING_D_STYLE}
+
+rule (name:CRAFTING_E_NAMES) {CRAFTING_E_STYLE}
