@@ -11,7 +11,7 @@ meta {
 /*@ define:module:greetings
 name: This Is a Test
 description:
-    This is a proof of concept for a filter that sorts by item tiers rather than ge value
+    This is WIP for a filter that sorts by item tiers rather than ge value. It is not finished. It is not usable. 
 
 
   Things to Finish
@@ -29,8 +29,6 @@ description:
   - Minigames
 
   - Clues
-
-  - Ammo (Metal Gear?)
 
   - Prayer
 
