@@ -8785,3 +8785,4683 @@ rule (name:CRAFTING_D_NAMES) {CRAFTING_D_STYLE}
 rule (name:CRAFTING_E_NAMES && quantity:>=CRAFTING_E_D_QUANT) {CRAFTING_D_STYLE}
 
 rule (name:CRAFTING_E_NAMES) {CRAFTING_E_STYLE}
+
+/*@ define:module:dragon_gear
+name: Dragon Gear
+subtitle: Made from Real Dragons
+*/
+
+/*@ define:input:dragon_gear
+label: SS Tier Dragon Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define DRAGON_GEAR_SS_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define DRAGON_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_SS_NAMES && !DRAGON_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define DRAGON_GEAR_SS_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_SS_NAMES && quantity:<DRAGON_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Dragon platebody
+*/
+
+#define DRAGON_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff870c12";\
+	color = "#ff870c12";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff870c12";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff870c12";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:dragon_gear
+label: S Tier Dragon Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define DRAGON_GEAR_S_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define DRAGON_GEAR_S_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_S_NAMES && !DRAGON_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define DRAGON_GEAR_S_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_S_NAMES && quantity:<DRAGON_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define DRAGON_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:dragon_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Dragon platelegs
+*/
+
+#define DRAGON_GEAR_S_STYLE \
+	backgroundColor = "#ff870c12";\
+	menuTextColor = "#ff870c12";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff870c12";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:dragon_gear
+label: A Tier Dragon Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define DRAGON_GEAR_A_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define DRAGON_GEAR_A_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_A_NAMES && !DRAGON_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define DRAGON_GEAR_A_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_A_NAMES && quantity:<DRAGON_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define DRAGON_GEAR_A_S_QUANT 10
+
+/*@ define:input:dragon_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define DRAGON_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:dragon_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Dragon kiteshield
+*/
+
+#define DRAGON_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc870c12";\
+	menuTextColor = "#ff870c12"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:dragon_gear
+label: B Tier Dragon Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define DRAGON_GEAR_B_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define DRAGON_GEAR_B_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_B_NAMES && !DRAGON_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define DRAGON_GEAR_B_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_B_NAMES && quantity:<DRAGON_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define DRAGON_GEAR_B_A_QUANT 10
+
+/*@ define:input:dragon_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define DRAGON_GEAR_B_S_QUANT 100
+
+/*@ define:input:dragon_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define DRAGON_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:dragon_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Dragon pickaxe
+*/
+
+#define DRAGON_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#99870c12";\
+	menuTextColor = "#ff870c12";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:dragon_gear
+label: C Tier Dragon Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_C_NAMES && !DRAGON_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_C_NAMES && quantity:<DRAGON_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_B_QUANT 10
+
+/*@ define:input:dragon_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_A_QUANT 100
+
+/*@ define:input:dragon_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_S_QUANT 1000
+
+/*@ define:input:dragon_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define DRAGON_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:dragon_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Dragon axe
+*/
+
+#define DRAGON_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#33870c12";\
+	menuTextColor = "#ff870c12";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:dragon_gear
+label: D Tier Dragon Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_D_NAMES && !DRAGON_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_D_NAMES && quantity:<DRAGON_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_C_QUANT 10
+
+/*@ define:input:dragon_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_B_QUANT 100
+
+/*@ define:input:dragon_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_A_QUANT 1000
+
+/*@ define:input:dragon_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_S_QUANT 10000
+
+/*@ define:input:dragon_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define DRAGON_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:dragon_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Dragon dagger
+*/
+
+#define DRAGON_GEAR_D_STYLE \
+    color = "#ff870c12"; \
+	menuTextColor = "#ff870c12";
+
+/*@ define:input:dragon_gear
+label: E Tier Dragon Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_NAMES []
+
+/*@ define:input:dragon_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_SHOW_UNNOTED true
+
+rule (name:DRAGON_GEAR_E_NAMES && !DRAGON_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_MIN_QUANT 0
+
+rule (name:DRAGON_GEAR_E_NAMES && quantity:<DRAGON_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:dragon_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_D_QUANT 10
+
+/*@ define:input:dragon_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_C_QUANT 100
+
+/*@ define:input:dragon_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_B_QUANT 1000
+
+/*@ define:input:dragon_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_A_QUANT 10000
+
+/*@ define:input:dragon_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_S_QUANT 100000
+
+/*@ define:input:dragon_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define DRAGON_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:dragon_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Dragon arrow
+*/
+
+#define DRAGON_GEAR_E_STYLE \
+    color = "#66870c12"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff870c12";\
+	menuSort = -10000;\
+
+rule (name:DRAGON_GEAR_SS_NAMES) {DRAGON_GEAR_SS_STYLE}
+rule (name:DRAGON_GEAR_S_NAMES && quantity:>=DRAGON_GEAR_S_SS_QUANT) {DRAGON_GEAR_SS_STYLE}
+rule (name:DRAGON_GEAR_A_NAMES && quantity:>=DRAGON_GEAR_A_SS_QUANT) {DRAGON_GEAR_SS_STYLE}
+rule (name:DRAGON_GEAR_B_NAMES && quantity:>=DRAGON_GEAR_B_SS_QUANT) {DRAGON_GEAR_SS_STYLE}
+rule (name:DRAGON_GEAR_C_NAMES && quantity:>=DRAGON_GEAR_C_SS_QUANT) {DRAGON_GEAR_SS_STYLE}
+rule (name:DRAGON_GEAR_D_NAMES && quantity:>=DRAGON_GEAR_D_SS_QUANT) {DRAGON_GEAR_SS_STYLE}
+rule (name:DRAGON_GEAR_E_NAMES && quantity:>=DRAGON_GEAR_E_SS_QUANT) {DRAGON_GEAR_SS_STYLE}
+
+rule (name:DRAGON_GEAR_S_NAMES) {DRAGON_GEAR_S_STYLE}
+rule (name:DRAGON_GEAR_A_NAMES && quantity:>=DRAGON_GEAR_A_S_QUANT) {DRAGON_GEAR_S_STYLE}
+rule (name:DRAGON_GEAR_B_NAMES && quantity:>=DRAGON_GEAR_B_S_QUANT) {DRAGON_GEAR_S_STYLE}
+rule (name:DRAGON_GEAR_C_NAMES && quantity:>=DRAGON_GEAR_C_S_QUANT) {DRAGON_GEAR_S_STYLE}
+rule (name:DRAGON_GEAR_D_NAMES && quantity:>=DRAGON_GEAR_D_S_QUANT) {DRAGON_GEAR_S_STYLE}
+rule (name:DRAGON_GEAR_E_NAMES && quantity:>=DRAGON_GEAR_E_S_QUANT) {DRAGON_GEAR_S_STYLE}
+
+rule (name:DRAGON_GEAR_A_NAMES) {DRAGON_GEAR_A_STYLE}
+rule (name:DRAGON_GEAR_B_NAMES && quantity:>=DRAGON_GEAR_B_A_QUANT) {DRAGON_GEAR_A_STYLE}
+rule (name:DRAGON_GEAR_C_NAMES && quantity:>=DRAGON_GEAR_C_A_QUANT) {DRAGON_GEAR_A_STYLE}
+rule (name:DRAGON_GEAR_D_NAMES && quantity:>=DRAGON_GEAR_D_A_QUANT) {DRAGON_GEAR_A_STYLE}
+rule (name:DRAGON_GEAR_E_NAMES && quantity:>=DRAGON_GEAR_E_A_QUANT) {DRAGON_GEAR_A_STYLE}
+
+rule (name:DRAGON_GEAR_B_NAMES) {DRAGON_GEAR_B_STYLE}
+rule (name:DRAGON_GEAR_C_NAMES && quantity:>=DRAGON_GEAR_C_B_QUANT) {DRAGON_GEAR_B_STYLE}
+rule (name:DRAGON_GEAR_D_NAMES && quantity:>=DRAGON_GEAR_D_B_QUANT) {DRAGON_GEAR_B_STYLE}
+rule (name:DRAGON_GEAR_E_NAMES && quantity:>=DRAGON_GEAR_E_B_QUANT) {DRAGON_GEAR_B_STYLE}
+
+rule (name:DRAGON_GEAR_C_NAMES) {DRAGON_GEAR_C_STYLE}
+rule (name:DRAGON_GEAR_D_NAMES && quantity:>=DRAGON_GEAR_D_C_QUANT) {DRAGON_GEAR_C_STYLE}
+rule (name:DRAGON_GEAR_E_NAMES && quantity:>=DRAGON_GEAR_E_C_QUANT) {DRAGON_GEAR_C_STYLE}
+
+rule (name:DRAGON_GEAR_D_NAMES) {DRAGON_GEAR_D_STYLE}
+rule (name:DRAGON_GEAR_E_NAMES && quantity:>=DRAGON_GEAR_E_D_QUANT) {DRAGON_GEAR_D_STYLE}
+
+rule (name:DRAGON_GEAR_E_NAMES) {DRAGON_GEAR_E_STYLE}
+
+/*@ define:module:runite_gear
+name: Runite Gear
+subtitle: Not Made from Real Runes
+*/
+
+/*@ define:input:runite_gear
+label: SS Tier Runite Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define RUNITE_GEAR_SS_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define RUNITE_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_SS_NAMES && !RUNITE_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define RUNITE_GEAR_SS_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_SS_NAMES && quantity:<RUNITE_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Runite platebody
+*/
+
+#define RUNITE_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff5B8796";\
+	color = "#ff5B8796";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff5B8796";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff5B8796";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:runite_gear
+label: S Tier Runite Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define RUNITE_GEAR_S_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define RUNITE_GEAR_S_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_S_NAMES && !RUNITE_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define RUNITE_GEAR_S_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_S_NAMES && quantity:<RUNITE_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define RUNITE_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:runite_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Runite platelegs
+*/
+
+#define RUNITE_GEAR_S_STYLE \
+	backgroundColor = "#ff5B8796";\
+	menuTextColor = "#ff5B8796";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff5B8796";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:runite_gear
+label: A Tier Runite Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define RUNITE_GEAR_A_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define RUNITE_GEAR_A_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_A_NAMES && !RUNITE_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define RUNITE_GEAR_A_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_A_NAMES && quantity:<RUNITE_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define RUNITE_GEAR_A_S_QUANT 10
+
+/*@ define:input:runite_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define RUNITE_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:runite_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Runite kiteshield
+*/
+
+#define RUNITE_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc5B8796";\
+	menuTextColor = "#ff5B8796"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:runite_gear
+label: B Tier Runite Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define RUNITE_GEAR_B_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define RUNITE_GEAR_B_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_B_NAMES && !RUNITE_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNITE_GEAR_B_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_B_NAMES && quantity:<RUNITE_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNITE_GEAR_B_A_QUANT 10
+
+/*@ define:input:runite_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNITE_GEAR_B_S_QUANT 100
+
+/*@ define:input:runite_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define RUNITE_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:runite_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Runite pickaxe
+*/
+
+#define RUNITE_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#995B8796";\
+	menuTextColor = "#ff5B8796";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:runite_gear
+label: C Tier Runite Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_C_NAMES && !RUNITE_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_C_NAMES && quantity:<RUNITE_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_B_QUANT 10
+
+/*@ define:input:runite_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_A_QUANT 100
+
+/*@ define:input:runite_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_S_QUANT 1000
+
+/*@ define:input:runite_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define RUNITE_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:runite_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Runite axe
+*/
+
+#define RUNITE_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#335B8796";\
+	menuTextColor = "#ff5B8796";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:runite_gear
+label: D Tier Runite Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_D_NAMES && !RUNITE_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_D_NAMES && quantity:<RUNITE_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_C_QUANT 10
+
+/*@ define:input:runite_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_B_QUANT 100
+
+/*@ define:input:runite_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_A_QUANT 1000
+
+/*@ define:input:runite_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_S_QUANT 10000
+
+/*@ define:input:runite_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define RUNITE_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:runite_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Runite dagger
+*/
+
+#define RUNITE_GEAR_D_STYLE \
+    color = "#ff5B8796"; \
+	menuTextColor = "#ff5B8796";
+
+/*@ define:input:runite_gear
+label: E Tier Runite Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_NAMES []
+
+/*@ define:input:runite_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_SHOW_UNNOTED true
+
+rule (name:RUNITE_GEAR_E_NAMES && !RUNITE_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_MIN_QUANT 0
+
+rule (name:RUNITE_GEAR_E_NAMES && quantity:<RUNITE_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:runite_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_D_QUANT 10
+
+/*@ define:input:runite_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_C_QUANT 100
+
+/*@ define:input:runite_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_B_QUANT 1000
+
+/*@ define:input:runite_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_A_QUANT 10000
+
+/*@ define:input:runite_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_S_QUANT 100000
+
+/*@ define:input:runite_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define RUNITE_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:runite_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Runite arrow
+*/
+
+#define RUNITE_GEAR_E_STYLE \
+    color = "#665B8796"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff5B8796";\
+	menuSort = -10000;\
+
+rule (name:RUNITE_GEAR_SS_NAMES) {RUNITE_GEAR_SS_STYLE}
+rule (name:RUNITE_GEAR_S_NAMES && quantity:>=RUNITE_GEAR_S_SS_QUANT) {RUNITE_GEAR_SS_STYLE}
+rule (name:RUNITE_GEAR_A_NAMES && quantity:>=RUNITE_GEAR_A_SS_QUANT) {RUNITE_GEAR_SS_STYLE}
+rule (name:RUNITE_GEAR_B_NAMES && quantity:>=RUNITE_GEAR_B_SS_QUANT) {RUNITE_GEAR_SS_STYLE}
+rule (name:RUNITE_GEAR_C_NAMES && quantity:>=RUNITE_GEAR_C_SS_QUANT) {RUNITE_GEAR_SS_STYLE}
+rule (name:RUNITE_GEAR_D_NAMES && quantity:>=RUNITE_GEAR_D_SS_QUANT) {RUNITE_GEAR_SS_STYLE}
+rule (name:RUNITE_GEAR_E_NAMES && quantity:>=RUNITE_GEAR_E_SS_QUANT) {RUNITE_GEAR_SS_STYLE}
+
+rule (name:RUNITE_GEAR_S_NAMES) {RUNITE_GEAR_S_STYLE}
+rule (name:RUNITE_GEAR_A_NAMES && quantity:>=RUNITE_GEAR_A_S_QUANT) {RUNITE_GEAR_S_STYLE}
+rule (name:RUNITE_GEAR_B_NAMES && quantity:>=RUNITE_GEAR_B_S_QUANT) {RUNITE_GEAR_S_STYLE}
+rule (name:RUNITE_GEAR_C_NAMES && quantity:>=RUNITE_GEAR_C_S_QUANT) {RUNITE_GEAR_S_STYLE}
+rule (name:RUNITE_GEAR_D_NAMES && quantity:>=RUNITE_GEAR_D_S_QUANT) {RUNITE_GEAR_S_STYLE}
+rule (name:RUNITE_GEAR_E_NAMES && quantity:>=RUNITE_GEAR_E_S_QUANT) {RUNITE_GEAR_S_STYLE}
+
+rule (name:RUNITE_GEAR_A_NAMES) {RUNITE_GEAR_A_STYLE}
+rule (name:RUNITE_GEAR_B_NAMES && quantity:>=RUNITE_GEAR_B_A_QUANT) {RUNITE_GEAR_A_STYLE}
+rule (name:RUNITE_GEAR_C_NAMES && quantity:>=RUNITE_GEAR_C_A_QUANT) {RUNITE_GEAR_A_STYLE}
+rule (name:RUNITE_GEAR_D_NAMES && quantity:>=RUNITE_GEAR_D_A_QUANT) {RUNITE_GEAR_A_STYLE}
+rule (name:RUNITE_GEAR_E_NAMES && quantity:>=RUNITE_GEAR_E_A_QUANT) {RUNITE_GEAR_A_STYLE}
+
+rule (name:RUNITE_GEAR_B_NAMES) {RUNITE_GEAR_B_STYLE}
+rule (name:RUNITE_GEAR_C_NAMES && quantity:>=RUNITE_GEAR_C_B_QUANT) {RUNITE_GEAR_B_STYLE}
+rule (name:RUNITE_GEAR_D_NAMES && quantity:>=RUNITE_GEAR_D_B_QUANT) {RUNITE_GEAR_B_STYLE}
+rule (name:RUNITE_GEAR_E_NAMES && quantity:>=RUNITE_GEAR_E_B_QUANT) {RUNITE_GEAR_B_STYLE}
+
+rule (name:RUNITE_GEAR_C_NAMES) {RUNITE_GEAR_C_STYLE}
+rule (name:RUNITE_GEAR_D_NAMES && quantity:>=RUNITE_GEAR_D_C_QUANT) {RUNITE_GEAR_C_STYLE}
+rule (name:RUNITE_GEAR_E_NAMES && quantity:>=RUNITE_GEAR_E_C_QUANT) {RUNITE_GEAR_C_STYLE}
+
+rule (name:RUNITE_GEAR_D_NAMES) {RUNITE_GEAR_D_STYLE}
+rule (name:RUNITE_GEAR_E_NAMES && quantity:>=RUNITE_GEAR_E_D_QUANT) {RUNITE_GEAR_D_STYLE}
+
+rule (name:RUNITE_GEAR_E_NAMES) {RUNITE_GEAR_E_STYLE}
+
+/*@ define:module:adamantite_gear
+name: Adamantite Gear
+subtitle: Made from Real Adamantites
+*/
+
+/*@ define:input:adamantite_gear
+label: SS Tier Adamantite Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define ADAMANTITE_GEAR_SS_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define ADAMANTITE_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_SS_NAMES && !ADAMANTITE_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define ADAMANTITE_GEAR_SS_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_SS_NAMES && quantity:<ADAMANTITE_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Adamantite platebody
+*/
+
+#define ADAMANTITE_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff506450";\
+	color = "#ff506450";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff506450";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff506450";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:adamantite_gear
+label: S Tier Adamantite Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define ADAMANTITE_GEAR_S_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define ADAMANTITE_GEAR_S_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_S_NAMES && !ADAMANTITE_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define ADAMANTITE_GEAR_S_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_S_NAMES && quantity:<ADAMANTITE_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define ADAMANTITE_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:adamantite_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Adamantite platelegs
+*/
+
+#define ADAMANTITE_GEAR_S_STYLE \
+	backgroundColor = "#ff506450";\
+	menuTextColor = "#ff506450";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff506450";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:adamantite_gear
+label: A Tier Adamantite Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define ADAMANTITE_GEAR_A_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define ADAMANTITE_GEAR_A_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_A_NAMES && !ADAMANTITE_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define ADAMANTITE_GEAR_A_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_A_NAMES && quantity:<ADAMANTITE_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define ADAMANTITE_GEAR_A_S_QUANT 10
+
+/*@ define:input:adamantite_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define ADAMANTITE_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:adamantite_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Adamantite kiteshield
+*/
+
+#define ADAMANTITE_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc506450";\
+	menuTextColor = "#ff506450"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:adamantite_gear
+label: B Tier Adamantite Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define ADAMANTITE_GEAR_B_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define ADAMANTITE_GEAR_B_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_B_NAMES && !ADAMANTITE_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define ADAMANTITE_GEAR_B_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_B_NAMES && quantity:<ADAMANTITE_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define ADAMANTITE_GEAR_B_A_QUANT 10
+
+/*@ define:input:adamantite_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define ADAMANTITE_GEAR_B_S_QUANT 100
+
+/*@ define:input:adamantite_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define ADAMANTITE_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:adamantite_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Adamantite pickaxe
+*/
+
+#define ADAMANTITE_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#99506450";\
+	menuTextColor = "#ff506450";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:adamantite_gear
+label: C Tier Adamantite Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_C_NAMES && !ADAMANTITE_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_C_NAMES && quantity:<ADAMANTITE_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_B_QUANT 10
+
+/*@ define:input:adamantite_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_A_QUANT 100
+
+/*@ define:input:adamantite_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_S_QUANT 1000
+
+/*@ define:input:adamantite_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define ADAMANTITE_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:adamantite_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Adamantite axe
+*/
+
+#define ADAMANTITE_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#33506450";\
+	menuTextColor = "#ff506450";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:adamantite_gear
+label: D Tier Adamantite Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_D_NAMES && !ADAMANTITE_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_D_NAMES && quantity:<ADAMANTITE_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_C_QUANT 10
+
+/*@ define:input:adamantite_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_B_QUANT 100
+
+/*@ define:input:adamantite_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_A_QUANT 1000
+
+/*@ define:input:adamantite_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_S_QUANT 10000
+
+/*@ define:input:adamantite_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define ADAMANTITE_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:adamantite_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Adamantite dagger
+*/
+
+#define ADAMANTITE_GEAR_D_STYLE \
+    color = "#ff506450"; \
+	menuTextColor = "#ff506450";
+
+/*@ define:input:adamantite_gear
+label: E Tier Adamantite Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_NAMES []
+
+/*@ define:input:adamantite_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_SHOW_UNNOTED true
+
+rule (name:ADAMANTITE_GEAR_E_NAMES && !ADAMANTITE_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_MIN_QUANT 0
+
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:<ADAMANTITE_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:adamantite_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_D_QUANT 10
+
+/*@ define:input:adamantite_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_C_QUANT 100
+
+/*@ define:input:adamantite_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_B_QUANT 1000
+
+/*@ define:input:adamantite_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_A_QUANT 10000
+
+/*@ define:input:adamantite_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_S_QUANT 100000
+
+/*@ define:input:adamantite_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define ADAMANTITE_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:adamantite_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Adamantite arrow
+*/
+
+#define ADAMANTITE_GEAR_E_STYLE \
+    color = "#66506450"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff506450";\
+	menuSort = -10000;\
+
+rule (name:ADAMANTITE_GEAR_SS_NAMES) {ADAMANTITE_GEAR_SS_STYLE}
+rule (name:ADAMANTITE_GEAR_S_NAMES && quantity:>=ADAMANTITE_GEAR_S_SS_QUANT) {ADAMANTITE_GEAR_SS_STYLE}
+rule (name:ADAMANTITE_GEAR_A_NAMES && quantity:>=ADAMANTITE_GEAR_A_SS_QUANT) {ADAMANTITE_GEAR_SS_STYLE}
+rule (name:ADAMANTITE_GEAR_B_NAMES && quantity:>=ADAMANTITE_GEAR_B_SS_QUANT) {ADAMANTITE_GEAR_SS_STYLE}
+rule (name:ADAMANTITE_GEAR_C_NAMES && quantity:>=ADAMANTITE_GEAR_C_SS_QUANT) {ADAMANTITE_GEAR_SS_STYLE}
+rule (name:ADAMANTITE_GEAR_D_NAMES && quantity:>=ADAMANTITE_GEAR_D_SS_QUANT) {ADAMANTITE_GEAR_SS_STYLE}
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:>=ADAMANTITE_GEAR_E_SS_QUANT) {ADAMANTITE_GEAR_SS_STYLE}
+
+rule (name:ADAMANTITE_GEAR_S_NAMES) {ADAMANTITE_GEAR_S_STYLE}
+rule (name:ADAMANTITE_GEAR_A_NAMES && quantity:>=ADAMANTITE_GEAR_A_S_QUANT) {ADAMANTITE_GEAR_S_STYLE}
+rule (name:ADAMANTITE_GEAR_B_NAMES && quantity:>=ADAMANTITE_GEAR_B_S_QUANT) {ADAMANTITE_GEAR_S_STYLE}
+rule (name:ADAMANTITE_GEAR_C_NAMES && quantity:>=ADAMANTITE_GEAR_C_S_QUANT) {ADAMANTITE_GEAR_S_STYLE}
+rule (name:ADAMANTITE_GEAR_D_NAMES && quantity:>=ADAMANTITE_GEAR_D_S_QUANT) {ADAMANTITE_GEAR_S_STYLE}
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:>=ADAMANTITE_GEAR_E_S_QUANT) {ADAMANTITE_GEAR_S_STYLE}
+
+rule (name:ADAMANTITE_GEAR_A_NAMES) {ADAMANTITE_GEAR_A_STYLE}
+rule (name:ADAMANTITE_GEAR_B_NAMES && quantity:>=ADAMANTITE_GEAR_B_A_QUANT) {ADAMANTITE_GEAR_A_STYLE}
+rule (name:ADAMANTITE_GEAR_C_NAMES && quantity:>=ADAMANTITE_GEAR_C_A_QUANT) {ADAMANTITE_GEAR_A_STYLE}
+rule (name:ADAMANTITE_GEAR_D_NAMES && quantity:>=ADAMANTITE_GEAR_D_A_QUANT) {ADAMANTITE_GEAR_A_STYLE}
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:>=ADAMANTITE_GEAR_E_A_QUANT) {ADAMANTITE_GEAR_A_STYLE}
+
+rule (name:ADAMANTITE_GEAR_B_NAMES) {ADAMANTITE_GEAR_B_STYLE}
+rule (name:ADAMANTITE_GEAR_C_NAMES && quantity:>=ADAMANTITE_GEAR_C_B_QUANT) {ADAMANTITE_GEAR_B_STYLE}
+rule (name:ADAMANTITE_GEAR_D_NAMES && quantity:>=ADAMANTITE_GEAR_D_B_QUANT) {ADAMANTITE_GEAR_B_STYLE}
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:>=ADAMANTITE_GEAR_E_B_QUANT) {ADAMANTITE_GEAR_B_STYLE}
+
+rule (name:ADAMANTITE_GEAR_C_NAMES) {ADAMANTITE_GEAR_C_STYLE}
+rule (name:ADAMANTITE_GEAR_D_NAMES && quantity:>=ADAMANTITE_GEAR_D_C_QUANT) {ADAMANTITE_GEAR_C_STYLE}
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:>=ADAMANTITE_GEAR_E_C_QUANT) {ADAMANTITE_GEAR_C_STYLE}
+
+rule (name:ADAMANTITE_GEAR_D_NAMES) {ADAMANTITE_GEAR_D_STYLE}
+rule (name:ADAMANTITE_GEAR_E_NAMES && quantity:>=ADAMANTITE_GEAR_E_D_QUANT) {ADAMANTITE_GEAR_D_STYLE}
+
+rule (name:ADAMANTITE_GEAR_E_NAMES) {ADAMANTITE_GEAR_E_STYLE}
+
+/*@ define:module:mithril_gear
+name: Mithril Gear
+subtitle: Made from Real Mithrils
+*/
+
+/*@ define:input:mithril_gear
+label: SS Tier Mithril Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define MITHRIL_GEAR_SS_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define MITHRIL_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_SS_NAMES && !MITHRIL_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define MITHRIL_GEAR_SS_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_SS_NAMES && quantity:<MITHRIL_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Mithril platebody
+*/
+
+#define MITHRIL_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff4c4c70";\
+	color = "#ff4c4c70";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff4c4c70";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff4c4c70";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:mithril_gear
+label: S Tier Mithril Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define MITHRIL_GEAR_S_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define MITHRIL_GEAR_S_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_S_NAMES && !MITHRIL_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define MITHRIL_GEAR_S_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_S_NAMES && quantity:<MITHRIL_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define MITHRIL_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:mithril_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Mithril platelegs
+*/
+
+#define MITHRIL_GEAR_S_STYLE \
+	backgroundColor = "#ff4c4c70";\
+	menuTextColor = "#ff4c4c70";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff4c4c70";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:mithril_gear
+label: A Tier Mithril Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define MITHRIL_GEAR_A_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define MITHRIL_GEAR_A_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_A_NAMES && !MITHRIL_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define MITHRIL_GEAR_A_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_A_NAMES && quantity:<MITHRIL_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define MITHRIL_GEAR_A_S_QUANT 10
+
+/*@ define:input:mithril_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define MITHRIL_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:mithril_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Mithril kiteshield
+*/
+
+#define MITHRIL_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc4c4c70";\
+	menuTextColor = "#ff4c4c70"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:mithril_gear
+label: B Tier Mithril Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define MITHRIL_GEAR_B_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define MITHRIL_GEAR_B_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_B_NAMES && !MITHRIL_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define MITHRIL_GEAR_B_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_B_NAMES && quantity:<MITHRIL_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define MITHRIL_GEAR_B_A_QUANT 10
+
+/*@ define:input:mithril_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define MITHRIL_GEAR_B_S_QUANT 100
+
+/*@ define:input:mithril_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define MITHRIL_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:mithril_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Mithril pickaxe
+*/
+
+#define MITHRIL_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#994c4c70";\
+	menuTextColor = "#ff4c4c70";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:mithril_gear
+label: C Tier Mithril Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_C_NAMES && !MITHRIL_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_C_NAMES && quantity:<MITHRIL_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_B_QUANT 10
+
+/*@ define:input:mithril_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_A_QUANT 100
+
+/*@ define:input:mithril_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_S_QUANT 1000
+
+/*@ define:input:mithril_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define MITHRIL_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:mithril_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Mithril axe
+*/
+
+#define MITHRIL_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#334c4c70";\
+	menuTextColor = "#ff4c4c70";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:mithril_gear
+label: D Tier Mithril Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_D_NAMES && !MITHRIL_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_D_NAMES && quantity:<MITHRIL_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_C_QUANT 10
+
+/*@ define:input:mithril_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_B_QUANT 100
+
+/*@ define:input:mithril_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_A_QUANT 1000
+
+/*@ define:input:mithril_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_S_QUANT 10000
+
+/*@ define:input:mithril_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define MITHRIL_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:mithril_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Mithril dagger
+*/
+
+#define MITHRIL_GEAR_D_STYLE \
+    color = "#ff4c4c70"; \
+	menuTextColor = "#ff4c4c70";
+
+/*@ define:input:mithril_gear
+label: E Tier Mithril Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_NAMES []
+
+/*@ define:input:mithril_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_SHOW_UNNOTED true
+
+rule (name:MITHRIL_GEAR_E_NAMES && !MITHRIL_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_MIN_QUANT 0
+
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:<MITHRIL_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:mithril_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_D_QUANT 10
+
+/*@ define:input:mithril_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_C_QUANT 100
+
+/*@ define:input:mithril_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_B_QUANT 1000
+
+/*@ define:input:mithril_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_A_QUANT 10000
+
+/*@ define:input:mithril_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_S_QUANT 100000
+
+/*@ define:input:mithril_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define MITHRIL_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:mithril_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Mithril arrow
+*/
+
+#define MITHRIL_GEAR_E_STYLE \
+    color = "#664c4c70"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff4c4c70";\
+	menuSort = -10000;\
+
+rule (name:MITHRIL_GEAR_SS_NAMES) {MITHRIL_GEAR_SS_STYLE}
+rule (name:MITHRIL_GEAR_S_NAMES && quantity:>=MITHRIL_GEAR_S_SS_QUANT) {MITHRIL_GEAR_SS_STYLE}
+rule (name:MITHRIL_GEAR_A_NAMES && quantity:>=MITHRIL_GEAR_A_SS_QUANT) {MITHRIL_GEAR_SS_STYLE}
+rule (name:MITHRIL_GEAR_B_NAMES && quantity:>=MITHRIL_GEAR_B_SS_QUANT) {MITHRIL_GEAR_SS_STYLE}
+rule (name:MITHRIL_GEAR_C_NAMES && quantity:>=MITHRIL_GEAR_C_SS_QUANT) {MITHRIL_GEAR_SS_STYLE}
+rule (name:MITHRIL_GEAR_D_NAMES && quantity:>=MITHRIL_GEAR_D_SS_QUANT) {MITHRIL_GEAR_SS_STYLE}
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:>=MITHRIL_GEAR_E_SS_QUANT) {MITHRIL_GEAR_SS_STYLE}
+
+rule (name:MITHRIL_GEAR_S_NAMES) {MITHRIL_GEAR_S_STYLE}
+rule (name:MITHRIL_GEAR_A_NAMES && quantity:>=MITHRIL_GEAR_A_S_QUANT) {MITHRIL_GEAR_S_STYLE}
+rule (name:MITHRIL_GEAR_B_NAMES && quantity:>=MITHRIL_GEAR_B_S_QUANT) {MITHRIL_GEAR_S_STYLE}
+rule (name:MITHRIL_GEAR_C_NAMES && quantity:>=MITHRIL_GEAR_C_S_QUANT) {MITHRIL_GEAR_S_STYLE}
+rule (name:MITHRIL_GEAR_D_NAMES && quantity:>=MITHRIL_GEAR_D_S_QUANT) {MITHRIL_GEAR_S_STYLE}
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:>=MITHRIL_GEAR_E_S_QUANT) {MITHRIL_GEAR_S_STYLE}
+
+rule (name:MITHRIL_GEAR_A_NAMES) {MITHRIL_GEAR_A_STYLE}
+rule (name:MITHRIL_GEAR_B_NAMES && quantity:>=MITHRIL_GEAR_B_A_QUANT) {MITHRIL_GEAR_A_STYLE}
+rule (name:MITHRIL_GEAR_C_NAMES && quantity:>=MITHRIL_GEAR_C_A_QUANT) {MITHRIL_GEAR_A_STYLE}
+rule (name:MITHRIL_GEAR_D_NAMES && quantity:>=MITHRIL_GEAR_D_A_QUANT) {MITHRIL_GEAR_A_STYLE}
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:>=MITHRIL_GEAR_E_A_QUANT) {MITHRIL_GEAR_A_STYLE}
+
+rule (name:MITHRIL_GEAR_B_NAMES) {MITHRIL_GEAR_B_STYLE}
+rule (name:MITHRIL_GEAR_C_NAMES && quantity:>=MITHRIL_GEAR_C_B_QUANT) {MITHRIL_GEAR_B_STYLE}
+rule (name:MITHRIL_GEAR_D_NAMES && quantity:>=MITHRIL_GEAR_D_B_QUANT) {MITHRIL_GEAR_B_STYLE}
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:>=MITHRIL_GEAR_E_B_QUANT) {MITHRIL_GEAR_B_STYLE}
+
+rule (name:MITHRIL_GEAR_C_NAMES) {MITHRIL_GEAR_C_STYLE}
+rule (name:MITHRIL_GEAR_D_NAMES && quantity:>=MITHRIL_GEAR_D_C_QUANT) {MITHRIL_GEAR_C_STYLE}
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:>=MITHRIL_GEAR_E_C_QUANT) {MITHRIL_GEAR_C_STYLE}
+
+rule (name:MITHRIL_GEAR_D_NAMES) {MITHRIL_GEAR_D_STYLE}
+rule (name:MITHRIL_GEAR_E_NAMES && quantity:>=MITHRIL_GEAR_E_D_QUANT) {MITHRIL_GEAR_D_STYLE}
+
+rule (name:MITHRIL_GEAR_E_NAMES) {MITHRIL_GEAR_E_STYLE}
+
+/*@ define:module:black_gear
+name: Black Gear
+subtitle: Made from Real Blacks
+*/
+
+/*@ define:input:black_gear
+label: SS Tier Black Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define BLACK_GEAR_SS_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define BLACK_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_SS_NAMES && !BLACK_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define BLACK_GEAR_SS_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_SS_NAMES && quantity:<BLACK_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Black platebody
+*/
+
+#define BLACK_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff000000";\
+	color = "#ff000000";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff000000";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff000000";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:black_gear
+label: S Tier Black Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define BLACK_GEAR_S_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define BLACK_GEAR_S_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_S_NAMES && !BLACK_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define BLACK_GEAR_S_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_S_NAMES && quantity:<BLACK_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define BLACK_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:black_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Black platelegs
+*/
+
+#define BLACK_GEAR_S_STYLE \
+	backgroundColor = "#ff000000";\
+	menuTextColor = "#ff000000";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff000000";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:black_gear
+label: A Tier Black Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define BLACK_GEAR_A_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define BLACK_GEAR_A_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_A_NAMES && !BLACK_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define BLACK_GEAR_A_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_A_NAMES && quantity:<BLACK_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define BLACK_GEAR_A_S_QUANT 10
+
+/*@ define:input:black_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define BLACK_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:black_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Black kiteshield
+*/
+
+#define BLACK_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc000000";\
+	menuTextColor = "#ff000000"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:black_gear
+label: B Tier Black Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define BLACK_GEAR_B_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define BLACK_GEAR_B_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_B_NAMES && !BLACK_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define BLACK_GEAR_B_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_B_NAMES && quantity:<BLACK_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define BLACK_GEAR_B_A_QUANT 10
+
+/*@ define:input:black_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define BLACK_GEAR_B_S_QUANT 100
+
+/*@ define:input:black_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define BLACK_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:black_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Black pickaxe
+*/
+
+#define BLACK_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#99000000";\
+	menuTextColor = "#ff000000";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:black_gear
+label: C Tier Black Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_C_NAMES && !BLACK_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_C_NAMES && quantity:<BLACK_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_B_QUANT 10
+
+/*@ define:input:black_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_A_QUANT 100
+
+/*@ define:input:black_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_S_QUANT 1000
+
+/*@ define:input:black_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define BLACK_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:black_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Black axe
+*/
+
+#define BLACK_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#33000000";\
+	menuTextColor = "#ff000000";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:black_gear
+label: D Tier Black Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_D_NAMES && !BLACK_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_D_NAMES && quantity:<BLACK_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_C_QUANT 10
+
+/*@ define:input:black_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_B_QUANT 100
+
+/*@ define:input:black_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_A_QUANT 1000
+
+/*@ define:input:black_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_S_QUANT 10000
+
+/*@ define:input:black_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define BLACK_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:black_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Black dagger
+*/
+
+#define BLACK_GEAR_D_STYLE \
+    color = "#ff000000"; \
+	menuTextColor = "#ff000000";
+
+/*@ define:input:black_gear
+label: E Tier Black Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_NAMES []
+
+/*@ define:input:black_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_SHOW_UNNOTED true
+
+rule (name:BLACK_GEAR_E_NAMES && !BLACK_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:black_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_MIN_QUANT 0
+
+rule (name:BLACK_GEAR_E_NAMES && quantity:<BLACK_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:black_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_D_QUANT 10
+
+/*@ define:input:black_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_C_QUANT 100
+
+/*@ define:input:black_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_B_QUANT 1000
+
+/*@ define:input:black_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_A_QUANT 10000
+
+/*@ define:input:black_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_S_QUANT 100000
+
+/*@ define:input:black_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define BLACK_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:black_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Black arrow
+*/
+
+#define BLACK_GEAR_E_STYLE \
+    color = "#66000000"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff000000";\
+	menuSort = -10000;\
+
+rule (name:BLACK_GEAR_SS_NAMES) {BLACK_GEAR_SS_STYLE}
+rule (name:BLACK_GEAR_S_NAMES && quantity:>=BLACK_GEAR_S_SS_QUANT) {BLACK_GEAR_SS_STYLE}
+rule (name:BLACK_GEAR_A_NAMES && quantity:>=BLACK_GEAR_A_SS_QUANT) {BLACK_GEAR_SS_STYLE}
+rule (name:BLACK_GEAR_B_NAMES && quantity:>=BLACK_GEAR_B_SS_QUANT) {BLACK_GEAR_SS_STYLE}
+rule (name:BLACK_GEAR_C_NAMES && quantity:>=BLACK_GEAR_C_SS_QUANT) {BLACK_GEAR_SS_STYLE}
+rule (name:BLACK_GEAR_D_NAMES && quantity:>=BLACK_GEAR_D_SS_QUANT) {BLACK_GEAR_SS_STYLE}
+rule (name:BLACK_GEAR_E_NAMES && quantity:>=BLACK_GEAR_E_SS_QUANT) {BLACK_GEAR_SS_STYLE}
+
+rule (name:BLACK_GEAR_S_NAMES) {BLACK_GEAR_S_STYLE}
+rule (name:BLACK_GEAR_A_NAMES && quantity:>=BLACK_GEAR_A_S_QUANT) {BLACK_GEAR_S_STYLE}
+rule (name:BLACK_GEAR_B_NAMES && quantity:>=BLACK_GEAR_B_S_QUANT) {BLACK_GEAR_S_STYLE}
+rule (name:BLACK_GEAR_C_NAMES && quantity:>=BLACK_GEAR_C_S_QUANT) {BLACK_GEAR_S_STYLE}
+rule (name:BLACK_GEAR_D_NAMES && quantity:>=BLACK_GEAR_D_S_QUANT) {BLACK_GEAR_S_STYLE}
+rule (name:BLACK_GEAR_E_NAMES && quantity:>=BLACK_GEAR_E_S_QUANT) {BLACK_GEAR_S_STYLE}
+
+rule (name:BLACK_GEAR_A_NAMES) {BLACK_GEAR_A_STYLE}
+rule (name:BLACK_GEAR_B_NAMES && quantity:>=BLACK_GEAR_B_A_QUANT) {BLACK_GEAR_A_STYLE}
+rule (name:BLACK_GEAR_C_NAMES && quantity:>=BLACK_GEAR_C_A_QUANT) {BLACK_GEAR_A_STYLE}
+rule (name:BLACK_GEAR_D_NAMES && quantity:>=BLACK_GEAR_D_A_QUANT) {BLACK_GEAR_A_STYLE}
+rule (name:BLACK_GEAR_E_NAMES && quantity:>=BLACK_GEAR_E_A_QUANT) {BLACK_GEAR_A_STYLE}
+
+rule (name:BLACK_GEAR_B_NAMES) {BLACK_GEAR_B_STYLE}
+rule (name:BLACK_GEAR_C_NAMES && quantity:>=BLACK_GEAR_C_B_QUANT) {BLACK_GEAR_B_STYLE}
+rule (name:BLACK_GEAR_D_NAMES && quantity:>=BLACK_GEAR_D_B_QUANT) {BLACK_GEAR_B_STYLE}
+rule (name:BLACK_GEAR_E_NAMES && quantity:>=BLACK_GEAR_E_B_QUANT) {BLACK_GEAR_B_STYLE}
+
+rule (name:BLACK_GEAR_C_NAMES) {BLACK_GEAR_C_STYLE}
+rule (name:BLACK_GEAR_D_NAMES && quantity:>=BLACK_GEAR_D_C_QUANT) {BLACK_GEAR_C_STYLE}
+rule (name:BLACK_GEAR_E_NAMES && quantity:>=BLACK_GEAR_E_C_QUANT) {BLACK_GEAR_C_STYLE}
+
+rule (name:BLACK_GEAR_D_NAMES) {BLACK_GEAR_D_STYLE}
+rule (name:BLACK_GEAR_E_NAMES && quantity:>=BLACK_GEAR_E_D_QUANT) {BLACK_GEAR_D_STYLE}
+
+rule (name:BLACK_GEAR_E_NAMES) {BLACK_GEAR_E_STYLE}
+
+/*@ define:module:white_gear
+name: White Gear
+subtitle: Made from Real Whites
+*/
+
+/*@ define:input:white_gear
+label: SS Tier White Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define WHITE_GEAR_SS_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define WHITE_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_SS_NAMES && !WHITE_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define WHITE_GEAR_SS_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_SS_NAMES && quantity:<WHITE_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: White platebody
+*/
+
+#define WHITE_GEAR_SS_STYLE \
+	backgroundColor = "#ff000000";\
+	menuTextColor = "#ffffffff";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffffff";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:white_gear
+label: S Tier White Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define WHITE_GEAR_S_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define WHITE_GEAR_S_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_S_NAMES && !WHITE_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define WHITE_GEAR_S_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_S_NAMES && quantity:<WHITE_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define WHITE_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:white_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: White platelegs
+*/
+
+#define WHITE_GEAR_S_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ffffffff";\
+	color = "#ff000000";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff000000";\
+	showLootbeam = true;\
+	lootbeamColor = "#ffffffff";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:white_gear
+label: A Tier White Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define WHITE_GEAR_A_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define WHITE_GEAR_A_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_A_NAMES && !WHITE_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define WHITE_GEAR_A_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_A_NAMES && quantity:<WHITE_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define WHITE_GEAR_A_S_QUANT 10
+
+/*@ define:input:white_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define WHITE_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:white_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: White kiteshield
+*/
+
+#define WHITE_GEAR_A_STYLE \
+	color = "#ff000000";\
+	backgroundColor = "#ccffffff";\
+	menuTextColor = "#ffffffff"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ff000000";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:white_gear
+label: B Tier White Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define WHITE_GEAR_B_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define WHITE_GEAR_B_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_B_NAMES && !WHITE_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define WHITE_GEAR_B_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_B_NAMES && quantity:<WHITE_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define WHITE_GEAR_B_A_QUANT 10
+
+/*@ define:input:white_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define WHITE_GEAR_B_S_QUANT 100
+
+/*@ define:input:white_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define WHITE_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:white_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: White pickaxe
+*/
+
+#define WHITE_GEAR_B_STYLE \
+	color = "#ff000000";\
+    backgroundColor = "#99ffffff";\
+	menuTextColor = "#ffffffff";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:white_gear
+label: C Tier White Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_C_NAMES && !WHITE_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_C_NAMES && quantity:<WHITE_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_B_QUANT 10
+
+/*@ define:input:white_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_A_QUANT 100
+
+/*@ define:input:white_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_S_QUANT 1000
+
+/*@ define:input:white_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define WHITE_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:white_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: White axe
+*/
+
+#define WHITE_GEAR_C_STYLE \
+    color = "#ff000000";\
+    backgroundColor = "#33ffffff";\
+	menuTextColor = "#ffffffff";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:white_gear
+label: D Tier White Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_D_NAMES && !WHITE_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_D_NAMES && quantity:<WHITE_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_C_QUANT 10
+
+/*@ define:input:white_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_B_QUANT 100
+
+/*@ define:input:white_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_A_QUANT 1000
+
+/*@ define:input:white_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_S_QUANT 10000
+
+/*@ define:input:white_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define WHITE_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:white_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: White dagger
+*/
+
+#define WHITE_GEAR_D_STYLE \
+    color = "#ffffffff"; \
+	menuTextColor = "#ffffffff";
+
+/*@ define:input:white_gear
+label: E Tier White Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_NAMES []
+
+/*@ define:input:white_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_SHOW_UNNOTED true
+
+rule (name:WHITE_GEAR_E_NAMES && !WHITE_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:white_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_MIN_QUANT 0
+
+rule (name:WHITE_GEAR_E_NAMES && quantity:<WHITE_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:white_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_D_QUANT 10
+
+/*@ define:input:white_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_C_QUANT 100
+
+/*@ define:input:white_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_B_QUANT 1000
+
+/*@ define:input:white_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_A_QUANT 10000
+
+/*@ define:input:white_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_S_QUANT 100000
+
+/*@ define:input:white_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define WHITE_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:white_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: White arrow
+*/
+
+#define WHITE_GEAR_E_STYLE \
+    color = "#66ffffff"; \
+	textAccentColor = "#66ffffff"; \
+	menuTextColor = "#ffffffff";\
+	menuSort = -10000;\
+
+rule (name:WHITE_GEAR_SS_NAMES) {WHITE_GEAR_SS_STYLE}
+rule (name:WHITE_GEAR_S_NAMES && quantity:>=WHITE_GEAR_S_SS_QUANT) {WHITE_GEAR_SS_STYLE}
+rule (name:WHITE_GEAR_A_NAMES && quantity:>=WHITE_GEAR_A_SS_QUANT) {WHITE_GEAR_SS_STYLE}
+rule (name:WHITE_GEAR_B_NAMES && quantity:>=WHITE_GEAR_B_SS_QUANT) {WHITE_GEAR_SS_STYLE}
+rule (name:WHITE_GEAR_C_NAMES && quantity:>=WHITE_GEAR_C_SS_QUANT) {WHITE_GEAR_SS_STYLE}
+rule (name:WHITE_GEAR_D_NAMES && quantity:>=WHITE_GEAR_D_SS_QUANT) {WHITE_GEAR_SS_STYLE}
+rule (name:WHITE_GEAR_E_NAMES && quantity:>=WHITE_GEAR_E_SS_QUANT) {WHITE_GEAR_SS_STYLE}
+
+rule (name:WHITE_GEAR_S_NAMES) {WHITE_GEAR_S_STYLE}
+rule (name:WHITE_GEAR_A_NAMES && quantity:>=WHITE_GEAR_A_S_QUANT) {WHITE_GEAR_S_STYLE}
+rule (name:WHITE_GEAR_B_NAMES && quantity:>=WHITE_GEAR_B_S_QUANT) {WHITE_GEAR_S_STYLE}
+rule (name:WHITE_GEAR_C_NAMES && quantity:>=WHITE_GEAR_C_S_QUANT) {WHITE_GEAR_S_STYLE}
+rule (name:WHITE_GEAR_D_NAMES && quantity:>=WHITE_GEAR_D_S_QUANT) {WHITE_GEAR_S_STYLE}
+rule (name:WHITE_GEAR_E_NAMES && quantity:>=WHITE_GEAR_E_S_QUANT) {WHITE_GEAR_S_STYLE}
+
+rule (name:WHITE_GEAR_A_NAMES) {WHITE_GEAR_A_STYLE}
+rule (name:WHITE_GEAR_B_NAMES && quantity:>=WHITE_GEAR_B_A_QUANT) {WHITE_GEAR_A_STYLE}
+rule (name:WHITE_GEAR_C_NAMES && quantity:>=WHITE_GEAR_C_A_QUANT) {WHITE_GEAR_A_STYLE}
+rule (name:WHITE_GEAR_D_NAMES && quantity:>=WHITE_GEAR_D_A_QUANT) {WHITE_GEAR_A_STYLE}
+rule (name:WHITE_GEAR_E_NAMES && quantity:>=WHITE_GEAR_E_A_QUANT) {WHITE_GEAR_A_STYLE}
+
+rule (name:WHITE_GEAR_B_NAMES) {WHITE_GEAR_B_STYLE}
+rule (name:WHITE_GEAR_C_NAMES && quantity:>=WHITE_GEAR_C_B_QUANT) {WHITE_GEAR_B_STYLE}
+rule (name:WHITE_GEAR_D_NAMES && quantity:>=WHITE_GEAR_D_B_QUANT) {WHITE_GEAR_B_STYLE}
+rule (name:WHITE_GEAR_E_NAMES && quantity:>=WHITE_GEAR_E_B_QUANT) {WHITE_GEAR_B_STYLE}
+
+rule (name:WHITE_GEAR_C_NAMES) {WHITE_GEAR_C_STYLE}
+rule (name:WHITE_GEAR_D_NAMES && quantity:>=WHITE_GEAR_D_C_QUANT) {WHITE_GEAR_C_STYLE}
+rule (name:WHITE_GEAR_E_NAMES && quantity:>=WHITE_GEAR_E_C_QUANT) {WHITE_GEAR_C_STYLE}
+
+rule (name:WHITE_GEAR_D_NAMES) {WHITE_GEAR_D_STYLE}
+rule (name:WHITE_GEAR_E_NAMES && quantity:>=WHITE_GEAR_E_D_QUANT) {WHITE_GEAR_D_STYLE}
+
+rule (name:WHITE_GEAR_E_NAMES) {WHITE_GEAR_E_STYLE}
+
+/*@ define:module:steel_gear
+name: Steel Gear
+subtitle: Made from Real Steels
+*/
+
+/*@ define:input:steel_gear
+label: SS Tier Steel Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define STEEL_GEAR_SS_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define STEEL_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_SS_NAMES && !STEEL_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define STEEL_GEAR_SS_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_SS_NAMES && quantity:<STEEL_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Steel platebody
+*/
+
+#define STEEL_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff908686";\
+	color = "#ff908686";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff908686";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff908686";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:steel_gear
+label: S Tier Steel Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define STEEL_GEAR_S_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define STEEL_GEAR_S_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_S_NAMES && !STEEL_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define STEEL_GEAR_S_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_S_NAMES && quantity:<STEEL_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define STEEL_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:steel_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Steel platelegs
+*/
+
+#define STEEL_GEAR_S_STYLE \
+	backgroundColor = "#ff908686";\
+	menuTextColor = "#ff908686";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff908686";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:steel_gear
+label: A Tier Steel Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define STEEL_GEAR_A_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define STEEL_GEAR_A_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_A_NAMES && !STEEL_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define STEEL_GEAR_A_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_A_NAMES && quantity:<STEEL_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define STEEL_GEAR_A_S_QUANT 10
+
+/*@ define:input:steel_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define STEEL_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:steel_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Steel kiteshield
+*/
+
+#define STEEL_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc908686";\
+	menuTextColor = "#ff908686"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:steel_gear
+label: B Tier Steel Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define STEEL_GEAR_B_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define STEEL_GEAR_B_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_B_NAMES && !STEEL_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define STEEL_GEAR_B_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_B_NAMES && quantity:<STEEL_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define STEEL_GEAR_B_A_QUANT 10
+
+/*@ define:input:steel_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define STEEL_GEAR_B_S_QUANT 100
+
+/*@ define:input:steel_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define STEEL_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:steel_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Steel pickaxe
+*/
+
+#define STEEL_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#99908686";\
+	menuTextColor = "#ff908686";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:steel_gear
+label: C Tier Steel Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_C_NAMES && !STEEL_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_C_NAMES && quantity:<STEEL_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_B_QUANT 10
+
+/*@ define:input:steel_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_A_QUANT 100
+
+/*@ define:input:steel_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_S_QUANT 1000
+
+/*@ define:input:steel_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define STEEL_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:steel_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Steel axe
+*/
+
+#define STEEL_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#33908686";\
+	menuTextColor = "#ff908686";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:steel_gear
+label: D Tier Steel Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_D_NAMES && !STEEL_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_D_NAMES && quantity:<STEEL_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_C_QUANT 10
+
+/*@ define:input:steel_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_B_QUANT 100
+
+/*@ define:input:steel_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_A_QUANT 1000
+
+/*@ define:input:steel_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_S_QUANT 10000
+
+/*@ define:input:steel_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define STEEL_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:steel_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Steel dagger
+*/
+
+#define STEEL_GEAR_D_STYLE \
+    color = "#ff908686"; \
+	menuTextColor = "#ff908686";
+
+/*@ define:input:steel_gear
+label: E Tier Steel Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_NAMES []
+
+/*@ define:input:steel_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_SHOW_UNNOTED true
+
+rule (name:STEEL_GEAR_E_NAMES && !STEEL_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_MIN_QUANT 0
+
+rule (name:STEEL_GEAR_E_NAMES && quantity:<STEEL_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:steel_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_D_QUANT 10
+
+/*@ define:input:steel_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_C_QUANT 100
+
+/*@ define:input:steel_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_B_QUANT 1000
+
+/*@ define:input:steel_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_A_QUANT 10000
+
+/*@ define:input:steel_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_S_QUANT 100000
+
+/*@ define:input:steel_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define STEEL_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:steel_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Steel arrow
+*/
+
+#define STEEL_GEAR_E_STYLE \
+    color = "#66908686"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff908686";\
+	menuSort = -10000;\
+
+rule (name:STEEL_GEAR_SS_NAMES) {STEEL_GEAR_SS_STYLE}
+rule (name:STEEL_GEAR_S_NAMES && quantity:>=STEEL_GEAR_S_SS_QUANT) {STEEL_GEAR_SS_STYLE}
+rule (name:STEEL_GEAR_A_NAMES && quantity:>=STEEL_GEAR_A_SS_QUANT) {STEEL_GEAR_SS_STYLE}
+rule (name:STEEL_GEAR_B_NAMES && quantity:>=STEEL_GEAR_B_SS_QUANT) {STEEL_GEAR_SS_STYLE}
+rule (name:STEEL_GEAR_C_NAMES && quantity:>=STEEL_GEAR_C_SS_QUANT) {STEEL_GEAR_SS_STYLE}
+rule (name:STEEL_GEAR_D_NAMES && quantity:>=STEEL_GEAR_D_SS_QUANT) {STEEL_GEAR_SS_STYLE}
+rule (name:STEEL_GEAR_E_NAMES && quantity:>=STEEL_GEAR_E_SS_QUANT) {STEEL_GEAR_SS_STYLE}
+
+rule (name:STEEL_GEAR_S_NAMES) {STEEL_GEAR_S_STYLE}
+rule (name:STEEL_GEAR_A_NAMES && quantity:>=STEEL_GEAR_A_S_QUANT) {STEEL_GEAR_S_STYLE}
+rule (name:STEEL_GEAR_B_NAMES && quantity:>=STEEL_GEAR_B_S_QUANT) {STEEL_GEAR_S_STYLE}
+rule (name:STEEL_GEAR_C_NAMES && quantity:>=STEEL_GEAR_C_S_QUANT) {STEEL_GEAR_S_STYLE}
+rule (name:STEEL_GEAR_D_NAMES && quantity:>=STEEL_GEAR_D_S_QUANT) {STEEL_GEAR_S_STYLE}
+rule (name:STEEL_GEAR_E_NAMES && quantity:>=STEEL_GEAR_E_S_QUANT) {STEEL_GEAR_S_STYLE}
+
+rule (name:STEEL_GEAR_A_NAMES) {STEEL_GEAR_A_STYLE}
+rule (name:STEEL_GEAR_B_NAMES && quantity:>=STEEL_GEAR_B_A_QUANT) {STEEL_GEAR_A_STYLE}
+rule (name:STEEL_GEAR_C_NAMES && quantity:>=STEEL_GEAR_C_A_QUANT) {STEEL_GEAR_A_STYLE}
+rule (name:STEEL_GEAR_D_NAMES && quantity:>=STEEL_GEAR_D_A_QUANT) {STEEL_GEAR_A_STYLE}
+rule (name:STEEL_GEAR_E_NAMES && quantity:>=STEEL_GEAR_E_A_QUANT) {STEEL_GEAR_A_STYLE}
+
+rule (name:STEEL_GEAR_B_NAMES) {STEEL_GEAR_B_STYLE}
+rule (name:STEEL_GEAR_C_NAMES && quantity:>=STEEL_GEAR_C_B_QUANT) {STEEL_GEAR_B_STYLE}
+rule (name:STEEL_GEAR_D_NAMES && quantity:>=STEEL_GEAR_D_B_QUANT) {STEEL_GEAR_B_STYLE}
+rule (name:STEEL_GEAR_E_NAMES && quantity:>=STEEL_GEAR_E_B_QUANT) {STEEL_GEAR_B_STYLE}
+
+rule (name:STEEL_GEAR_C_NAMES) {STEEL_GEAR_C_STYLE}
+rule (name:STEEL_GEAR_D_NAMES && quantity:>=STEEL_GEAR_D_C_QUANT) {STEEL_GEAR_C_STYLE}
+rule (name:STEEL_GEAR_E_NAMES && quantity:>=STEEL_GEAR_E_C_QUANT) {STEEL_GEAR_C_STYLE}
+
+rule (name:STEEL_GEAR_D_NAMES) {STEEL_GEAR_D_STYLE}
+rule (name:STEEL_GEAR_E_NAMES && quantity:>=STEEL_GEAR_E_D_QUANT) {STEEL_GEAR_D_STYLE}
+
+rule (name:STEEL_GEAR_E_NAMES) {STEEL_GEAR_E_STYLE}
+
+/*@ define:module:iron_gear
+name: Iron Gear
+subtitle: Made from Real Irons
+*/
+
+/*@ define:input:iron_gear
+label: SS Tier Iron Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define IRON_GEAR_SS_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define IRON_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_SS_NAMES && !IRON_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define IRON_GEAR_SS_MIN_QUANT 0
+
+rule (name:IRON_GEAR_SS_NAMES && quantity:<IRON_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Iron platebody
+*/
+
+#define IRON_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff391D14";\
+	color = "#ff391D14";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff391D14";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff391D14";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:iron_gear
+label: S Tier Iron Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define IRON_GEAR_S_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define IRON_GEAR_S_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_S_NAMES && !IRON_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define IRON_GEAR_S_MIN_QUANT 0
+
+rule (name:IRON_GEAR_S_NAMES && quantity:<IRON_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define IRON_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:iron_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Iron platelegs
+*/
+
+#define IRON_GEAR_S_STYLE \
+	backgroundColor = "#ff391D14";\
+	menuTextColor = "#ff391D14";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff391D14";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:iron_gear
+label: A Tier Iron Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define IRON_GEAR_A_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define IRON_GEAR_A_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_A_NAMES && !IRON_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define IRON_GEAR_A_MIN_QUANT 0
+
+rule (name:IRON_GEAR_A_NAMES && quantity:<IRON_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define IRON_GEAR_A_S_QUANT 10
+
+/*@ define:input:iron_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define IRON_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:iron_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Iron kiteshield
+*/
+
+#define IRON_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc391D14";\
+	menuTextColor = "#ff391D14"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:iron_gear
+label: B Tier Iron Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define IRON_GEAR_B_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define IRON_GEAR_B_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_B_NAMES && !IRON_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define IRON_GEAR_B_MIN_QUANT 0
+
+rule (name:IRON_GEAR_B_NAMES && quantity:<IRON_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define IRON_GEAR_B_A_QUANT 10
+
+/*@ define:input:iron_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define IRON_GEAR_B_S_QUANT 100
+
+/*@ define:input:iron_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define IRON_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:iron_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Iron pickaxe
+*/
+
+#define IRON_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#99391D14";\
+	menuTextColor = "#ff391D14";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:iron_gear
+label: C Tier Iron Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define IRON_GEAR_C_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define IRON_GEAR_C_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_C_NAMES && !IRON_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define IRON_GEAR_C_MIN_QUANT 0
+
+rule (name:IRON_GEAR_C_NAMES && quantity:<IRON_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define IRON_GEAR_C_B_QUANT 10
+
+/*@ define:input:iron_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define IRON_GEAR_C_A_QUANT 100
+
+/*@ define:input:iron_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define IRON_GEAR_C_S_QUANT 1000
+
+/*@ define:input:iron_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define IRON_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:iron_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Iron axe
+*/
+
+#define IRON_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#33391D14";\
+	menuTextColor = "#ff391D14";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:iron_gear
+label: D Tier Iron Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define IRON_GEAR_D_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define IRON_GEAR_D_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_D_NAMES && !IRON_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define IRON_GEAR_D_MIN_QUANT 0
+
+rule (name:IRON_GEAR_D_NAMES && quantity:<IRON_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define IRON_GEAR_D_C_QUANT 10
+
+/*@ define:input:iron_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define IRON_GEAR_D_B_QUANT 100
+
+/*@ define:input:iron_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define IRON_GEAR_D_A_QUANT 1000
+
+/*@ define:input:iron_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define IRON_GEAR_D_S_QUANT 10000
+
+/*@ define:input:iron_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define IRON_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:iron_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Iron dagger
+*/
+
+#define IRON_GEAR_D_STYLE \
+    color = "#ff391D14"; \
+	menuTextColor = "#ff391D14";
+
+/*@ define:input:iron_gear
+label: E Tier Iron Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define IRON_GEAR_E_NAMES []
+
+/*@ define:input:iron_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define IRON_GEAR_E_SHOW_UNNOTED true
+
+rule (name:IRON_GEAR_E_NAMES && !IRON_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_MIN_QUANT 0
+
+rule (name:IRON_GEAR_E_NAMES && quantity:<IRON_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:iron_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_D_QUANT 10
+
+/*@ define:input:iron_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_C_QUANT 100
+
+/*@ define:input:iron_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_B_QUANT 1000
+
+/*@ define:input:iron_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_A_QUANT 10000
+
+/*@ define:input:iron_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_S_QUANT 100000
+
+/*@ define:input:iron_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define IRON_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:iron_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Iron arrow
+*/
+
+#define IRON_GEAR_E_STYLE \
+    color = "#66391D14"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff391D14";\
+	menuSort = -10000;\
+
+rule (name:IRON_GEAR_SS_NAMES) {IRON_GEAR_SS_STYLE}
+rule (name:IRON_GEAR_S_NAMES && quantity:>=IRON_GEAR_S_SS_QUANT) {IRON_GEAR_SS_STYLE}
+rule (name:IRON_GEAR_A_NAMES && quantity:>=IRON_GEAR_A_SS_QUANT) {IRON_GEAR_SS_STYLE}
+rule (name:IRON_GEAR_B_NAMES && quantity:>=IRON_GEAR_B_SS_QUANT) {IRON_GEAR_SS_STYLE}
+rule (name:IRON_GEAR_C_NAMES && quantity:>=IRON_GEAR_C_SS_QUANT) {IRON_GEAR_SS_STYLE}
+rule (name:IRON_GEAR_D_NAMES && quantity:>=IRON_GEAR_D_SS_QUANT) {IRON_GEAR_SS_STYLE}
+rule (name:IRON_GEAR_E_NAMES && quantity:>=IRON_GEAR_E_SS_QUANT) {IRON_GEAR_SS_STYLE}
+
+rule (name:IRON_GEAR_S_NAMES) {IRON_GEAR_S_STYLE}
+rule (name:IRON_GEAR_A_NAMES && quantity:>=IRON_GEAR_A_S_QUANT) {IRON_GEAR_S_STYLE}
+rule (name:IRON_GEAR_B_NAMES && quantity:>=IRON_GEAR_B_S_QUANT) {IRON_GEAR_S_STYLE}
+rule (name:IRON_GEAR_C_NAMES && quantity:>=IRON_GEAR_C_S_QUANT) {IRON_GEAR_S_STYLE}
+rule (name:IRON_GEAR_D_NAMES && quantity:>=IRON_GEAR_D_S_QUANT) {IRON_GEAR_S_STYLE}
+rule (name:IRON_GEAR_E_NAMES && quantity:>=IRON_GEAR_E_S_QUANT) {IRON_GEAR_S_STYLE}
+
+rule (name:IRON_GEAR_A_NAMES) {IRON_GEAR_A_STYLE}
+rule (name:IRON_GEAR_B_NAMES && quantity:>=IRON_GEAR_B_A_QUANT) {IRON_GEAR_A_STYLE}
+rule (name:IRON_GEAR_C_NAMES && quantity:>=IRON_GEAR_C_A_QUANT) {IRON_GEAR_A_STYLE}
+rule (name:IRON_GEAR_D_NAMES && quantity:>=IRON_GEAR_D_A_QUANT) {IRON_GEAR_A_STYLE}
+rule (name:IRON_GEAR_E_NAMES && quantity:>=IRON_GEAR_E_A_QUANT) {IRON_GEAR_A_STYLE}
+
+rule (name:IRON_GEAR_B_NAMES) {IRON_GEAR_B_STYLE}
+rule (name:IRON_GEAR_C_NAMES && quantity:>=IRON_GEAR_C_B_QUANT) {IRON_GEAR_B_STYLE}
+rule (name:IRON_GEAR_D_NAMES && quantity:>=IRON_GEAR_D_B_QUANT) {IRON_GEAR_B_STYLE}
+rule (name:IRON_GEAR_E_NAMES && quantity:>=IRON_GEAR_E_B_QUANT) {IRON_GEAR_B_STYLE}
+
+rule (name:IRON_GEAR_C_NAMES) {IRON_GEAR_C_STYLE}
+rule (name:IRON_GEAR_D_NAMES && quantity:>=IRON_GEAR_D_C_QUANT) {IRON_GEAR_C_STYLE}
+rule (name:IRON_GEAR_E_NAMES && quantity:>=IRON_GEAR_E_C_QUANT) {IRON_GEAR_C_STYLE}
+
+rule (name:IRON_GEAR_D_NAMES) {IRON_GEAR_D_STYLE}
+rule (name:IRON_GEAR_E_NAMES && quantity:>=IRON_GEAR_E_D_QUANT) {IRON_GEAR_D_STYLE}
+
+rule (name:IRON_GEAR_E_NAMES) {IRON_GEAR_E_STYLE}
+
+/*@ define:module:bronze_gear
+name: Bronze Gear
+subtitle: Made from Real Bronzes
+*/
+
+/*@ define:input:bronze_gear
+label: SS Tier Bronze Gear
+type: enumlist
+enum: ["*"]
+group: SS Tier
+*/
+
+#define BRONZE_GEAR_SS_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: SS Tier
+*/
+
+#define BRONZE_GEAR_SS_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_SS_NAMES && !BRONZE_GEAR_SS_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: SS Tier
+*/
+
+#define BRONZE_GEAR_SS_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_SS_NAMES && quantity:<BRONZE_GEAR_SS_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: SS Tier
+type: style
+group: SS Tier
+exampleItem: Bronze platebody
+*/
+
+#define BRONZE_GEAR_SS_STYLE \
+	backgroundColor = "#ffffffff";\
+	menuTextColor = "#ff5b462a";\
+	color = "#ff5b462a";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ff5b462a";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff5b462a";\
+	menuSort = 50000;\
+	sound = "DropSS.wav";
+
+/*@ define:input:bronze_gear
+label: S Tier Bronze Gear
+type: enumlist
+enum: ["*"]
+group: S Tier
+*/
+
+#define BRONZE_GEAR_S_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: S Tier
+*/
+
+#define BRONZE_GEAR_S_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_S_NAMES && !BRONZE_GEAR_S_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: S Tier
+*/
+
+#define BRONZE_GEAR_S_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_S_NAMES && quantity:<BRONZE_GEAR_S_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: SS Quantity
+type: number
+group: S Tier
+*/
+
+#define BRONZE_GEAR_S_SS_QUANT 10
+
+
+/*@ define:input:bronze_gear
+label: S Tier
+type: style
+group: S Tier
+exampleItem: Bronze platelegs
+*/
+
+#define BRONZE_GEAR_S_STYLE \
+	backgroundColor = "#ff5b462a";\
+	menuTextColor = "#ff5b462a";\
+	color = "#ffffffff";\
+	fontType = 3;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	showLootbeam = true;\
+	lootbeamColor = "#ff5b462a";\
+	menuSort = 40000;\
+	sound = "DropS.wav";
+
+/*@ define:input:bronze_gear
+label: A Tier Bronze Gear 
+type: enumlist
+enum: ["*"]
+group: A Tier
+*/
+
+#define BRONZE_GEAR_A_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: A Tier
+*/
+
+#define BRONZE_GEAR_A_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_A_NAMES && !BRONZE_GEAR_A_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: A Tier
+*/
+
+#define BRONZE_GEAR_A_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_A_NAMES && quantity:<BRONZE_GEAR_A_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: S Quantity
+type: number
+group: A Tier
+*/
+
+#define BRONZE_GEAR_A_S_QUANT 10
+
+/*@ define:input:bronze_gear
+label: SS Quantity
+type: number
+group: A Tier
+*/
+
+#define BRONZE_GEAR_A_SS_QUANT 100
+
+
+/*@ define:input:bronze_gear
+label: A Tier
+type: style
+group: A Tier
+exampleItem: Bronze kiteshield
+*/
+
+#define BRONZE_GEAR_A_STYLE \
+	color = "#ffffffff";\
+	backgroundColor = "#cc5b462a";\
+	menuTextColor = "#ff5b462a"; \
+	fontType = 2;\
+	textAccent = 3;\
+	borderColor = "#ffffffff";\
+	menuSort = 30000;\
+	sound = "DropA.wav";
+
+/*@ define:input:bronze_gear
+label: B Tier Bronze Gear
+type: enumlist
+enum: ["*"]
+group: B Tier
+*/
+
+#define BRONZE_GEAR_B_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: B Tier
+*/
+
+#define BRONZE_GEAR_B_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_B_NAMES && !BRONZE_GEAR_B_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: B Tier
+*/
+
+#define BRONZE_GEAR_B_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_B_NAMES && quantity:<BRONZE_GEAR_B_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: A Quantity
+type: number
+group: B Tier
+*/
+
+#define BRONZE_GEAR_B_A_QUANT 10
+
+/*@ define:input:bronze_gear
+label: S Quantity
+type: number
+group: B Tier
+*/
+
+#define BRONZE_GEAR_B_S_QUANT 100
+
+/*@ define:input:bronze_gear
+label: SS Quantity
+type: number
+group: B Tier
+*/
+
+#define BRONZE_GEAR_B_SS_QUANT 1000
+
+/*@ define:input:bronze_gear
+label: B Tier
+type: style
+group: B Tier
+exampleItem: Bronze pickaxe
+*/
+
+#define BRONZE_GEAR_B_STYLE \
+	color = "#ffffffff";\
+    backgroundColor = "#995b462a";\
+	menuTextColor = "#ff5b462a";\
+	textAccent = 3;\
+	menuSort = 20000;
+
+/*@ define:input:bronze_gear
+label: C Tier Bronze Gear
+type: enumlist
+enum: ["*"]
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_C_NAMES && !BRONZE_GEAR_C_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_C_NAMES && quantity:<BRONZE_GEAR_C_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: B Quantity
+type: number
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_B_QUANT 10
+
+/*@ define:input:bronze_gear
+label: A Quantity
+type: number
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_A_QUANT 100
+
+/*@ define:input:bronze_gear
+label: S Quantity
+type: number
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_S_QUANT 1000
+
+/*@ define:input:bronze_gear
+label: SS Quantity
+type: number
+group: C Tier
+*/
+
+#define BRONZE_GEAR_C_SS_QUANT 10000
+
+/*@ define:input:bronze_gear
+label: C Tier
+type: style
+group: C Tier
+exampleItem: Bronze axe
+*/
+
+#define BRONZE_GEAR_C_STYLE \
+    color = "#ffffffff";\
+    backgroundColor = "#335b462a";\
+	menuTextColor = "#ff5b462a";\
+	textAccent = 3;\
+	menuSort = 10000;\
+
+/*@ define:input:bronze_gear
+label: D Tier Bronze Gear
+type: enumlist
+enum: ["*"]
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_D_NAMES && !BRONZE_GEAR_D_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_D_NAMES && quantity:<BRONZE_GEAR_D_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: C Quantity
+type: number
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_C_QUANT 10
+
+/*@ define:input:bronze_gear
+label: B Quantity
+type: number
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_B_QUANT 100
+
+/*@ define:input:bronze_gear
+label: A Quantity
+type: number
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_A_QUANT 1000
+
+/*@ define:input:bronze_gear
+label: S Quantity
+type: number
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_S_QUANT 10000
+
+/*@ define:input:bronze_gear
+label: SS Quantity
+type: number
+group: D Tier
+*/
+
+#define BRONZE_GEAR_D_SS_QUANT 100000
+
+/*@ define:input:bronze_gear
+label: D Tier
+type: style
+group: D Tier
+exampleItem: Bronze dagger
+*/
+
+#define BRONZE_GEAR_D_STYLE \
+    color = "#ff5b462a"; \
+	menuTextColor = "#ff5b462a";
+
+/*@ define:input:bronze_gear
+label: E Tier Bronze Gear
+type: enumlist
+enum: ["*"]
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_NAMES []
+
+/*@ define:input:bronze_gear
+label: Show Unnoted
+type: boolean
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_SHOW_UNNOTED true
+
+rule (name:BRONZE_GEAR_E_NAMES && !BRONZE_GEAR_E_SHOW_UNNOTED && noted:true) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: Minimum Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_MIN_QUANT 0
+
+rule (name:BRONZE_GEAR_E_NAMES && quantity:<BRONZE_GEAR_E_MIN_QUANT) {hidden = true;}
+
+/*@ define:input:bronze_gear
+label: D Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_D_QUANT 10
+
+/*@ define:input:bronze_gear
+label: C Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_C_QUANT 100
+
+/*@ define:input:bronze_gear
+label: B Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_B_QUANT 1000
+
+/*@ define:input:bronze_gear
+label: A Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_A_QUANT 10000
+
+/*@ define:input:bronze_gear
+label: S Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_S_QUANT 100000
+
+/*@ define:input:bronze_gear
+label: SS Quantity
+type: number
+group: E Tier
+*/
+
+#define BRONZE_GEAR_E_SS_QUANT 1000000
+
+/*@ define:input:bronze_gear
+label: E Tier
+type: style
+group: E Tier
+exampleItem: Bronze arrow
+*/
+
+#define BRONZE_GEAR_E_STYLE \
+    color = "#665b462a"; \
+	textAccentColor = "#66000000"; \
+	menuTextColor = "#ff5b462a";\
+	menuSort = -10000;\
+
+rule (name:BRONZE_GEAR_SS_NAMES) {BRONZE_GEAR_SS_STYLE}
+rule (name:BRONZE_GEAR_S_NAMES && quantity:>=BRONZE_GEAR_S_SS_QUANT) {BRONZE_GEAR_SS_STYLE}
+rule (name:BRONZE_GEAR_A_NAMES && quantity:>=BRONZE_GEAR_A_SS_QUANT) {BRONZE_GEAR_SS_STYLE}
+rule (name:BRONZE_GEAR_B_NAMES && quantity:>=BRONZE_GEAR_B_SS_QUANT) {BRONZE_GEAR_SS_STYLE}
+rule (name:BRONZE_GEAR_C_NAMES && quantity:>=BRONZE_GEAR_C_SS_QUANT) {BRONZE_GEAR_SS_STYLE}
+rule (name:BRONZE_GEAR_D_NAMES && quantity:>=BRONZE_GEAR_D_SS_QUANT) {BRONZE_GEAR_SS_STYLE}
+rule (name:BRONZE_GEAR_E_NAMES && quantity:>=BRONZE_GEAR_E_SS_QUANT) {BRONZE_GEAR_SS_STYLE}
+
+rule (name:BRONZE_GEAR_S_NAMES) {BRONZE_GEAR_S_STYLE}
+rule (name:BRONZE_GEAR_A_NAMES && quantity:>=BRONZE_GEAR_A_S_QUANT) {BRONZE_GEAR_S_STYLE}
+rule (name:BRONZE_GEAR_B_NAMES && quantity:>=BRONZE_GEAR_B_S_QUANT) {BRONZE_GEAR_S_STYLE}
+rule (name:BRONZE_GEAR_C_NAMES && quantity:>=BRONZE_GEAR_C_S_QUANT) {BRONZE_GEAR_S_STYLE}
+rule (name:BRONZE_GEAR_D_NAMES && quantity:>=BRONZE_GEAR_D_S_QUANT) {BRONZE_GEAR_S_STYLE}
+rule (name:BRONZE_GEAR_E_NAMES && quantity:>=BRONZE_GEAR_E_S_QUANT) {BRONZE_GEAR_S_STYLE}
+
+rule (name:BRONZE_GEAR_A_NAMES) {BRONZE_GEAR_A_STYLE}
+rule (name:BRONZE_GEAR_B_NAMES && quantity:>=BRONZE_GEAR_B_A_QUANT) {BRONZE_GEAR_A_STYLE}
+rule (name:BRONZE_GEAR_C_NAMES && quantity:>=BRONZE_GEAR_C_A_QUANT) {BRONZE_GEAR_A_STYLE}
+rule (name:BRONZE_GEAR_D_NAMES && quantity:>=BRONZE_GEAR_D_A_QUANT) {BRONZE_GEAR_A_STYLE}
+rule (name:BRONZE_GEAR_E_NAMES && quantity:>=BRONZE_GEAR_E_A_QUANT) {BRONZE_GEAR_A_STYLE}
+
+rule (name:BRONZE_GEAR_B_NAMES) {BRONZE_GEAR_B_STYLE}
+rule (name:BRONZE_GEAR_C_NAMES && quantity:>=BRONZE_GEAR_C_B_QUANT) {BRONZE_GEAR_B_STYLE}
+rule (name:BRONZE_GEAR_D_NAMES && quantity:>=BRONZE_GEAR_D_B_QUANT) {BRONZE_GEAR_B_STYLE}
+rule (name:BRONZE_GEAR_E_NAMES && quantity:>=BRONZE_GEAR_E_B_QUANT) {BRONZE_GEAR_B_STYLE}
+
+rule (name:BRONZE_GEAR_C_NAMES) {BRONZE_GEAR_C_STYLE}
+rule (name:BRONZE_GEAR_D_NAMES && quantity:>=BRONZE_GEAR_D_C_QUANT) {BRONZE_GEAR_C_STYLE}
+rule (name:BRONZE_GEAR_E_NAMES && quantity:>=BRONZE_GEAR_E_C_QUANT) {BRONZE_GEAR_C_STYLE}
+
+rule (name:BRONZE_GEAR_D_NAMES) {BRONZE_GEAR_D_STYLE}
+rule (name:BRONZE_GEAR_E_NAMES && quantity:>=BRONZE_GEAR_E_D_QUANT) {BRONZE_GEAR_D_STYLE}
+
+rule (name:BRONZE_GEAR_E_NAMES) {BRONZE_GEAR_E_STYLE}
