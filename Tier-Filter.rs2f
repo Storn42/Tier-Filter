@@ -295,7 +295,7 @@ type: number
 group: Coins
 */
 
-#define COINS_B_VALUE 5000
+#define COINS_B_VALUE 1000
 
 /*@ define:input:currency
 label: C Value
@@ -477,7 +477,7 @@ type: number
 group: Tokkul
 */
 
-#define TOKKUL_B_QUANT 2000
+#define TOKKUL_B_QUANT 1000
 
 /*@ define:input:currency
 label: C Value
@@ -485,7 +485,7 @@ type: number
 group: Tokkul
 */
 
-#define TOKKUL_C_QUANT 500
+#define TOKKUL_C_QUANT 100
 
 /*@ define:input:currency
 label: D Quantity
@@ -661,7 +661,7 @@ type: number
 group: Numalite
 */
 
-#define NUMALITE_B_QUANT 2000
+#define NUMALITE_B_QUANT 1000
 
 /*@ define:input:currency
 label: C Value
@@ -669,7 +669,7 @@ type: number
 group: Numalite
 */
 
-#define NUMALITE_C_QUANT 500
+#define NUMALITE_C_QUANT 100
 
 /*@ define:input:currency
 label: D Quantity
@@ -864,7 +864,7 @@ type: number
 group: Tiers
 */
 
-#define ALCHS_B_VALUE 20000
+#define ALCHS_B_VALUE 10000
 
 /*@ define:input:alchs
 label: C Value
@@ -872,7 +872,7 @@ type: number
 group: Tiers
 */
 
-#define ALCHS_C_VALUE 5000
+#define ALCHS_C_VALUE 1000
 
 /*@ define:input:alchs
 label: D Value
@@ -8792,11 +8792,11 @@ subtitle: Made from Real Dragons
 /*@ define:input:dragon_gear
 label: SS Tier Dragon Gear
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: SS Tier
 */
 
-#define DRAGON_GEAR_SS_NAMES []
+#define DRAGON_GEAR_SS_NAMES ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts"]
 
 /*@ define:input:dragon_gear
 label: Show Unnoted
@@ -8840,11 +8840,11 @@ exampleItem: Dragon platebody
 /*@ define:input:dragon_gear
 label: S Tier Dragon Gear
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: S Tier
 */
 
-#define DRAGON_GEAR_S_NAMES []
+#define DRAGON_GEAR_S_NAMES ["Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook"]
 
 /*@ define:input:dragon_gear
 label: Show Unnoted
@@ -8897,11 +8897,11 @@ exampleItem: Dragon platelegs
 /*@ define:input:dragon_gear
 label: A Tier Dragon Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: A Tier
 */
 
-#define DRAGON_GEAR_A_NAMES []
+#define DRAGON_GEAR_A_NAMES ["Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield"]
 
 /*@ define:input:dragon_gear
 label: Show Unnoted
@@ -8960,11 +8960,11 @@ exampleItem: Dragon kiteshield
 /*@ define:input:dragon_gear
 label: B Tier Dragon Gear
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: B Tier
 */
 
-#define DRAGON_GEAR_B_NAMES []
+#define DRAGON_GEAR_B_NAMES ["Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd"]
 
 /*@ define:input:dragon_gear
 label: Show Unnoted
@@ -9027,11 +9027,11 @@ exampleItem: Dragon pickaxe
 /*@ define:input:dragon_gear
 label: C Tier Dragon Gear
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: C Tier
 */
 
-#define DRAGON_GEAR_C_NAMES []
+#define DRAGON_GEAR_C_NAMES ["Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball"]
 
 /*@ define:input:dragon_gear
 label: Show Unnoted
@@ -9102,11 +9102,11 @@ exampleItem: Dragon axe
 /*@ define:input:dragon_gear
 label: D Tier Dragon Gear
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: D Tier
 */
 
-#define DRAGON_GEAR_D_NAMES []
+#define DRAGON_GEAR_D_NAMES ["Dragon javelin"]
 
 /*@ define:input:dragon_gear
 label: Show Unnoted
@@ -9182,7 +9182,7 @@ exampleItem: Dragon dagger
 /*@ define:input:dragon_gear
 label: E Tier Dragon Gear
 type: enumlist
-enum: ["*"]
+enum: ["Dragon warhammer","Dragon claws","Dragon full helm","Dragon platebody","Dragon kiteshield","Dragon keel parts","Large dragon keel parts","Dragon pickaxe","Dragon harpoon","Dragon crossbow","Dragon chainbody","Dragon metal sheet","Dragon cannon barrel","Broken dragon hook","Dragon axe","Dragon hasta","Dragon sword","Dragon battleaxe","Dragon 2h sword","Dragon halberd","Dragon platelegs","Dragon plateskirt","Dragon gloves","Dragon sq shield","Dragon dagger","Dragon mace","Dragon cane","Dragon scimitar","Dragon longsword","Dragon halberd","Dragon knife","Dragon dart","Dragon thrownaxe","Dragon arrow","Dragon bolts","Dragon nails","Dragon cannonball","Dragon javelin"]
 group: E Tier
 */
 
@@ -12432,7 +12432,7 @@ subtitle: Made from Real Irons
 /*@ define:input:iron_gear
 label: SS Tier Iron Gear
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: SS Tier
 */
 
@@ -12480,7 +12480,7 @@ exampleItem: Iron platebody
 /*@ define:input:iron_gear
 label: S Tier Iron Gear
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: S Tier
 */
 
@@ -12537,7 +12537,7 @@ exampleItem: Iron platelegs
 /*@ define:input:iron_gear
 label: A Tier Iron Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: A Tier
 */
 
@@ -12600,7 +12600,7 @@ exampleItem: Iron kiteshield
 /*@ define:input:iron_gear
 label: B Tier Iron Gear
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: B Tier
 */
 
@@ -12667,7 +12667,7 @@ exampleItem: Iron pickaxe
 /*@ define:input:iron_gear
 label: C Tier Iron Gear
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: C Tier
 */
 
@@ -12742,7 +12742,7 @@ exampleItem: Iron axe
 /*@ define:input:iron_gear
 label: D Tier Iron Gear
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: D Tier
 */
 
@@ -12822,11 +12822,11 @@ exampleItem: Iron dagger
 /*@ define:input:iron_gear
 label: E Tier Iron Gear
 type: enumlist
-enum: ["*"]
+enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 group: E Tier
 */
 
-#define IRON_GEAR_E_NAMES []
+#define IRON_GEAR_E_NAMES ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
 
 /*@ define:input:iron_gear
 label: Show Unnoted
@@ -12952,7 +12952,7 @@ subtitle: Made from Real Bronzes
 /*@ define:input:bronze_gear
 label: SS Tier Bronze Gear
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: SS Tier
 */
 
@@ -13000,7 +13000,7 @@ exampleItem: Bronze platebody
 /*@ define:input:bronze_gear
 label: S Tier Bronze Gear
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: S Tier
 */
 
@@ -13057,7 +13057,7 @@ exampleItem: Bronze platelegs
 /*@ define:input:bronze_gear
 label: A Tier Bronze Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: A Tier
 */
 
@@ -13120,7 +13120,7 @@ exampleItem: Bronze kiteshield
 /*@ define:input:bronze_gear
 label: B Tier Bronze Gear
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: B Tier
 */
 
@@ -13187,7 +13187,7 @@ exampleItem: Bronze pickaxe
 /*@ define:input:bronze_gear
 label: C Tier Bronze Gear
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: C Tier
 */
 
@@ -13262,7 +13262,7 @@ exampleItem: Bronze axe
 /*@ define:input:bronze_gear
 label: D Tier Bronze Gear
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: D Tier
 */
 
@@ -13342,11 +13342,11 @@ exampleItem: Bronze dagger
 /*@ define:input:bronze_gear
 label: E Tier Bronze Gear
 type: enumlist
-enum: ["*"]
+enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 group: E Tier
 */
 
-#define BRONZE_GEAR_E_NAMES []
+#define BRONZE_GEAR_E_NAMES ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
 
 /*@ define:input:bronze_gear
 label: Show Unnoted
