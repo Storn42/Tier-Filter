@@ -10877,7 +10877,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:black_gear
 label: SS Tier Black Gear
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: SS Tier
 */
 
@@ -10925,11 +10925,11 @@ exampleItem: Black platebody
 /*@ define:input:black_gear
 label: S Tier Black Gear
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: S Tier
 */
 
-#define BLACK_GEAR_S_NAMES []
+#define BLACK_GEAR_S_NAMES ["Black felling axe"]
 
 /*@ define:input:black_gear
 label: Show Unnoted
@@ -10982,7 +10982,7 @@ exampleItem: Black platelegs
 /*@ define:input:black_gear
 label: A Tier Black Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: A Tier
 */
 
@@ -11045,7 +11045,7 @@ exampleItem: Black kiteshield
 /*@ define:input:black_gear
 label: B Tier Black Gear
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: B Tier
 */
 
@@ -11112,11 +11112,11 @@ exampleItem: Black pickaxe
 /*@ define:input:black_gear
 label: C Tier Black Gear
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: C Tier
 */
 
-#define BLACK_GEAR_C_NAMES []
+#define BLACK_GEAR_C_NAMES ["Black platebody","Black plateskirt","Black platelegs"]
 
 /*@ define:input:black_gear
 label: Show Unnoted
@@ -11187,11 +11187,11 @@ exampleItem: Black axe
 /*@ define:input:black_gear
 label: D Tier Black Gear
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: D Tier
 */
 
-#define BLACK_GEAR_D_NAMES []
+#define BLACK_GEAR_D_NAMES ["Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody"]
 
 /*@ define:input:black_gear
 label: Show Unnoted
@@ -11267,11 +11267,11 @@ exampleItem: Black dagger
 /*@ define:input:black_gear
 label: E Tier Black Gear
 type: enumlist
-enum: ["*"]
+enum: ["Black platebody","Black plateskirt","Black platelegs","Black dagger","Black pickaxe","Black axe","Black sword","Black mace","Black scimitar","Black longsword","Black warhammer","Black battleaxe","Black claws","Black spear","Black halberd","Black 2h sword","Black gloves","Black boots","Black defender","Black med helm","Black full helm","Black sq shield","Black kiteshield","Black chainbody","Black dart","Black knife","Black brutal","Black nails","Black felling axe"]
 group: E Tier
 */
 
-#define BLACK_GEAR_E_NAMES []
+#define BLACK_GEAR_E_NAMES ["Black dart","Black knife","Black brutal","Black nails"]
 
 /*@ define:input:black_gear
 label: Show Unnoted
