@@ -10356,7 +10356,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:mithril_gear
 label: SS Tier Mithril Gear
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: SS Tier
 */
 
@@ -10404,11 +10404,11 @@ exampleItem: Mithril platebody
 /*@ define:input:mithril_gear
 label: S Tier Mithril Gear
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: S Tier
 */
 
-#define MITHRIL_GEAR_S_NAMES []
+#define MITHRIL_GEAR_S_NAMES ["Mithril felling axe"]
 
 /*@ define:input:mithril_gear
 label: Show Unnoted
@@ -10461,7 +10461,7 @@ exampleItem: Mithril platelegs
 /*@ define:input:mithril_gear
 label: A Tier Mithril Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: A Tier
 */
 
@@ -10524,11 +10524,11 @@ exampleItem: Mithril kiteshield
 /*@ define:input:mithril_gear
 label: B Tier Mithril Gear
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: B Tier
 */
 
-#define MITHRIL_GEAR_B_NAMES []
+#define MITHRIL_GEAR_B_NAMES ["Large mithril keel parts"]
 
 /*@ define:input:mithril_gear
 label: Show Unnoted
@@ -10591,11 +10591,11 @@ exampleItem: Mithril pickaxe
 /*@ define:input:mithril_gear
 label: C Tier Mithril Gear
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: C Tier
 */
 
-#define MITHRIL_GEAR_C_NAMES []
+#define MITHRIL_GEAR_C_NAMES ["Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts"]
 
 /*@ define:input:mithril_gear
 label: Show Unnoted
@@ -10666,11 +10666,11 @@ exampleItem: Mithril axe
 /*@ define:input:mithril_gear
 label: D Tier Mithril Gear
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: D Tier
 */
 
-#define MITHRIL_GEAR_D_NAMES []
+#define MITHRIL_GEAR_D_NAMES ["Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple"]
 
 /*@ define:input:mithril_gear
 label: Show Unnoted
@@ -10746,11 +10746,11 @@ exampleItem: Mithril dagger
 /*@ define:input:mithril_gear
 label: E Tier Mithril Gear
 type: enumlist
-enum: ["*"]
+enum: ["Mithril felling axe","Large mithril keel parts","Mithril battleaxe","Mithril warhammer","Mithril halberd","Mithril 2h sword","Mithril gloves","Mithril defender","Mithril sq shield","Mithril plateskirt","Mithril platelegs","Mithril kiteshield","Mithril chainbody","Mithril platebody","Mithril keel parts","Mithril battleaxe","Mithril pickaxe","Mithril axe","Mithril mace","Mithril sword","Mithril hasta","Mithril scimitar","Mithril longsword","Mithril claws","Mithril spear","Mithril crossbow","Mithril boots","Mithril med helm","Mithril full helm","Mithril ore","Mithril bar","Mithril limbs","Mithril crossbow (u)","Mith grapple tip","Mith grapple","Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 group: E Tier
 */
 
-#define MITHRIL_GEAR_E_NAMES []
+#define MITHRIL_GEAR_E_NAMES ["Mithril dart","Mithril knife","Mithril thrownaxe","Mithril arrow","Mithril brutal","Mithril bolts","Mithril javelin","Mithril bolts (unf)","Mithril nails","Mithril dart tip","Mithril cannonball","Mithril arrowtips","Mithril javelin tips"]
 
 /*@ define:input:mithril_gear
 label: Show Unnoted
