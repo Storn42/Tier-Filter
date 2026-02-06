@@ -9835,7 +9835,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:adamantite_gear
 label: SS Tier Adamantite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: SS Tier
 */
 
@@ -9883,11 +9883,11 @@ exampleItem: Adamantite platebody
 /*@ define:input:adamantite_gear
 label: S Tier Adamantite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: S Tier
 */
 
-#define ADAMANTITE_GEAR_S_NAMES []
+#define ADAMANTITE_GEAR_S_NAMES ["Adamant felling axe"]
 
 /*@ define:input:adamantite_gear
 label: Show Unnoted
@@ -9940,11 +9940,11 @@ exampleItem: Adamantite platelegs
 /*@ define:input:adamantite_gear
 label: A Tier Adamantite Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: A Tier
 */
 
-#define ADAMANTITE_GEAR_A_NAMES []
+#define ADAMANTITE_GEAR_A_NAMES ["Large adamant keel parts"]
 
 /*@ define:input:adamantite_gear
 label: Show Unnoted
@@ -10003,11 +10003,11 @@ exampleItem: Adamantite kiteshield
 /*@ define:input:adamantite_gear
 label: B Tier Adamantite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: B Tier
 */
 
-#define ADAMANTITE_GEAR_B_NAMES []
+#define ADAMANTITE_GEAR_B_NAMES ["Adamant platebody","Adamant keel parts"]
 
 /*@ define:input:adamantite_gear
 label: Show Unnoted
@@ -10070,11 +10070,11 @@ exampleItem: Adamantite pickaxe
 /*@ define:input:adamantite_gear
 label: C Tier Adamantite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: C Tier
 */
 
-#define ADAMANTITE_GEAR_C_NAMES []
+#define ADAMANTITE_GEAR_C_NAMES ["Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)"]
 
 /*@ define:input:adamantite_gear
 label: Show Unnoted
@@ -10145,11 +10145,11 @@ exampleItem: Adamantite axe
 /*@ define:input:adamantite_gear
 label: D Tier Adamantite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: D Tier
 */
 
-#define ADAMANTITE_GEAR_D_NAMES []
+#define ADAMANTITE_GEAR_D_NAMES ["Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball"]
 
 /*@ define:input:adamantite_gear
 label: Show Unnoted
@@ -10225,11 +10225,11 @@ exampleItem: Adamantite dagger
 /*@ define:input:adamantite_gear
 label: E Tier Adamantite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large adamant keel parts","Adamant felling axe","Adamant platebody","Adamant keel parts","Adamant pickaxe","Adamant axe","Adamant mace","Adamant sword","Adamant hasta","Adamant scimitar","Adamant longsword","Adamant warhammer","Adamant battleaxe","Adamant claws","Adamant spear","Adamant halberd","Adamant 2h sword","Adamant crossbow","Adamant gloves","Adamant boots","Adamant defender","Adamant med helm","Adamant full helm","Adamant sq shield","Adamant plateskirt","Adamant platelegs","Adamant kiteshield","Adamant chainbody","Adamantite ore","Adamantite bar","Adamantite limbs","Adamant crossbow (u)","Adamant dagger","Adamant cane","Adamantite nails","Adamant cannonball","Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 group: E Tier
 */
 
-#define ADAMANTITE_GEAR_E_NAMES []
+#define ADAMANTITE_GEAR_E_NAMES ["Adamant knife","Adamant dart","Adamant thrownaxe","Adamant arrow","Adamant brutal","Adamant bolts","Adamant javelin","Adamant bolts(unf)","Adamant dart tip","Adamant arrowtips","Adamant javelin tips"]
 
 /*@ define:input:adamantite_gear
 label: Show Unnoted
