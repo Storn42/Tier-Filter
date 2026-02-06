@@ -9312,7 +9312,7 @@ subtitle: Not Made from Real Runes
 /*@ define:input:runite_gear
 label: SS Tier Runite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: SS Tier
 */
 
@@ -9360,11 +9360,11 @@ exampleItem: Runite platebody
 /*@ define:input:runite_gear
 label: S Tier Runite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: S Tier
 */
 
-#define RUNITE_GEAR_S_NAMES []
+#define RUNITE_GEAR_S_NAMES ["Large rune keel parts"]
 
 /*@ define:input:runite_gear
 label: Show Unnoted
@@ -9417,11 +9417,11 @@ exampleItem: Runite platelegs
 /*@ define:input:runite_gear
 label: A Tier Runite Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: A Tier
 */
 
-#define RUNITE_GEAR_A_NAMES []
+#define RUNITE_GEAR_A_NAMES ["Rune keel parts"]
 
 /*@ define:input:runite_gear
 label: Show Unnoted
@@ -9480,11 +9480,11 @@ exampleItem: Runite kiteshield
 /*@ define:input:runite_gear
 label: B Tier Runite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: B Tier
 */
 
-#define RUNITE_GEAR_B_NAMES []
+#define RUNITE_GEAR_B_NAMES ["Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)"]
 
 /*@ define:input:runite_gear
 label: Show Unnoted
@@ -9547,11 +9547,11 @@ exampleItem: Runite pickaxe
 /*@ define:input:runite_gear
 label: C Tier Runite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: C Tier
 */
 
-#define RUNITE_GEAR_C_NAMES []
+#define RUNITE_GEAR_C_NAMES ["Rune dagger","Rune cannonball","Rune nails"]
 
 /*@ define:input:runite_gear
 label: Show Unnoted
@@ -9622,11 +9622,11 @@ exampleItem: Runite axe
 /*@ define:input:runite_gear
 label: D Tier Runite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: D Tier
 */
 
-#define RUNITE_GEAR_D_NAMES []
+#define RUNITE_GEAR_D_NAMES ["Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 
 /*@ define:input:runite_gear
 label: Show Unnoted
@@ -9702,7 +9702,7 @@ exampleItem: Runite dagger
 /*@ define:input:runite_gear
 label: E Tier Runite Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large rune keel parts","Rune keel parts","Rune pickaxe","Rune pickaxe","Rune sword","Rune axe","Rune hasta","Rune scimitar","Rune longsword","Rune warhammer","Rune battleaxe","Rune claws","Rune spear","Rune halberd","Rune gloves","Rune boots","Rune defender","Rune med helm","Rune full helm","Rune sq shield","Rune kiteshield","Rune plateskirt","Rune platelegs","Rune chainbody","Rune platebody","Rune crossbow","Runite ore","Runite bar","Runite limbs","Runite crossbow (u)","Rune dagger","Rune cannonball","Rune nails","Rune knife","Rune dart","Rune thrownaxe","Rune arrow","Rune brutal","Runite bolts","Rune javelin","Runite bolts (unf)","Rune dart tip","Rune arrowtips","Rune javelin tips"]
 group: E Tier
 */
 
