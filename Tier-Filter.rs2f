@@ -12313,7 +12313,7 @@ enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe"
 group: E Tier
 */
 
-#define STEEL_GEAR_E_NAMES ["Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs"]
+#define STEEL_GEAR_E_NAMES ["Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs"]
 
 /*@ define:input:steel_gear
 label: Show Unnoted
