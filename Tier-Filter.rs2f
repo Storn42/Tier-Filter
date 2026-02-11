@@ -15147,4 +15147,9 @@ type: style
 #define FALLBACK_D_STYLE \
 	textColor = "#ffffffff";
 
-rule (value:>=FALLBACK_SS_VALUE
+rule (value:>=FALLBACK_VALUE_SS) {FALLBACK_SS_STYLE}
+rule (value:>=FALLBACK_VALUE_S) {FALLBACK_S_STYLE}
+rule (value:>=FALLBACK_VALUE_A) {FALLBACK_A_STYLE}
+rule (value:>=FALLBACK_VALUE_B) {FALLBACK_B_STYLE}
+rule (value:>=FALLBACK_VALUE_C) {FALLBACK_C_STYLE}
+rule (value:>=FALLBACK_VALUE_D) {FALLBACK_D_STYLE}
