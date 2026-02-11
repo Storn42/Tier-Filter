@@ -10326,7 +10326,7 @@ rule (name:PRAYER_HEADS_SS_NAMES && quantity:<PRAYER_HEADS_SS_MIN_QUANT) {hidden
 label: SS Tier
 type: style
 group: Ensouled Heads SS Tier
-exampleItem: Raw anglerfish
+exampleItem: Ensouled dragon head
 */
 
 #define PRAYER_HEADS_SS_STYLE \
@@ -10383,7 +10383,7 @@ group: Ensouled Heads S Tier
 label: S Tier
 type: style
 group: Ensouled Heads S Tier
-exampleItem: Raw manta ray
+exampleItem: Ensouled abyssal head
 */
 
 #define PRAYER_HEADS_S_STYLE \
@@ -10448,7 +10448,7 @@ group: Ensouled Heads A Tier
 label: A Tier
 type: style
 group: Ensouled Heads A Tier
-exampleItem: Raw sea turtle
+exampleItem: Ensouled aviansie head
 */
 
 #define PRAYER_HEADS_A_STYLE \
@@ -10518,7 +10518,7 @@ group: Ensouled Heads B Tier
 label: B Tier
 type: style
 group: Ensouled Heads B Tier
-exampleItem: Raw shark
+exampleItem: Ensouled hellhound head
 */
 
 #define PRAYER_HEADS_B_STYLE \
@@ -10593,7 +10593,7 @@ group: Ensouled Heads C Tier
 label: C Tier
 type: style
 group: Ensouled Heads C Tier
-exampleItem: Raw monkfish
+exampleItem: Ensouled dagannoth head
 */
 
 #define PRAYER_HEADS_C_STYLE \
@@ -10676,7 +10676,7 @@ group: Ensouled Heads D Tier
 label: D Tier
 type: style
 group: Ensouled Heads D Tier
-exampleItem: Grapes
+exampleItem: Ensouled giant head
 */
 
 #define PRAYER_HEADS_D_STYLE \
@@ -10764,7 +10764,7 @@ group: Ensouled Heads E Tier
 label: E Tier
 type: style
 group: Ensouled Heads E Tier
-exampleItem: Raw shrimps
+exampleItem: Ensouled goblin head
 */
 
 #define PRAYER_HEADS_E_STYLE \
