@@ -509,6 +509,118 @@ apply (_hidecondition && name:HIDE_USER_UNDER_100 && quantity:<100) {hidden = fa
 apply (_hidecondition && name:HIDE_USER_UNDER_1000 && quantity:<1000) {hidden = false; hideOverlay = true;} \
 apply (_hidecondition && name:HIDE_USER_UNDER_10000 && quantity:<10000) {hidden = false; hideOverlay = true;} \
 
+/*@ define:module:food_and_pots
+name: Food and Potions
+subtitle: Never Forget your Pots Again
+*/
+
+/*@ define:input:food_and_pots
+label: Food
+type: stringlist
+group: My Food and Potoins
+*/
+
+#define MYFOOD_NAMES ["Manta ray", "Dark crab", "Anglerfish", "Sea turtle", "Shark", "Cooked karambwan"] 
+
+/*@ define:input:food_and_pots
+label: Potions
+type: stringlist
+group: My Food and Potoins
+*/
+
+#define MYPOTS_NAMES ["Saradomin brew*", "Super restore*", "Ranging potion*", "Super combat potion*", "Prayer potion*", "Extended anti-venom+*", "Superantipoison*", "Stamina potion*", "Extended super antifire*", "Prayer regeneration*", "Goading potion*"]
+
+/*@ define:input:food_and_pots
+label: Food Style
+type: style
+group: Styles
+exampleItem: Shark
+*/
+
+#define MYFOOD_STYLE \
+    fontType = 3;
+
+/*@ define:input:food_and_pots
+label: Potion Style
+type: style
+group: Styles
+exampleItem: Saradomin brew(4)
+*/
+
+#define MYPOTS_STYLE \
+    fontType = 3; \
+    showLootbeam = true;
+
+rule (name:MYFOOD_NAMES && stackable:false) {MYFOOD_STYLE}
+rule (name:MYPOTS_NAMES && stackable:false) {MYPOTS_STYLE}
+
+/*@ define:input:food_and_pots
+label: Supply Drops
+type: style
+group: Styles
+exampleItem: Wild pie
+*/
+
+#define SUPPLY_DROP_STYLE \
+    fontType = 2; \
+	hidden = false;
+	
+#define SUPPLY_DROP_RULESET(_area, _name) \
+rule (area:_area && name:_name && (!ownership:2 || SHOW_OTHER_DROPS)) {SUPPLY_DROP_STYLE}
+
+/*@ define:input:food_and_pots
+label: Extra Food 1
+type: stringlist
+group: Extra Food & Potions
+*/
+
+#define EXTRA_FOOD_1_NAMES []
+
+/*@ define:input:food_and_pots
+label: Extra Food 2
+type: stringlist
+group: Extra Food & Potions
+*/
+
+#define EXTRA_FOOD_2_NAMES []
+
+/*@ define:input:food_and_pots
+label: Extra Food 3
+type: stringlist
+group: Extra Food & Potions
+*/
+
+#define EXTRA_FOOD_3_NAMES []
+
+
+/*@ define:input:food_and_pots
+label: Extra Food 1
+type: style
+group: Extra Food & Potions
+*/
+
+#define EXTRA_FOOD_1_STYLE
+
+/*@ define:input:food_and_pots
+label: Extra Food 2
+type: style
+group: Extra Food & Potions
+*/
+
+#define EXTRA_FOOD_2_STYLE
+
+/*@ define:input:food_and_pots
+label: Extra Food 3
+type: style
+group: Extra Food & Potions
+*/
+
+#define EXTRA_FOOD_3_STYLE
+
+rule (name:EXTRA_FOOD_1_NAMES && stackable:false) {EXTRA_FOOD_1_STYLE}
+rule (name:EXTRA_FOOD_2_NAMES && stackable:false) {EXTRA_FOOD_2_STYLE}
+rule (name:EXTRA_FOOD_3_NAMES && stackable:false) {EXTRA_FOOD_3_STYLE}
+
 /*@ define:module:uniques
 name: Uniques 
 subtitle: Style your Collection Log drops 
