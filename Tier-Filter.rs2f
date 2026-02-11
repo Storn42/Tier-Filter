@@ -30,8 +30,6 @@ description:
 
   - Clues
 
-  - Prayer
-
   - Fallback
 */
 
@@ -15022,3 +15020,131 @@ rule (name:PRAYER_HEADS_D_NAMES) {PRAYER_HEADS_D_STYLE}
 rule (name:PRAYER_HEADS_E_NAMES && quantity:>=PRAYER_HEADS_E_D_QUANT) {PRAYER_HEADS_D_STYLE}
 
 rule (name:PRAYER_HEADS_E_NAMES) {PRAYER_HEADS_E_STYLE}
+
+/*@ define:module:fallback
+name: Fallback Tier Styles
+subtitle: For Items that haven't been Changed by Other Catagories
+*/
+
+/*@ define:input:fallback
+label: SS Value
+type: number
+*/
+
+#define FALLBACK_VALUE_SS 10000000
+
+
+/*@ define:input:fallback
+label: S Value
+type: number
+*/
+
+#define FALLBACK_VALUE_S 1000000
+
+
+/*@ define:input:fallback
+label: A Value
+type: number
+*/
+
+#define FALLBACK_VALUE_SS 100000
+
+
+/*@ define:input:fallback
+label: B Value
+type: number
+*/
+
+#define FALLBACK_VALUE_B 10000
+
+
+/*@ define:input:fallback
+label: C Value
+type: number
+*/
+
+#define FALLBACK_VALUE_C 1000
+
+
+/*@ define:input:fallback
+label: D Value
+type: number
+*/
+
+#define FALLBACK_VALUE_D 0
+
+
+/*@ define:input:fallback
+label: Tier SS
+type: style
+*/
+
+#define FALLBACK_SS_STYLE \
+	textColor = "#ffff0000"; \
+	backgroundColor = "#ffffffff"; \
+	borderColor = "#ffff0000"; \
+	lootbeamColor = "#ffff0000"; \
+	menuTextColor = "#ffff0000"; \
+	textAccent = 3; \
+	fontType = 3; \
+	showLootbeam = true;
+
+/*@ define:input:fallback
+label: S Tier
+type: style
+*/
+
+#define FALLBACK_S_STYLE \
+	textColor = "#ffffffff"; \
+	backgroundColor = "#FFFFBFEA"; \
+	borderColor = "#ffffffff"; \
+	lootbeamColor = "#FFFFBFEA"; \
+	menuTextColor = "#FFFFBFEA"; \
+	textAccent = 3; \
+	fontType = 3; \
+	showLootbeam = true;
+
+/*@ define:input:fallback
+label: A Tier
+type: style
+*/
+
+#define FALLBACK_A_STYLE \
+	textColor = "#ffffffff"; \
+	backgroundColor = "#ccffcc00"; \
+	borderColor = "#ffffffff"; \
+	menuTextColor = "#ffffcc00"; \
+	textAccent = 3; \
+	fontType = 2;
+
+/*@ define:input:fallback
+label: B Tier
+type: style
+*/
+
+#define FALLBACK_B_STYLE \
+	textColor = "#ffffffff"; \
+	backgroundColor = "#7000c8ff"; \
+	menuTextColor = "#ff00c9ff"; \
+	textAccent = 3;
+
+/*@ define:input:fallback
+label: C Tier
+type: style
+*/
+
+#define FALLBACK_C_STYLE \
+	textColor = "#ffffffff"; \
+	backgroundColor = "#337bff1f"; \
+	menuTextColor = "#ff7bff1f"; \
+	textAccent = 3;
+	
+/*@ define:input:fallback
+label: D Tier
+type: style
+*/
+
+#define FALLBACK_D_STYLE \
+	textColor = "#ffffffff";
+
+rule (value:>=FALLBACK_SS_VALUE
