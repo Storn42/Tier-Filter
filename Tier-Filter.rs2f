@@ -9307,7 +9307,7 @@ rule (name:DRAGON_GEAR_E_NAMES) {DRAGON_GEAR_E_STYLE}
 
 /*@ define:module:runite_gear
 name: Runite Gear
-subtitle: Not Made from Real Runes
+subtitle: The Iconic Metal
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -9828,7 +9828,7 @@ rule (name:RUNITE_GEAR_E_NAMES) {RUNITE_GEAR_E_STYLE}
 
 /*@ define:module:adamantite_gear
 name: Adamantite Gear
-subtitle: Made from Real Adamantites
+subtitle: The Green Metal
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -10349,7 +10349,7 @@ rule (name:ADAMANTITE_GEAR_E_NAMES) {ADAMANTITE_GEAR_E_STYLE}
 
 /*@ define:module:mithril_gear
 name: Mithril Gear
-subtitle: Made from Real Mithrils
+subtitle: The Mythical Metal
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -10870,7 +10870,7 @@ rule (name:MITHRIL_GEAR_E_NAMES) {MITHRIL_GEAR_E_STYLE}
 
 /*@ define:module:black_gear
 name: Black Gear
-subtitle: Made from Real Blacks
+subtitle: Enlist in the Black Knights Today!
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -11391,7 +11391,7 @@ rule (name:BLACK_GEAR_E_NAMES) {BLACK_GEAR_E_STYLE}
 
 /*@ define:module:white_gear
 name: White Gear
-subtitle: Made from Real Whites
+subtitle: Enlist in the White Knights Today!
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -11912,7 +11912,7 @@ rule (name:WHITE_GEAR_E_NAMES) {WHITE_GEAR_E_STYLE}
 
 /*@ define:module:steel_gear
 name: Steel Gear
-subtitle: Made from Real Steels
+subtitle: Real Steel
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -12433,7 +12433,7 @@ rule (name:STEEL_GEAR_E_NAMES) {STEEL_GEAR_E_STYLE}
 
 /*@ define:module:iron_gear
 name: Iron Gear
-subtitle: Made from Real Irons
+subtitle: BTW 
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
@@ -12954,7 +12954,7 @@ rule (name:IRON_GEAR_E_NAMES) {IRON_GEAR_E_STYLE}
 
 /*@ define:module:bronze_gear
 name: Bronze Gear
-subtitle: Made from Real Bronzes
+subtitle: The Classic Metal
 description: Many items are covered by previous modules Such as Alchs or Uniques. Items will need to be removed from the module or the module disabled for them to be styled as shown here.
 */
 
