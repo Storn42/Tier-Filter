@@ -239,12 +239,12 @@ group: Special Drops
 
 #define UNQIQUE_SPECIAL_C_NAMES []
 
-#define SPECIAL_UNIQUE_CHECK(_enabled, _area) \
-	rule (_enabled && _area && name:UNQIQUE_SPECIAL_SS_NAMES) {UNIQUE_SS_STYLE} \
-	rule (_enabled && _area && name:UNQIQUE_SPECIAL_S_NAMES) {UNIQUE_S_STYLE} \
-	rule (_enabled && _area && name:UNQIQUE_SPECIAL_A_NAMES) {UNIQUE_A_STYLE} \
-	rule (_enabled && _area && name:UNQIQUE_SPECIAL_B_NAMES) {UNIQUE_B_STYLE} \
-	rule (_enabled && _area && name:UNQIQUE_SPECIAL_C_NAMES) {UNIQUE_C_STYLE} \
+#define SPECIAL_UNIQUE_CHECK(_enabled, _area, _name) \
+	rule (_enabled && _area && name:_name && name:UNQIQUE_SPECIAL_SS_NAMES) {UNIQUE_SS_STYLE} \
+	rule (_enabled && _area && name:_name && name:UNQIQUE_SPECIAL_S_NAMES) {UNIQUE_S_STYLE} \
+	rule (_enabled && _area && name:_name && name:UNQIQUE_SPECIAL_A_NAMES) {UNIQUE_A_STYLE} \
+	rule (_enabled && _area && name:_name && name:UNQIQUE_SPECIAL_B_NAMES) {UNIQUE_B_STYLE} \
+	rule (_enabled && _area && name:_name && name:UNQIQUE_SPECIAL_C_NAMES) {UNIQUE_C_STYLE} \
 
 /*@ define:module:currency
 name: Currency
