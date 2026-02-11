@@ -13590,7 +13590,7 @@ enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydr
 group: Bones A Tier
 */
 
-#define PRAYER_BONES_A_NAMES []
+#define PRAYER_BONES_A_NAMES ["Chewed bones"]
 
 /*@ define:input:prayer
 label: Show Unnoted
@@ -13653,7 +13653,7 @@ enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydr
 group: Bones B Tier
 */
 
-#define PRAYER_BONES_B_NAMES []
+#define PRAYER_BONES_B_NAMES ["Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones"]
 
 /*@ define:input:prayer
 label: Show Unnoted
@@ -13720,7 +13720,7 @@ enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydr
 group: Bones C Tier
 */
 
-#define PRAYER_BONES_C_NAMES []
+#define PRAYER_BONES_C_NAMES ["Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones"]
 
 /*@ define:input:prayer
 label: Show Unnoted
@@ -13795,7 +13795,7 @@ enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydr
 group: Bones D Tier
 */
 
-#define PRAYER_BONES_D_NAMES []
+#define PRAYER_BONES_D_NAMES ["Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones"]
 
 /*@ define:input:prayer
 label: Show Unnoted
@@ -13875,8 +13875,7 @@ enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydr
 group: Bones E Tier
 */
 
-#define PRAYER_BONES_E_NAMES []
-
+#define PRAYER_BONES_E_NAMES ["Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"
 /*@ define:input:prayer
 label: Show Unnoted
 type: boolean
