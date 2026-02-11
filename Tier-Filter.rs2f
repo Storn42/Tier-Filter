@@ -11398,7 +11398,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:white_gear
 label: SS Tier White Gear
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: SS Tier
 */
 
@@ -11446,7 +11446,7 @@ exampleItem: White platebody
 /*@ define:input:white_gear
 label: S Tier White Gear
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: S Tier
 */
 
@@ -11503,7 +11503,7 @@ exampleItem: White platelegs
 /*@ define:input:white_gear
 label: A Tier White Gear 
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: A Tier
 */
 
@@ -11566,7 +11566,7 @@ exampleItem: White kiteshield
 /*@ define:input:white_gear
 label: B Tier White Gear
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: B Tier
 */
 
@@ -11633,11 +11633,11 @@ exampleItem: White pickaxe
 /*@ define:input:white_gear
 label: C Tier White Gear
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: C Tier
 */
 
-#define WHITE_GEAR_C_NAMES []
+#define WHITE_GEAR_C_NAMES ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody"]
 
 /*@ define:input:white_gear
 label: Show Unnoted
@@ -11708,11 +11708,11 @@ exampleItem: White axe
 /*@ define:input:white_gear
 label: D Tier White Gear
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: D Tier
 */
 
-#define WHITE_GEAR_D_NAMES []
+#define WHITE_GEAR_D_NAMES ["White dagger","White mace","White claws","White magic staff","White boots","White med helm"]
 
 /*@ define:input:white_gear
 label: Show Unnoted
@@ -11788,11 +11788,11 @@ exampleItem: White dagger
 /*@ define:input:white_gear
 label: E Tier White Gear
 type: enumlist
-enum: ["*"]
+enum: ["White sword","White scimitar","White longsword","White warhammer","White battleaxe","White halberd","White 2h sword","White full helm","White sq shield","White kiteshield","White plateskirt","White platelegs","White chainbody","White platebody","White dagger","White mace","White claws","White magic staff","White boots","White med helm","White gloves"]
 group: E Tier
 */
 
-#define WHITE_GEAR_E_NAMES []
+#define WHITE_GEAR_E_NAMES ["White gloves"]
 
 /*@ define:input:white_gear
 label: Show Unnoted
@@ -11919,7 +11919,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:steel_gear
 label: SS Tier Steel Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: SS Tier
 */
 
@@ -11967,11 +11967,11 @@ exampleItem: Steel platebody
 /*@ define:input:steel_gear
 label: S Tier Steel Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: S Tier
 */
 
-#define STEEL_GEAR_S_NAMES []
+#define STEEL_GEAR_S_NAMES ["Steel felling axe"]
 
 /*@ define:input:steel_gear
 label: Show Unnoted
@@ -12024,7 +12024,7 @@ exampleItem: Steel platelegs
 /*@ define:input:steel_gear
 label: A Tier Steel Gear 
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: A Tier
 */
 
@@ -12087,11 +12087,11 @@ exampleItem: Steel kiteshield
 /*@ define:input:steel_gear
 label: B Tier Steel Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: B Tier
 */
 
-#define STEEL_GEAR_B_NAMES []
+#define STEEL_GEAR_B_NAMES ["Large steel keel parts"]
 
 /*@ define:input:steel_gear
 label: Show Unnoted
@@ -12154,11 +12154,11 @@ exampleItem: Steel pickaxe
 /*@ define:input:steel_gear
 label: C Tier Steel Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: C Tier
 */
 
-#define STEEL_GEAR_C_NAMES []
+#define STEEL_GEAR_C_NAMES ["Steel platebody","Steel keel parts"]
 
 /*@ define:input:steel_gear
 label: Show Unnoted
@@ -12229,11 +12229,11 @@ exampleItem: Steel axe
 /*@ define:input:steel_gear
 label: D Tier Steel Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: D Tier
 */
 
-#define STEEL_GEAR_D_NAMES []
+#define STEEL_GEAR_D_NAMES ["Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)"]
 
 /*@ define:input:steel_gear
 label: Show Unnoted
@@ -12309,11 +12309,11 @@ exampleItem: Steel dagger
 /*@ define:input:steel_gear
 label: E Tier Steel Gear
 type: enumlist
-enum: ["*"]
+enum: ["Large steel keel parts","Steel platebody","Steel keel parts","Steel axe","Steel pickaxe","Steel mace","Steel hasta","Steel sword","Steel scimitar","Steel longsword","Steel warhammer","Steel battleaxe","Steel spear","Steel claws","Steel halberd","Steel 2h sword","Steel crossbow","Steel gloves","Steel boots","Steel defender","Steel med helm","Steel full helm","Steel sq shield","Steel kiteshield","Steel plateskirt","Steel platelegs","Steel chainbody","Steel bar","Steel cannonball","Steel limbs","Steel crossbow (u)","Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs","Steel felling axe"]
 group: E Tier
 */
 
-#define STEEL_GEAR_E_NAMES []
+#define STEEL_GEAR_E_NAMES ["Steel dagger","Steel dart","Steel knife","Steel thrownaxe","Steel arrow","Steel brutal","Steel bolts","Steel javelin","Steel bolts (unf)","Steel nails","Steel dart tip","Steel arrowtips","Steel javelin tips","Steel studs"]
 
 /*@ define:input:steel_gear
 label: Show Unnoted
