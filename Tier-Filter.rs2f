@@ -16,10 +16,6 @@ description:
 
   Things to Finish
 
-  - User Settings
-
-  - Hide Items
-
   - Uniquess
 
   - Bosses
@@ -30,6 +26,488 @@ description:
 
   - Clues
 */
+
+/*@ define:module:settings
+name: Settings
+subtitle: Basic Global Settings 
+*/
+
+/*@ define:input:settings
+label: World Spawns
+type: boolean
+group: Show
+*/
+#define SHOW_GLOBAL_DROPS true
+
+apply (!SHOW_GLOBAL_DROPS && ownership:0) {hidden = true;}
+
+/*@ define:input:settings
+label: Unowned Drops
+type: boolean
+group: Show
+*/
+#define SHOW_OTHER_DROPS false
+
+apply (!SHOW_OTHER_DROPS && ownership:2) {hidden = true;}
+
+#define FORCE_SHOW_RULESET(_area, _name) \
+rule (area:_area && name:_name && (!ownership:2 || SHOW_OTHER_DROPS)) {hidden = false;}
+
+/*@ define:input:settings
+label: Despawn Timer
+type: boolean
+group: Show
+*/
+
+#define SHOW_DEPSAWN_TIMER true
+
+apply (SHOW_DEPSAWN_TIMER) {showDespawn = true;}
+
+/*@ define:input:settings
+label: Item Value
+type: boolean
+group: Show
+*/
+
+#define SHOW_ITEM_VALUE false
+
+apply (SHOW_ITEM_VALUE) {showValue = true;}
+
+/*@ define:input:settings
+label: Item Icon
+type: boolean
+group: Show
+*/
+
+#define SHOW_ITEM_ICON false
+
+apply (SHOW_ITEM_ICON) {icon = CurrentItem();}
+
+
+/*@ define:module:hidden
+name: Hidden Items
+subtitle: For when you NEVER want to see that item again  
+*/
+
+/*@ define:input:hidden
+label: User Hide
+type: stringlist
+group: User
+*/
+
+#define HIDE_USER []
+
+apply (name:HIDE_USER) {hidden=true;}
+
+/*@ define:input:hidden
+label: Hide if Unnoted
+type: stringlist
+group: User
+*/
+
+#define HIDE_USER_UNNOTED []
+
+apply (name:HIDE_USER_UNNOTED && stackable:false)  {hidden=true;}
+
+/*@ define:input:hidden
+label: Hide if quant < 10
+type: stringlist
+group: User
+*/
+
+#define HIDE_USER_UNDER_10 []
+
+apply (name:HIDE_USER_UNDER_10 && quantity:<10) {hidden=true}
+
+/*@ define:input:hidden
+label: Hide if quant < 100
+type: stringlist
+group: User
+*/
+
+#define HIDE_USER_UNDER_100 []
+
+apply (name:HIDE_USER_UNDER_100 && quantity:<100) {hidden=true}
+
+/*@ define:input:hidden
+label: Hide if quant < 1000
+type: stringlist
+group: User
+*/
+
+#define HIDE_USER_UNDER_1000 []
+
+apply (name:HIDE_USER_UNDER_1000 && quantity:<1000) {hidden=true}
+
+/*@ define:input:hidden
+label: Bronze
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_BRONZE []
+
+apply (name:HIDE_BRONZE) {hidden=true;}
+
+/*@ define:input:hidden
+label: Iron
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_IRON []
+
+apply (name:HIDE_IRON) {hidden=true;}
+
+/*@ define:input:hidden
+label: Steel
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_STEEL []
+
+apply (name:HIDE_STEEL) {hidden=true;}
+
+/*@ define:input:hidden
+label: Black
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_BLACK []
+
+apply (name:HIDE_BLACK) {hidden=true;}
+
+/*@ define:input:hidden
+label: White
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_WHITE []
+
+apply (name:HIDE_WHITE) {hidden=true;}
+
+/*@ define:input:hidden
+label: Mithril
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_MITHRIL []
+
+apply (name:HIDE_MITHRIL) {hidden=true;}
+
+/*@ define:input:hidden
+label: Adamant
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_ADAMANT []
+
+apply (name:HIDE_ADAMANT) {hidden=true;}
+
+/*@ define:input:hidden
+label: Rune
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_RUNE []
+
+apply (name:HIDE_RUNE) {hidden=true;}
+
+/*@ define:input:hidden
+label: Dragon
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_DRAGON []
+
+apply (name:HIDE_DRAGON) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Ranged
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_RANGED []
+
+apply (name:HIDE_RANGED) {hidden=true;}
+
+/*@ define:input:hidden
+label: Mage
+type: stringlist
+group: Equipment
+*/
+
+#define HIDE_MAGE []
+
+apply (name:HIDE_MAGE) {hidden=true;}
+
+/*@ define:input:hidden
+label: Hide "Fake" Items
+type: boolean
+group: Other
+*/
+
+#define ENABLE_HIDE_FAKE true
+
+apply (ENABLE_HIDE_FAKE && id:[2513,4178,4180,6967,21060,31252]) {hidden=true;}
+
+/*@ define:input:hidden
+label: Herbs
+type: stringlist
+group: Skilling
+*/
+#define HIDE_HERBS []
+
+apply (name:HIDE_HERBS) {hidden=true;}
+
+/*@ define:input:hidden
+label: Herblore Secondaries
+type: stringlist
+group: Skilling
+*/
+#define HIDE_SECONDARIES []
+
+apply (name:HIDE_SECONDARIES) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Seeds
+type: stringlist
+group: Skilling
+*/
+#define HIDE_SEEDS []
+
+apply (name:HIDE_SEEDS) {hidden=true;}
+
+/*@ define:input:hidden
+label: Prayer
+type: stringlist
+group: Skilling
+*/
+#define HIDE_PRAYER []
+
+apply (name:HIDE_PRAYER) {hidden=true;}
+
+/*@ define:input:hidden
+label: Cooking
+type: stringlist
+group: Skilling
+*/
+#define HIDE_COOKING []
+
+apply (name:HIDE_COOKING) {hidden=true;}
+
+/*@ define:input:hidden
+label: Crafting
+type: stringlist
+group: Skilling
+*/
+#define HIDE_CRAFTING []
+
+apply (name:HIDE_CRAFTING) {hidden=true;}
+
+/*@ define:input:hidden
+label: Fishing
+type: stringlist
+group: Skilling
+*/
+#define HIDE_FISHING []
+
+apply (name:HIDE_FISHING) {hidden=true;}
+
+/*@ define:input:hidden
+label: Runecraft
+type: stringlist
+group: Skilling
+*/
+#define HIDE_RUNECRAFT []
+
+apply (name:HIDE_RUNECRAFT) {hidden=true;}
+
+/*@ define:input:hidden
+label: Hunter
+type: stringlist
+group: Skilling
+*/
+#define HIDE_HUNTER []
+
+apply (name:HIDE_HUNTER) {hidden=true;}
+
+/*@ define:input:hidden
+label: Hide Drops from Other Boats
+type: boolean
+group: Sailing
+*/
+#define HIDE_OTHER_BOATS true
+
+apply (HIDE_OTHER_BOATS && area:[3838,6432,0,3896,6465,3] && ownership:2) {hidden=true;}
+
+/*@ define:input:hidden
+label: Hide on Boat
+type: stringlist
+group: Sailing
+*/
+#define HIDE_SAILING []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_SAILING) {hidden=true;}
+
+/*@ define:input:hidden
+label: Hide Small Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_SMALL_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_SMALL_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Fishy Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_FISHY_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_FISHY_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Barracuda Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_BARRACUDA_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_BARRACUDA_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Large Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_LARGE_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_LARGE_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Plundered Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_PLUNDERED_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_PLUNDERED_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Martial Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_MARTIAL_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_MARTIAL_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Fremennik Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_FREMENNIK_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_FREMENNIK_SALVAGE) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Hide Opulent Salvage
+type: stringlist
+group: Sailing
+*/
+#define HIDE_OPULENT_SALVAGE []
+
+apply (area:[3838,6432,0,3896,6465,3] && name:HIDE_OPULENT_SALVAGE) {hidden=true;}
+
+/*@ define:input:hidden
+label: Cooked Food
+type: stringlist
+group: Misc
+*/
+
+#define HIDE_FOOD []
+
+apply (name:HIDE_FOOD){hidden=true;}
+
+/*@ define:input:hidden
+label: Burnt Food
+type: stringlist
+group: Misc
+*/
+
+#define HIDE_BURNT_FOOD []
+
+apply (name:HIDE_BURNT_FOOD) {hidden=true;}
+
+/*@ define:input:hidden
+label: Potions
+type: stringlist
+group: Misc
+*/
+
+#define HIDE_POTIONS []
+
+apply (name:HIDE_POTIONS) {hidden=true;}
+
+/*@ define:input:hidden
+label: Containers
+type: stringlist
+group: Misc
+*/
+
+#define HIDE_CONTAINERS []
+
+apply (name:HIDE_CONTAINERS) {hidden=true;}
+
+/*@ define:input:hidden
+label: Tools
+type: stringlist
+group: Misc
+*/
+
+#define HIDE_TOOLS []
+
+apply (name:HIDE_TOOLS) {hidden=true;}
+
+
+/*@ define:input:hidden
+label: Misc
+type: stringlist
+group: Misc
+*/
+
+#define HIDE_MISC []
+
+apply (name:HIDE_MISC) {hidden=true;}
+
+#define HIDE_LIST name:HIDE_USER || name:HIDE_BRONZE || name:HIDE_IRON || name:HIDE_STEEL || name:HIDE_BLACK || name:HIDE_WHITE || name:HIDE_MITHRIL || name:HIDE_ADAMANT || name:HIDE_RUNE || name:HIDE_DRAGON || name:HIDE_RANGED || name:HIDE_MAGE || name:HIDE_HERBS || name:HIDE_SECONDARIES || name:HIDE_SEEDS || name:HIDE_PRAYER || name:HIDE_COOKING || name:HIDE_CRAFTING || name:HIDE_FISHING || name:HIDE_RUNECRAFT || name:HIDE_HUNTER || name:HIDE_BURNT_FOOD || name:HIDE_POTIONS || name:HIDE_CONTAINERS || name:HIDE_TOOLS || name:HIDE_MISC
+
+#define AREA_UNHIDE(_hidecondition) apply (_hidecondition && (HIDE_LIST)) {hidden = false; hideOverlay = true;} \
+apply (_hidecondition && name:HIDE_USER_UNNOTED && stackable:false) {hidden = false; hideOverlay = true;} \
+apply (_hidecondition && name:HIDE_USER_UNDER_10 && quantity:<10) {hidden = false; hideOverlay = true;} \
+apply (_hidecondition && name:HIDE_USER_UNDER_100 && quantity:<100) {hidden = false; hideOverlay = true;} \
+apply (_hidecondition && name:HIDE_USER_UNDER_1000 && quantity:<1000) {hidden = false; hideOverlay = true;} \
+apply (_hidecondition && name:HIDE_USER_UNDER_10000 && quantity:<10000) {hidden = false; hideOverlay = true;} \
 
 /*@ define:module:uniques
 name: Uniques 
@@ -15073,7 +15551,7 @@ type: number
 
 
 /*@ define:input:fallback
-label: Tier SS
+label: SS Tier
 type: style
 */
 
