@@ -12440,7 +12440,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:iron_gear
 label: SS Tier Iron Gear
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: SS Tier
 */
 
@@ -12488,11 +12488,11 @@ exampleItem: Iron platebody
 /*@ define:input:iron_gear
 label: S Tier Iron Gear
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: S Tier
 */
 
-#define IRON_GEAR_S_NAMES []
+#define IRON_GEAR_S_NAMES ["Iron felling axe"]
 
 /*@ define:input:iron_gear
 label: Show Unnoted
@@ -12545,7 +12545,7 @@ exampleItem: Iron platelegs
 /*@ define:input:iron_gear
 label: A Tier Iron Gear 
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: A Tier
 */
 
@@ -12608,7 +12608,7 @@ exampleItem: Iron kiteshield
 /*@ define:input:iron_gear
 label: B Tier Iron Gear
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: B Tier
 */
 
@@ -12675,11 +12675,11 @@ exampleItem: Iron pickaxe
 /*@ define:input:iron_gear
 label: C Tier Iron Gear
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: C Tier
 */
 
-#define IRON_GEAR_C_NAMES []
+#define IRON_GEAR_C_NAMES ["Large iron keel parts"]
 
 /*@ define:input:iron_gear
 label: Show Unnoted
@@ -12750,11 +12750,11 @@ exampleItem: Iron axe
 /*@ define:input:iron_gear
 label: D Tier Iron Gear
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: D Tier
 */
 
-#define IRON_GEAR_D_NAMES []
+#define IRON_GEAR_D_NAMES ["Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts"]
 
 /*@ define:input:iron_gear
 label: Show Unnoted
@@ -12830,11 +12830,11 @@ exampleItem: Iron dagger
 /*@ define:input:iron_gear
 label: E Tier Iron Gear
 type: enumlist
-enum: ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+enum: ["Iron felling axe","Large iron keel parts","Iron warhammer","Iron battleaxe","Iron halberd","Iron 2h sword","Iron gloves","Iron defender","Iron sq shield","Iron plateskirt","Iron platelegs","Iron kiteshield","Iron chainbody","Iron platebody","Iron keel parts","Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 group: E Tier
 */
 
-#define IRON_GEAR_E_NAMES ["Iron med helm","Iron full helm","Iron chainbody","Iron platebody","Iron platelegs","Iron plateskirt","Iron gloves","Iron boots","Iron defender","Iron sq shield","Iron kiteshield","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron bolts","Iron brutal","Iron javelin","Iron claws","Iron spear","Iron halberd","Iron 2h sword","Iron dagger","Iron axe","Iron sword","Iron mace","Iron pickaxe","Iron scimitar","Iron hasta","Iron longsword","Iron warhammer","Iron battleaxe","Iron bar","Iron ore","Iron cannonball"]
+#define IRON_GEAR_E_NAMES ["Iron dagger","Iron axe","Iron pickaxe","Iron sword","Iron mace","Iron scimitar","Iron hasta","Iron longsword","Iron claws","Iron spear","Iron crossbow","Iron dart","Iron knife","Iron thrownaxe","Iron arrow","Iron brutal","Iron javelin","Iron bolts","Iron boots","Iron med helm","Iron full helm","Iron bar","Iron ore","Iron bolts (unf)","Iron dart tip","Iron nails","Iron arrowtips","Iron cannonball","Iron javelin tips","Iron limbs","Iron crossbow (u)"]
 
 /*@ define:input:iron_gear
 label: Show Unnoted
