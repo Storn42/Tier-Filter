@@ -12961,7 +12961,7 @@ description: Many items are covered by previous modules Such as Alchs or Uniques
 /*@ define:input:bronze_gear
 label: SS Tier Bronze Gear
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: SS Tier
 */
 
@@ -13009,11 +13009,11 @@ exampleItem: Bronze platebody
 /*@ define:input:bronze_gear
 label: S Tier Bronze Gear
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: S Tier
 */
 
-#define BRONZE_GEAR_S_NAMES []
+#define BRONZE_GEAR_S_NAMES ["Bronze felling axe"]
 
 /*@ define:input:bronze_gear
 label: Show Unnoted
@@ -13066,7 +13066,7 @@ exampleItem: Bronze platelegs
 /*@ define:input:bronze_gear
 label: A Tier Bronze Gear 
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: A Tier
 */
 
@@ -13129,7 +13129,7 @@ exampleItem: Bronze kiteshield
 /*@ define:input:bronze_gear
 label: B Tier Bronze Gear
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: B Tier
 */
 
@@ -13196,11 +13196,11 @@ exampleItem: Bronze pickaxe
 /*@ define:input:bronze_gear
 label: C Tier Bronze Gear
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: C Tier
 */
 
-#define BRONZE_GEAR_C_NAMES []
+#define BRONZE_GEAR_C_NAMES ["Large bronze keel parts"]
 
 /*@ define:input:bronze_gear
 label: Show Unnoted
@@ -13271,11 +13271,11 @@ exampleItem: Bronze axe
 /*@ define:input:bronze_gear
 label: D Tier Bronze Gear
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: D Tier
 */
 
-#define BRONZE_GEAR_D_NAMES []
+#define BRONZE_GEAR_D_NAMES ["Bronze defender","Bronze gloves","Bronze keel parts"]
 
 /*@ define:input:bronze_gear
 label: Show Unnoted
@@ -13351,11 +13351,11 @@ exampleItem: Bronze dagger
 /*@ define:input:bronze_gear
 label: E Tier Bronze Gear
 type: enumlist
-enum: ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+enum: ["Bronze felling axe","Large bronze keel parts","Bronze defender","Bronze gloves","Bronze keel parts","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 group: E Tier
 */
 
-#define BRONZE_GEAR_E_NAMES ["Bronze med helm","Bronze full helm","Bronze chainbody","Bronze platebody","Bronze platelegs","Bronze plateskirt","Bronze gloves","Bronze boots","Bronze defender","Bronze sq shield","Bronze kiteshield","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze bar","Bronze cannonball"]
+#define BRONZE_GEAR_E_NAMES ["Bronze dagger","Bronze axe","Bronze sword","Bronze mace","Bronze pickaxe","Bronze scimitar","Bronze hasta","Bronze longsword","Bronze warhammer","Bronze battleaxe","Bronze claws","Bronze spear","Bronze halberd","Bronze 2h sword","Bronze crossbow","Bronze dart","Bronze knife","Bronze thrownaxe","Bronze arrow","Bronze bolts","Bronze brutal","Bronze javelin","Bronze boots","Bronze med helm","Bronze full helm","Bronze sq shield","Bronze kiteshield","Bronze plateskirt","Bronze platelegs","Bronze chainbody","Bronze platebody","Bronze bar","Bronze bolts (unf)","Bronze dart tip","Bronze nails","Bronze arrowtips"]
 
 /*@ define:input:bronze_gear
 label: Show Unnoted
