@@ -13481,7 +13481,7 @@ subtitle: Future Gifts to PKers
 /*@ define:input:prayer
 label: SS Tier Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones SS Tier
 */
 
@@ -13529,7 +13529,7 @@ exampleItem: Superior dragon bones
 /*@ define:input:prayer
 label: S Tier Prayer Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones S Tier
 */
 
@@ -13586,7 +13586,7 @@ exampleItem: Dagannoth bones
 /*@ define:input:prayer
 label: A Tier Prayer Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones A Tier
 */
 
@@ -13649,7 +13649,7 @@ exampleItem: Frost dragon bones
 /*@ define:input:prayer
 label: B Tier Prayer Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones B Tier
 */
 
@@ -13716,7 +13716,7 @@ exampleItem: Dragon bones
 /*@ define:input:prayer
 label: C Tier Prayer Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones C Tier
 */
 
@@ -13791,7 +13791,7 @@ exampleItem: Babydragon bones
 /*@ define:input:prayer
 label: D Tier Prayer Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones D Tier
 */
 
@@ -13871,11 +13871,12 @@ exampleItem: Big Bones
 /*@ define:input:prayer
 label: E Tier Prayer Bones
 type: enumlist
-enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"]
+enum: ["Chewed bones","Curved bone","Dagannoth bones","Frost dragon bones","Hydra bones","Ourg bones","Superior dragon bones","Dragon bones","Drake bones","Fayrg bones","Lava dragon bones","Long bone","Ourg bones","Strykewyrm bones","Wyrm bones","Wyvern bones","Babydragon bones","Bleached bones","Mangled bones","Shaikahan bones","Sun-kissed bones","Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
 group: Bones E Tier
 */
 
-#define PRAYER_BONES_E_NAMES ["Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones',"Blessed bone shards"
+#define PRAYER_BONES_E_NAMES ["Bones","Bat bones","Big bones","Burnt bones","Jogre bones","Monkey bones","Small zombie monkey bones","Large zombie monkey bones","Gorilla bones","Bearded gorilla bones","Small ninja monkey bones","Medium ninja monkey bone","Wolf bones","Wyrmling bones","Zogre bones","Blessed bone shards"]
+
 /*@ define:input:prayer
 label: Show Unnoted
 type: boolean
