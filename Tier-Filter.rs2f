@@ -13636,8 +13636,8 @@ exampleItem: Frost dragon bones
 
 #define PRAYER_BONES_A_STYLE \
 	color = "#fffff759";\
-	backgroundColor = "#ccffffff";\
-	menuTextColor = "#ffbbbbbb"; \
+	backgroundColor = "#ccbbbbbb";\
+	menuTextColor = "#ffffffff"; \
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#fffff759";\
@@ -13706,7 +13706,7 @@ exampleItem: Dragon bones
 
 #define PRAYER_BONES_B_STYLE \
 	color = "#fffff759";\
-    backgroundColor = "#99ffffff";\
+    backgroundColor = "#99bbbbbb";\
 	menuTextColor = "#ffffffff";\
 	textAccent = 3;\
 	menuSort = 20000;
@@ -13781,7 +13781,7 @@ exampleItem: Babydragon bones
 
 #define PRAYER_BONES_C_STYLE \
     color = "#fffff759";\
-    backgroundColor = "#33ffffff";\
+    backgroundColor = "#33bbbbbb";\
 	menuTextColor = "#ffffffff";\
 	textAccent = 3;\
 	menuSort = 10000;\
@@ -13864,7 +13864,7 @@ exampleItem: Big Bones
 
 #define PRAYER_BONES_D_STYLE \
     color = "#fffff759"; \
-	menuTextColor = "#ffbbbbbb";
+	menuTextColor = "#ffffffff";
 
 /*@ define:input:prayer
 label: E Tier Prayer Bones
@@ -14152,7 +14152,7 @@ exampleItem: Infernal ashes
 #define PRAYER_ASHES_A_STYLE \
 	color = "#ffffffff";\
 	backgroundColor = "#cc6A3430";\
-	menuTextColor = "#ffbbbbbb"; \
+	menuTextColor = "#ff6A3430"; \
 	fontType = 2;\
 	textAccent = 3;\
 	borderColor = "#ffffffff";\
