@@ -140,6 +140,16 @@ group: User
 apply (name:HIDE_USER_UNDER_1000 && quantity:<1000) {hidden=true}
 
 /*@ define:input:hidden
+label: Hide if quant < 10000
+type: stringlist
+group: User
+*/
+
+#define HIDE_USER_UNDER_10000 []
+
+apply (name:HIDE_USER_UNDER_10000 && quantity:<10000) {hidden=true}
+
+/*@ define:input:hidden
 label: Bronze
 type: stringlist
 group: Equipment
