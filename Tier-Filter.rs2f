@@ -16,11 +16,7 @@ description:
 
   Things to Finish
 
-  - Uniquess
-
   - Bosses
-
-  - Monsters
 
   - Minigames
 
@@ -1665,7 +1661,7 @@ group: Hellhounds
 
 rule (area:[2728,9676,0,2748,9702,0] && name:HELLHOUND_WITCHAVEN_HIDE) {hidden = true;}
 
-*@ define:input:slayer_pvm
+/*@ define:input:slayer_pvm
 label: Asgarnian Ice Dungeon West - Hide Items
 type: stringlist
 group: Ice Giants/Ice Warriors
